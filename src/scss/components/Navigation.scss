@@ -1,0 +1,10 @@
+@import '../partial';
+.nav-container {
+  @include flex(row, nowrap, initial, initial, initial);
+  .nav {
+    .nav-list-container {
+      @include flex(row, nowrap, initial, initial, 1rem);
+      list-style: none;
+    }
+  }
+}
