@@ -1,3 +1,4 @@
+/* Mixin */
 @mixin flex($value0, $value1, $value2, $value3, $value4) {
   display: flex;
   flex-flow: $value0 $value1;
@@ -9,3 +10,20 @@
   width: $width;
   height: $height;
 }
+/* Color*/
+$color-map: (
+  background__grey: #f7f7f7,
+  primary: #9356dc,
+  secondary: #fca311,
+  green__light: #99e2d0,
+  green__dark: #008766,
+  blue__light: #89c8fa,
+  blue__dark: #003a68,
+  white__normal: #ffffff,
+  black__normal: #101010,
+  grey__dark: #353535,
+  grey__dark_2: #414141,
+  grey__light: #eaeaea,
+  btn_gradient_color: #ff79da,
+  red__pink__identity: rgba(212, 25, 94, 1),
+);
