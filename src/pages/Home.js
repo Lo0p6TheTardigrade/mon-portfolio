@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/pages/Main.scss';
+import '../scss/components/Main.scss';
 import Layout from '../components/Layout';
 import Main from '../components/Main';
 import Section from '../components/Section';
