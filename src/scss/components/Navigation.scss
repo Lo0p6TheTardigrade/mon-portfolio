@@ -1,10 +1,12 @@
 @import '../partial';
 .nav-container {
   @include flex(row, nowrap, initial, initial, initial);
+  background: map-get($color-map, grey__dark_2);
   .nav {
     .nav-list-container {
       @include flex(row, nowrap, initial, initial, 1rem);
       list-style: none;
+      color: map-get($color-map, white__normal);
     }
   }
 }
