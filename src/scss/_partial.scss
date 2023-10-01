@@ -10,7 +10,42 @@
   width: $width;
   height: $height;
 }
-/* Color*/
+
+/* Border Mixin */
+@mixin border__solid($size, $color-map) {
+  border: $size solid $color-map;
+}
+
+/* Font Family Mixins*/
+@mixin font-family_Braah_One {
+  font-family: 'Braah One', sans-serif;
+}
+@mixin font-family_Golos_Text {
+  font-family: 'Golos Text', sans-serif;
+}
+@mixin font-family_Pacifico {
+  font-family: 'Pacifico', sans-serif;
+}
+@mixin font-family_Roboto {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin font-family_Rubik_Vinyl {
+  font-family: 'Rubik Vinyl', cursive;
+}
+@mixin font-family_Shrinkhand {
+  font-family: 'Shrikhand', cursive;
+}
+@mixin font-family_Vina_Sans {
+  font-family: 'Vina Sans', cursive;
+}
+@mixin font-family_Ysabeau {
+  font-family: 'Ysabeau', sans-serif;
+}
+@mixin font-family_SF-Pro {
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Color Map */
 $color-map: (
   background__grey: #f7f7f7,
   primary: #9356dc,
@@ -26,4 +61,12 @@ $color-map: (
   grey__light: #eaeaea,
   btn_gradient_color: #ff79da,
   red__pink__identity: rgba(212, 25, 94, 1),
+);
+
+/* Shadow Map */
+$box-shadow: (
+  shadow__card: 0px 4px 10px rgba(0, 0, 0, 0.25),
+  shadow__card_2: 0px 4px 10px rgba(255, 255, 255, 0.25),
+  shadow__card-out: 0px 2px 8px rgba(0, 0, 0, 0.25),
+  shadow__menu__card: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1),
 );
