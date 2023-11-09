@@ -27,6 +27,8 @@
         .project-name {
           @include flex(row, wrap, flex-end, initial, initial);
           color: map-get($color-map, red__pink__identity);
+          //   color: map-get($color-map, btn_gradient_color);
+          //   color: rgb(250, 203, 223);
           @include font-family_Braah_One;
           width: 50%;
         }
