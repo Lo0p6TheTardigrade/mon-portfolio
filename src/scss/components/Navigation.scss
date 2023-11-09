@@ -14,14 +14,21 @@
       .nav-list-item {
         padding-right: 1rem;
         border-right: solid 3px map-get($color-map, grey__dark_2);
+        cursor: pointer;
         a {
           color: map-get($color-map, grey__dark);
+          &:hover {
+            color: map-get($color-map, blue__light);
+          }
         }
         .contact {
           color: map-get($color-map, grey__dark);
         }
         &:last-child {
           border: none;
+        }
+        &:hover {
+          color: map-get($color-map, blue__light);
         }
       }
     }
