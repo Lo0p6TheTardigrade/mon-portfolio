@@ -9,16 +9,16 @@ const Navigation = () => {
           <li className="nav-list-item">Home</li>
           <li className="nav-list-item">
             <a
-              href="#projects"
-              className="anchor-projects">
-              Projets
+              href="#skills"
+              className="anchor-skills">
+              Compétences
             </a>
           </li>
           <li className="nav-list-item">
             <a
-              href="#skills"
-              className="anchor-skills">
-              Compétences
+              href="#projects"
+              className="anchor-projects">
+              Projets
             </a>
           </li>
         </ul>
