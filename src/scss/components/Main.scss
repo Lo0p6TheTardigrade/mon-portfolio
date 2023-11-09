@@ -1,0 +1,46 @@
+@import '../partial';
+.main-container {
+  @include flex(column, nowrap, initial, center, 60px);
+  .main-title-container {
+    @include font-family_SF-Pro;
+    @include flex(column, nowrap, initial, center, initial);
+    margin-top: 30px;
+    border: none;
+    border-radius: 36px;
+    color: map-get($color-map, white__normal);
+    background: map-get($color-map, grey__dark);
+    width: 18%;
+  }
+  .subtitle-container {
+    @include font-family_SF-Pro;
+    @include flex(row, nowrap, initial, center, initial);
+    margin-top: 63px;
+    border: solid 2px map-get($color-map, grey__dark);
+    border-radius: 9px 81px 81px 9px;
+    width: fit-content;
+    .boxA {
+      order: 2;
+      @include flex(column, nowrap, initial, center, initial);
+      .description {
+        @include font-family_SF-Pro;
+        @include flex(column, nowrap, initial, center, initial);
+        text-align: center;
+        width: 80%;
+        .text {
+          @include font-family_Roboto;
+        }
+      }
+      width: 70%;
+    }
+    .boxB {
+      @include flex(column, nowrap, initial, center, initial);
+      .image-profile-container {
+        @include flex(column, nowrap, initial, center, initial);
+        .image-profile {
+          border-radius: 0 18px 18px 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

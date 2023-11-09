@@ -1,0 +1,4 @@
+@import '../partial';
+.header {
+  @include flex(column, nowrap, initial, center, initial);
+}

@@ -6,10 +6,21 @@ const Navigation = () => {
     <div className="nav-container">
       <nav className="nav">
         <ul className="nav-list-container">
-          <li className="nav-list-item">Accueil</li>
-          <li className="nav-list-item">Mes projets</li>
-          <li className="nav-list-item">Mes compétences</li>
-          <li className="nav-list-item">À propos de moi</li>
+          <li className="nav-list-item">Home</li>
+          <li className="nav-list-item">
+            <a
+              href="#projects"
+              className="anchor-projects">
+              Projets
+            </a>
+          </li>
+          <li className="nav-list-item">
+            <a
+              href="#skills"
+              className="anchor-skills">
+              Compétences
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

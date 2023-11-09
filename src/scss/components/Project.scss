@@ -1,0 +1,42 @@
+@import '../partial';
+.projects-section {
+  @include flex(column, nowrap, initial, center, initial);
+  //   .projects-section-title {
+  //     .title {
+  //       padding: 9px;
+  //       border: solid 3px map-get($color-map, grey__dark);
+  //       border-radius: 18px;
+  //     }
+  //   }
+  .projects {
+    @include flex(row, wrap, center, initial, 1rem);
+    width: 100%;
+    .article-container {
+      padding: 9px;
+      border-radius: 6px;
+      background: map-get($color-map, grey__dark_2);
+      .project-title-box {
+        @include flex(row, wrap, initial, initial, initial);
+        .project-type {
+          @include flex(row, wrap, flex-start, initial, initial);
+          text-decoration: underline;
+          @include font-family_Roboto;
+          width: 50%;
+        }
+        .project-name {
+          @include flex(row, wrap, flex-end, initial, initial);
+          color: map-get($color-map, red__pink__identity);
+          @include font-family_Braah_One;
+          width: 50%;
+        }
+      }
+      .project-preview-image {
+        border-radius: 6px;
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: map-get($color-map, white__normal);
+}

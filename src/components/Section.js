@@ -7,12 +7,15 @@ import javascript from '../assets/images/javascript.webp';
 import react from '../assets/images/react.webp';
 import redux from '../assets/images/redux.webp';
 import seo from '../assets/images/seo.webp';
+import github from '../assets/images/github.webp';
 
 const Section = () => {
   return (
     <div className="section-container">
       <section className="section">
-        <div className="section-title-container">
+        <div
+          className="section-title-container"
+          id="skills">
           <h3 className="section-title">Mes compétences</h3>
         </div>
         <div className="description-box">
@@ -105,6 +108,21 @@ const Section = () => {
                 src={seo}
                 alt="logo de seo"
                 className="logo-seo logo"
+              />
+            </div>
+            <div className="description-separator-container">
+              <div className="description-separator"></div>
+            </div>
+          </article>
+          <article className="description-container">
+            <div className="description-item-container">
+              <p className="description-item">Github</p>
+            </div>
+            <div className="logo-container">
+              <img
+                src={github}
+                alt="logo de github"
+                className="logo-github logo"
               />
             </div>
             <div className="description-separator-container">

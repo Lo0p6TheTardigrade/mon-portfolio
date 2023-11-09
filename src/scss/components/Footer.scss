@@ -1,0 +1,28 @@
+@import '../partial';
+.footer-container {
+  @include flex(row, nowrap, center, center, 1rem);
+  margin-top: 42px;
+  background: map-get($color-map, grey__light);
+  height: 126px;
+  .footer {
+    @include flex(column, nowrap, center, center, initial);
+    .footer-list {
+      @include flex(row, nowrap, center, center, 1rem);
+      padding: 9px 36px;
+      border-radius: 27px;
+      background: map-get($color-map, white__normal);
+      .logo-container {
+        margin-bottom: 3px;
+        .logo {
+          @include width-height(36px, 36px);
+          border-radius: 9px;
+        }
+      }
+    }
+    .copyright-container {
+      .copyright {
+        font-size: smaller;
+      }
+    }
+  }
+}

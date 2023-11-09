@@ -1,12 +1,29 @@
 @import '../partial';
 .nav-container {
-  @include flex(row, nowrap, initial, initial, initial);
-  background: map-get($color-map, grey__dark_2);
+  @include flex(row, nowrap, center, initial, initial);
+  padding-right: 1rem;
+  box-shadow: map-get($box-shadow, shadow__card);
+  border-radius: 9px;
+  background: map-get($color-map, white__normal);
+  width: fit-content;
   .nav {
     .nav-list-container {
       @include flex(row, nowrap, initial, initial, 1rem);
       list-style: none;
-      color: map-get($color-map, white__normal);
+      color: map-get($color-map, grey__dark_2);
+      .nav-list-item {
+        padding-right: 1rem;
+        border-right: solid 3px map-get($color-map, grey__dark_2);
+        a {
+          color: map-get($color-map, grey__dark);
+        }
+        .contact {
+          color: map-get($color-map, grey__dark);
+        }
+        &:last-child {
+          border: none;
+        }
+      }
     }
   }
 }

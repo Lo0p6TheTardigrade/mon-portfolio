@@ -2,9 +2,13 @@
 .section-container {
   @include font-family_SF-Pro;
   .section {
+    padding: 27px;
+    border-radius: 18px;
+    background: map-get($color-map, grey__light);
     .section-title-container {
       @include flex(column, nowrap, center, center, initial);
       .section-title {
+        margin-top: 6px;
       }
     }
     .description-box {
@@ -15,6 +19,7 @@
         border-radius: 9px;
         @include width-height(110px, inherit);
         box-shadow: map-get($box-shadow, shadow__card);
+        background-color: map-get($color-map, white__normal);
         .description-item-container {
           .description-item {
             margin-top: 3px;
