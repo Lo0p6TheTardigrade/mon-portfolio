@@ -23,6 +23,8 @@ const Project = () => {
                 src="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbf90bb6aa01b2aeffc61/screenshot_2023-11-09-11-16-42-0000.png"
                 alt="scss oh my food preview"
                 className="project-preview-image"
+                width={336}
+                height={210}
               />
             </a>
           </article>
@@ -40,6 +42,8 @@ const Project = () => {
                 src="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbd912e06c6190cc3eded/screenshot_2023-11-09-11-08-25-0000.png"
                 alt="js print it preview"
                 className="project-preview-image"
+                width={336}
+                height={210}
               />
             </a>
           </article>
@@ -57,6 +61,8 @@ const Project = () => {
                 src="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc033b5dcf7156a942acf/screenshot_2023-11-09-11-19-24-0000.png"
                 alt="seo nina carducci preview"
                 className="project-preview-image"
+                width={336}
+                height={210}
               />
             </a>
           </article>
@@ -74,6 +80,8 @@ const Project = () => {
                 src="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc08057495a2146d6dc3f/screenshot_2023-11-09-11-21-07-0000.png"
                 alt="debug 724Event preview"
                 className="project-preview-image"
+                width={336}
+                height={210}
               />
             </a>
           </article>
@@ -91,6 +99,8 @@ const Project = () => {
                 src="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc66a413130287af09dce/screenshot_2023-11-09-11-46-21-0000.png"
                 alt="kasa preview"
                 className="project-preview-image"
+                width={336}
+                height={210}
               />
             </a>
           </article>
