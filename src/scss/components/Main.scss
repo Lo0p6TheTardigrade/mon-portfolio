@@ -18,9 +18,18 @@
     border: solid 2px map-get($color-map, grey__dark);
     border-radius: 9px 81px 81px 9px;
     width: fit-content;
+    @media screen and (max-width: 720px) {
+      @include flex(column, nowrap, initial, center, initial);
+      border-radius: 81px;
+    }
     .boxA {
       order: 2;
       @include flex(column, nowrap, initial, center, initial);
+      .subtitle {
+        @media screen and (max-width: 720px) {
+          text-align: center;
+        }
+      }
       .description {
         @include font-family_SF-Pro;
         @include flex(column, nowrap, initial, center, initial);
@@ -36,9 +45,15 @@
       @include flex(column, nowrap, initial, center, initial);
       .image-profile-container {
         @include flex(column, nowrap, initial, center, initial);
+        @media screen and (max-width: 720px) {
+          margin-top: 9px;
+        }
         .image-profile {
           border-radius: 0 18px 18px 0;
           width: 100%;
+          @media screen and (max-width: 720px) {
+            border-radius: 18px;
+          }
         }
       }
     }
