@@ -11,8 +11,12 @@
       background: map-get($color-map, grey__dark_2);
       .description-container {
         width: 336px;
-        p {
+        .description {
           font-size: small;
+          height: 30px;
+        }
+        .skills {
+          color: rgb(250, 203, 223);
         }
       }
       .project-link:hover {
