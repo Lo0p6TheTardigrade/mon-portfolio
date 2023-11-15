@@ -9,6 +9,12 @@
       border: solid 3px map-get($color-map, grey__dark);
       border-radius: 6px;
       background: map-get($color-map, grey__dark_2);
+      .description-container {
+        width: 336px;
+        p {
+          font-size: small;
+        }
+      }
       .project-link:hover {
         .project-type {
           text-decoration: underline;
