@@ -9,6 +9,9 @@ const Project = () => {
         id="projects">
         <h3 className="title">Mes projets</h3>
       </div>
+      <div className="learn">
+        <p className="learn-title">Projet réalisé dans le cadre de ma formation Développeur Frontend chez Openclassroom</p>
+      </div>
       <div className="projects">
         <div className="article-container">
           <article className="article-item">
@@ -26,6 +29,10 @@ const Project = () => {
                 width={336}
                 height={210}
               />
+              <div className="description-container">
+                <p className="description">Utilisation de SASS et des animations</p>
+                <p className="skills">Compétences SCSS</p>
+              </div>
             </a>
           </article>
         </div>
@@ -45,6 +52,10 @@ const Project = () => {
                 width={336}
                 height={210}
               />
+              <div className="description-container">
+                <p className="description">Premiers pas sur JavaScript avec l'implémentation d'un carousel</p>
+                <p className="skills">Compétences JavaScript</p>
+              </div>
             </a>
           </article>
         </div>
@@ -64,6 +75,10 @@ const Project = () => {
                 width={336}
                 height={210}
               />
+              <div className="description-container">
+                <p className="description">Optimisation du référencement du site d'une photographe</p>
+                <p className="skills">Compétences SEO</p>
+              </div>
             </a>
           </article>
         </div>
@@ -83,6 +98,10 @@ const Project = () => {
                 width={336}
                 height={210}
               />
+              <div className="description-container">
+                <p className="description">Debug d'un site d'évènementiel à l'aide des outils de debug et des tests unitaire</p>
+                <p className="skills">Compétences Debug</p>
+              </div>
             </a>
           </article>
         </div>
@@ -102,6 +121,10 @@ const Project = () => {
                 width={336}
                 height={210}
               />
+              <div className="description-container">
+                <p className="description">Realisation d'une application REACT pour une agence immobilière</p>
+                <p className="skills">Compétences REACT</p>
+              </div>
             </a>
           </article>
         </div>
