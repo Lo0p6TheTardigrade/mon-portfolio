@@ -28,11 +28,15 @@ const Section = () => {
                 src={html5}
                 alt="logo de html5"
                 className="logo-html5 logo"
+                width="51"
+                height="51"
               />
               <img
                 src={css3}
                 alt="logo de css3"
                 className="logo-css3 logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -48,6 +52,8 @@ const Section = () => {
                 src={sass}
                 alt="logo de sass"
                 className="logo-sass logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -63,6 +69,8 @@ const Section = () => {
                 src={javascript}
                 alt="logo de javascript"
                 className="logo-javascript logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -78,6 +86,8 @@ const Section = () => {
                 src={react}
                 alt="logo de react"
                 className="logo-react logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -93,6 +103,8 @@ const Section = () => {
                 src={redux}
                 alt="logo de redux"
                 className="logo-redux logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -108,6 +120,8 @@ const Section = () => {
                 src={seo}
                 alt="logo de seo"
                 className="logo-seo logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">
@@ -123,6 +137,8 @@ const Section = () => {
                 src={github}
                 alt="logo de github"
                 className="logo-github logo"
+                width="51"
+                height="51"
               />
             </div>
             <div className="description-separator-container">

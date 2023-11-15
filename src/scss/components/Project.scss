@@ -1,13 +1,6 @@
 @import '../partial';
 .projects-section {
   @include flex(column, nowrap, initial, center, initial);
-  //   .projects-section-title {
-  //     .title {
-  //       padding: 9px;
-  //       border: solid 3px map-get($color-map, grey__dark);
-  //       border-radius: 18px;
-  //     }
-  //   }
   .projects {
     @include flex(row, wrap, center, initial, 1rem);
     width: 100%;
@@ -16,24 +9,26 @@
       border: solid 3px map-get($color-map, grey__dark);
       border-radius: 6px;
       background: map-get($color-map, grey__dark_2);
+      .project-link:hover {
+        .project-type {
+          text-decoration: underline;
+        }
+        .project-name {
+          color: map-get($color-map, red__pink__identity);
+        }
+      }
       .project-title-box {
         @include flex(row, wrap, initial, initial, initial);
         .project-type {
           @include flex(row, wrap, flex-start, initial, initial);
           @include font-family_Roboto;
           width: 50%;
-          &:hover {
-            text-decoration: underline;
-          }
         }
         .project-name {
           @include flex(row, wrap, flex-end, initial, initial);
           color: rgb(250, 203, 223);
           @include font-family_Braah_One;
           width: 50%;
-          &:hover {
-            color: map-get($color-map, red__pink__identity);
-          }
         }
       }
       .project-preview-image {

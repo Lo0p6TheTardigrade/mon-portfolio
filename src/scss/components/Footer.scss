@@ -16,6 +16,7 @@
         @include flex(column, nowrap, center, center, 9px);
         color: map-get($color-map, grey__dark);
         font-size: smaller;
+        height: 67px;
         .logo-container {
           margin-bottom: 3px;
           .logo {
