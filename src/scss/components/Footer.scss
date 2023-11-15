@@ -3,19 +3,28 @@
   @include flex(row, nowrap, center, center, 1rem);
   margin-top: 42px;
   background: map-get($color-map, grey__light);
-  height: 126px;
+  height: 135px;
   .footer {
     @include flex(column, nowrap, center, center, initial);
     .footer-list {
       @include flex(row, nowrap, center, center, 1rem);
+      margin-top: 9px;
       padding: 9px 36px;
       border-radius: 27px;
       background: map-get($color-map, white__normal);
-      .logo-container {
-        margin-bottom: 3px;
-        .logo {
-          @include width-height(36px, 36px);
-          border-radius: 9px;
+      .link-to {
+        @include flex(column, nowrap, center, center, 9px);
+        color: map-get($color-map, grey__dark);
+        font-size: smaller;
+        .logo-container {
+          margin-bottom: 3px;
+          .logo {
+            @include width-height(36px, 36px);
+            border-radius: 9px;
+          }
+        }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }

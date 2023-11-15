@@ -20,17 +20,20 @@
         @include flex(row, wrap, initial, initial, initial);
         .project-type {
           @include flex(row, wrap, flex-start, initial, initial);
-          text-decoration: underline;
           @include font-family_Roboto;
           width: 50%;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         .project-name {
           @include flex(row, wrap, flex-end, initial, initial);
-          color: map-get($color-map, red__pink__identity);
-          //   color: map-get($color-map, btn_gradient_color);
-          //   color: rgb(250, 203, 223);
+          color: rgb(250, 203, 223);
           @include font-family_Braah_One;
           width: 50%;
+          &:hover {
+            color: map-get($color-map, red__pink__identity);
+          }
         }
       }
       .project-preview-image {

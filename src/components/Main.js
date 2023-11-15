@@ -9,7 +9,7 @@ const Main = () => {
     <div className="main-container">
       <div className="subtitle-container">
         <div className="boxA">
-          <h4 className="subtitle">Christophe développeur frontend</h4>
+          <h1 className="subtitle">Christophe développeur frontend</h1>
           <div className="description">
             <p className="text">Passionné par le web, l'expérience utilisateur et l'accessibilité, je me suis tourné vers le développement web coté client</p>
           </div>
@@ -20,7 +20,7 @@ const Main = () => {
               src={imageProfile}
               alt="profile"
               className="image-profile"
-              width={156}
+              width={150}
               height={200}
             />
           </div>

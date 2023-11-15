@@ -26,6 +26,7 @@
       order: 2;
       @include flex(column, nowrap, initial, center, initial);
       .subtitle {
+        font-size: large;
         @media screen and (max-width: 720px) {
           text-align: center;
         }

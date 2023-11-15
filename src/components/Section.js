@@ -16,7 +16,7 @@ const Section = () => {
         <div
           className="section-title-container"
           id="skills">
-          <h3 className="section-title">Mes compétences</h3>
+          <h2 className="section-title">Mes compétences</h2>
         </div>
         <div className="description-box">
           <article className="description-container">
