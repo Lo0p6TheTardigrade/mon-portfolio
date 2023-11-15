@@ -76,7 +76,7 @@ const Project = () => {
                 height={210}
               />
               <div className="description-container">
-                <p className="description">Optimisation du référencement du site d'une photographe</p>
+                <p className="description">Optimisation du référencement du site d'une photographe.</p>
                 <p className="skills">Compétences SEO</p>
               </div>
             </a>
