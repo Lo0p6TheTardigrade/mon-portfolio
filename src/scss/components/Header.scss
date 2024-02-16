@@ -1,4 +1,29 @@
-@import '../partial';
 .header {
-  @include flex(column, nowrap, initial, center, initial);
+  @include flex(row, nowrap, space-between, center, initial);
+  box-shadow: map-get($box-shadow, shadow__card);
+  border-radius: 9px;
+  background: map-get($color-map, white__normal);
+  .image-profile-container {
+    .image-profile {
+      margin: 9px;
+      @include flex(row, nowrap, center, center, initial);
+      outline: solid 1px map-get($color-map, grey__dark);
+      border: solid 1px map-get($color-map, red__pink__identity);
+      border-radius: 80px;
+      object-fit: cover;
+      height: 70px;
+      width: 70px;
+      box-shadow: map-get($box-shadow, shadow__card);
+      transform: rotateZ(15deg);
+    }
+  }
+  .home-title {
+    @include font-family_SF-Pro;
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    @media screen and (max-width: 720px) {
+      width: 200px;
+    }
+  }
 }

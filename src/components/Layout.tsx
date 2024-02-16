@@ -1,9 +1,9 @@
+// @flow
 import React from 'react';
-import '../scss/components/Layout.scss';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = (props) => {
+const Layout = (props: any) => {
   return (
     <div className="layout-container">
       <Header />

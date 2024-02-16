@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import '../scss/components/Main.scss';
 import Layout from '../components/Layout';
 import Main from '../components/Main';
 

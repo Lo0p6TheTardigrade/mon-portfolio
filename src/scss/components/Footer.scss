@@ -2,30 +2,38 @@
 .footer-container {
   @include flex(row, nowrap, center, center, 1rem);
   margin-top: 42px;
+  border-radius: 6px;
   background: map-get($color-map, grey__light);
-  height: 135px;
+  box-shadow: map-get($box-shadow, shadow__card);
   .footer {
     @include flex(column, nowrap, center, center, initial);
     .footer-list {
       @include flex(row, nowrap, center, center, 1rem);
       margin-top: 9px;
-      padding: 9px 36px;
       border-radius: 27px;
-      background: map-get($color-map, white__normal);
       .link-to {
-        @include flex(column, nowrap, center, center, 9px);
+        @include flex(column, nowrap, center, center, initial);
         color: map-get($color-map, grey__dark);
         font-size: smaller;
         height: 67px;
         .logo-container {
           margin-bottom: 3px;
           .logo {
-            @include width-height(36px, 36px);
-            border-radius: 9px;
+            outline: solid 3px transparent;
+            border: solid 1px transparent;
+            border-radius: 90px;
+            @include width-height(27px, 27px);
           }
         }
         &:hover {
+          color: map-get($color-map, red__pink__identity);
           text-decoration: underline;
+          .logo-container {
+            .logo {
+              outline: solid 3px map-get($color-map, red__pink__identity);
+              border: solid 1px map-get($color-map, white__normal);
+            }
+          }
         }
       }
     }

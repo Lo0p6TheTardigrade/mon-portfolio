@@ -66,6 +66,9 @@ $color-map: (
 /* Shadow Map */
 $box-shadow: (
   shadow__card: 0px 4px 10px rgba(0, 0, 0, 0.25),
+  shadow__card_grey_ANIM: 0px 0px 10px 10px rgba(255, 255, 255, 0.25),
+  shadow__card_red_ANIM: 0px 0px 10px 10px rgba(212, 25, 94, 1),
+  shadow__card_green_ANIM: 0px 0px 10px 10px #99e2d0,
   shadow__card_2: 0px 4px 10px rgba(255, 255, 255, 0.25),
   shadow__card-out: 0px 2px 8px rgba(0, 0, 0, 0.25),
   shadow__menu__card: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1),

@@ -1,0 +1,118 @@
+.roadmap-list-container {
+  @include flex(column, nowrap, center, initial, initial);
+  @include width-height(100%, 100%);
+  background-image: url('../../assets/images/tree.webp');
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  @media screen and (max-width: 1024px) {
+    background-image: none;
+  }
+  .roadmap-list {
+    list-style: none;
+    .learns-skills-container {
+      @include flex(row, nowrap, initial, center, 0.6rem);
+      li {
+        margin: 9px 27px;
+      }
+      .learns-skills-year {
+        margin: 0;
+      }
+      .learns-skills-title-container {
+        @include flex(row-reverse, nowrap, center, center, 0.6rem);
+        .learns-skills-title {
+          @extend.learns-skills-year;
+        }
+      }
+      .learn-list-item {
+        @extend.flex;
+      }
+      .learns-skills-link {
+        @include flex(row, nowrap, center, center, 0.3rem);
+        width: 100%;
+        .learns-skills {
+          @extend.flex;
+        }
+        .text-color {
+          @extend.learns-skills-year;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.displaying-roadmap-block {
+  padding: 27px;
+  @include flex(column, nowrap, center, flex-start, 0.6rem);
+  border-radius: 9px;
+  color: map-get($color-map, white__normal);
+  box-shadow: map-get($box-shadow, shadow__card);
+}
+
+.learns-skills-logo {
+  @include width-height(27px, 27px);
+}
+
+.courses-skills-box {
+  padding: 9px 33px;
+  .courses-skills-container {
+    @include flex(row, nowrap, space-between, center, 0.6rem);
+    width: 100%;
+    .courses-skills-title-container {
+      @extend.courses-skills-container;
+    }
+    .courses-link {
+      @extend.courses-skills-container;
+    }
+  }
+}
+.courses-skills-description-container {
+  padding: 9px;
+  text-align: center;
+  width: 100%;
+  h4 {
+    margin: 0 0 0.6rem;
+  }
+  p {
+    margin: 0.6rem 0 0;
+  }
+}
+
+.flex {
+  @include flex(row, nowrap, center, center, 0.6rem);
+  width: 100%;
+}
+
+.graduate-list-item {
+  margin: 9px 27px;
+  .graduate-skill-content-box {
+    @include flex(row, nowrap, initial, center, 0.6rem);
+    width: 100%;
+    .graduate-skill-content-item {
+      justify-content: center;
+      @extend.graduate-skill-content-box;
+    }
+  }
+  a {
+    @include flex(row, nowrap, space-between, center, 0.6rem);
+  }
+}
+
+.decoration-box {
+  margin: auto;
+  outline: solid 3px map-get($color-map, grey__dark);
+  border: solid 3px map-get($color-map, white__normal);
+  border-radius: 6px;
+  background-color: map-get($color-map, grey__dark);
+  box-shadow: map-get($box-shadow, shadow__card);
+  width: 81%;
+}
+
+.career-title,
+#career-graduated,
+#career-learn,
+#career-incoming {
+  color: map-get($color-map, grey__dark);
+  border-bottom: solid 3px map-get($color-map, grey__dark);
+}

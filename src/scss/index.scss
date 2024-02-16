@@ -1,4 +1,38 @@
 @import './partial';
 * {
   @include font-family_SF-Pro;
+  box-sizing: border-box;
+  transition: 0.18s ease-in-out 0.18s;
+}
+.title-container {
+  margin: 9px 27px 27px 27px;
+  padding: 6px 27px;
+  @include flex(row, nowrap, initial, center, initial);
+  outline: solid 3px map-get($color-map, grey__light);
+  border: solid 3px map-get($color-map, grey__dark);
+  border-radius: 27px;
+  height: 54px;
+}
+
+.title-container {
+  .learn {
+    @include flex(row, nowrap, space-between, center, 0.6rem);
+    height: auto;
+    .learn-title {
+      margin: 0;
+      min-width: 72%;
+    }
+    .icon-container {
+      @include flex(row, nowrap, center, center, initial);
+      outline: solid 3px map-get($color-map, white__normal);
+      border: solid 3px map-get($color-map, grey__dark);
+      border-radius: 18px;
+      box-shadow: map-get($box-shadow, shadow__card) inset;
+      @include width-height(30px, 30px);
+      .roadmap-icon-trigger {
+        @include width-height(24px, 18px);
+        cursor: pointer;
+      }
+    }
+  }
 }

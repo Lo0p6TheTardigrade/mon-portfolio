@@ -1,51 +1,103 @@
 @import '../partial';
 .projects-section {
-  @include flex(column, nowrap, initial, center, initial);
+  padding: 0;
+  @extend .common-class-wrapper;
+  @media screen and (min-width: 675px) {
+    padding: 27px;
+  }
   .projects {
+    padding: 27px 0;
     @include flex(row, wrap, center, initial, 1rem);
+    background-color: map-get($color-map, grey__light);
+    background-image: url('../../assets/images/tree.webp');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+      background-image: none;
+    }
     .article-container {
+      @include flex(column, nowrap, initial, initial, initial);
       padding: 9px;
       border: solid 3px map-get($color-map, grey__dark);
       border-radius: 6px;
       background: map-get($color-map, grey__dark_2);
-      .description-container {
-        width: 336px;
-        .description {
-          font-size: small;
-          height: 30px;
-        }
-        .skills {
-          color: rgb(250, 203, 223);
-        }
+      width: 81%;
+      box-shadow: map-get($box-shadow, shadow__card);
+      @media screen and (min-width: 675px) {
+        width: 270px;
       }
-      .project-link:hover {
-        .project-type {
-          text-decoration: underline;
-        }
-        .project-name {
-          color: map-get($color-map, red__pink__identity);
-        }
+      @media screen and (min-width: 768px) {
+        width: 333px;
       }
-      .project-title-box {
-        @include flex(row, wrap, initial, initial, initial);
-        .project-type {
-          @include flex(row, wrap, flex-start, initial, initial);
-          @include font-family_Roboto;
-          width: 50%;
+      .article-item {
+        @include flex(row, nowrap, initial, initial, initial);
+        .description-container {
+          padding: 0 3px 6px 3px;
+          margin-top: 12px;
+          @include flex(row, nowrap, space-between, center, 1rem);
+          height: 93px;
+          width: 100%;
+          cursor: default;
+          .description {
+            @include flex(row, nowrap, flex-start, initial, initial);
+            font-size: small;
+          }
+          .skills {
+            @include flex(row, nowrap, flex-end, initial, initial);
+            color: rgb(250, 203, 223);
+            text-align: right;
+          }
+          .description,
+          .skills {
+            margin: 0;
+          }
         }
-        .project-name {
-          @include flex(row, wrap, flex-end, initial, initial);
-          color: rgb(250, 203, 223);
-          @include font-family_Braah_One;
-          width: 50%;
+        .project-link:hover {
+          border: solid 3px map-get($color-map, green__light);
+          .project-type {
+            text-decoration: underline;
+          }
+          .project-name {
+            color: map-get($color-map, red__pink__identity);
+          }
         }
-      }
-      .project-preview-image {
-        border-radius: 6px;
-      }
-      &:hover {
-        border: solid 3px map-get($color-map, green__light);
+        .project-link {
+          padding: 0 9px;
+          @include flex(row, wrap, initial, initial, initial);
+          border: solid 3px transparent;
+          border-radius: 9px;
+          .project-title-box {
+            padding: 0 3px 6px 3px;
+            @include flex(row, wrap, space-between, center, initial);
+            height: 45px;
+            width: 100%;
+            .project-type {
+              @include flex(row, wrap, flex-start, initial, initial);
+              @include font-family_Roboto;
+            }
+            .project-name {
+              @include flex(row, wrap, flex-end, initial, initial);
+              color: rgb(250, 203, 223);
+              @include font-family_Braah_One;
+            }
+            .project-name,
+            .project-type {
+              margin: 0;
+              width: 50%;
+            }
+          }
+          .project-preview-image {
+            padding: 9px;
+            @include flex(column, nowrap, initial, initial, initial);
+            outline: solid 2px map-get($color-map, white__normal);
+            border-radius: 6px;
+            object-fit: fill;
+            height: 150px;
+            width: 100%;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,18 @@
+.nav-container {
+  @include flex(row, nowrap, center, center, initial);
+  padding-right: 1rem;
+  width: fit-content;
+  .dot-menu-display-container {
+    @include flex(row, nowrap, center, center, initial);
+    outline: solid 3px map-get($color-map, grey__dark);
+    border-radius: 180px;
+    height: 27px;
+    width: 27px;
+    box-shadow: map-get($box-shadow, shadow__card);
+    .dot-menu-display {
+      border: solid 3px transparent;
+      border-radius: 180px;
+      animation: rotate 2s ease-in-out infinite both;
+    }
+  }
+}

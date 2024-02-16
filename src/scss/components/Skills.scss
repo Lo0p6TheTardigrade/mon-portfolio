@@ -1,0 +1,103 @@
+.section-container {
+  padding: 0;
+  @include font-family_SF-Pro;
+  @extend .common-class-wrapper;
+  width: 100%;
+  @media screen and (min-width: 675px) {
+    padding: 27px;
+  }
+  .section {
+    padding: 27px;
+    background: map-get($color-map, grey__light);
+    height: auto;
+    background-image: url('../../assets/images/tree.webp');
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    @media screen and (max-width: 1024px) {
+      background-image: none;
+    }
+    .section-title-container {
+      @include flex(column, nowrap, center, center, initial);
+      @media screen and (min-width: 720px) {
+        font-size: small;
+      }
+      .section-title {
+        margin-top: 6px;
+        padding: 18px;
+        border-radius: 27px;
+        background-color: map-get($color-map, white__normal);
+      }
+    }
+    .description-box {
+      @include flex(row, wrap, center, center, 1.8rem);
+      .description-container {
+        padding: 6px;
+        @include flex(column, nowrap, center, center, initial);
+        border-radius: 9px;
+        box-shadow: map-get($box-shadow, shadow__card);
+        background-color: map-get($color-map, white__normal);
+        outline: solid 2px transparent;
+        width: 90%;
+        cursor: default;
+        &:hover {
+          outline: solid 2px map-get($color-map, red__pink__identity);
+        }
+        @media screen and (min-width: 675px) {
+          width: 250px;
+        }
+        @media screen and (min-width: 720px) {
+          width: 218px;
+        }
+        .description-item-container {
+          height: 175px;
+          @media screen and (min-width: 720px) {
+            height: 153px;
+          }
+          .item-title {
+            @include flex(row, nowrap, space-between, center, initial);
+            font-size: 19px;
+            text-align: center;
+            font-weight: bold;
+            @media screen and (min-width: 720px) {
+              font-size: 16px;
+            }
+          }
+          .item-text {
+            font-size: 15px;
+            @media screen and (min-width: 720px) {
+              font-size: 13px;
+            }
+          }
+          .iframe-content {
+            position: relative;
+          }
+          .description-item {
+            margin-top: 3px;
+            padding: 6px;
+            @include border__solid(1px, map-get($color-map, grey__light));
+            border-radius: 9px;
+          }
+        }
+        .logo-container {
+          margin-bottom: 3px;
+          .logo {
+            @include width-height(51px, 51px);
+            border-radius: 9px;
+          }
+        }
+        .description-separator-container {
+          @include flex(row, nowrap, center, center, initial);
+          @include width-height(100%, inherit);
+          .description-separator {
+            @include border__solid(1px, map-get($color-map, grey__light));
+            @include width-height(100%, inherit);
+          }
+        }
+        .wiki-link {
+          color: map-get($color-map, grey__dark);
+        }
+      }
+    }
+  }
+}

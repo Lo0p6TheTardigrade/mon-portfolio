@@ -1,0 +1,69 @@
+.main-tab-container {
+  margin-top: 27px;
+  padding: 0 27px;
+  @include flex(column, nowrap, center, flex-end, initial);
+  border-top: solid 27px map-get($color-map, grey__dark);
+  height: 90px;
+  width: 100%;
+  .main-tab-box {
+    @include flex(row, nowrap, space-between, center, initial);
+    width: 100%;
+  }
+}
+.tab {
+  padding: 9px 18px;
+  outline: solid 3px map-get($color-map, white__normal);
+  border: solid 2px transparent;
+  border-radius: 9px;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+  box-shadow: map-get($box-shadow, shadow__card);
+}
+.tab-link-top {
+  margin: 0;
+  padding: 0;
+  @include flex(row, nowrap, center, center, initial);
+  border-radius: 90px;
+  background-color: map-get($color-map, white__normal);
+  color: map-get($color-map, grey__dark);
+  position: fixed;
+  right: 27px;
+  bottom: 27px;
+  @include width-height(63px, 63px);
+  box-shadow: map-get($box-shadow, shadow__card);
+  opacity: 0.3;
+  z-index: 1;
+  transition: 0.3s ease-in-out 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.tab-box {
+  @include flex(row, nowrap, space-between, initial, 2rem);
+  border-radius: 90px;
+}
+.main-tab-content {
+  border-radius: 0;
+}
+
+.tab-skills,
+.tab-projects {
+  padding: 0;
+  @include flex(row, nowrap, center, center, 2rem);
+  border-radius: inherit;
+  border: solid 2px map-get($color-map, grey__dark);
+  @include width-height(1.6rem, 1.6rem);
+  transition: 0.3s ease-in-out 0.3s;
+  transform: rotateZ(-180deg);
+  animation: shadowAnimation 3s ease-in-out 3s both infinite;
+  opacity: 1;
+  &:hover {
+    animation: none;
+    outline: solid 3px map-get($color-map, green__light);
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
