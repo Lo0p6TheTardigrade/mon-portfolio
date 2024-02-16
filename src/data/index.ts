@@ -270,7 +270,7 @@ const roadmap = [
   {
     name: 'Python',
     type: 'graduation',
-    description: 'Formation Développeur Backend',
+    description: 'Formation Python',
     link: 'https://www.udemy.com/courses/search/?q=python',
     skill: 'Python',
     id: 2,
