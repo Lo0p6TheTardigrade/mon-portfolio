@@ -56,170 +56,187 @@ const Career = () => {
           id="career-graduated-container"
           class="career-graduated-skill-title-container career-title-container"
         />
-        {window1 &&
-          Custom_Data_Array_Obj.skills.map((skill: any, index: any) => {
-            return (
-              <div
-                key={index}
-                className="decoration-box">
-                <li className={`${skill.class}`}>
-                  <a
-                    href={skill.link}
-                    target="blank">
-                    <Box
-                      tag={'div'}
-                      content={
-                        <>
-                          <Box
-                            tag={'p'}
-                            content={`${skill.year}: `}
-                          />
-                          <Box
-                            tag={'p'}
-                            content={`Formation ${skill.name}`}
-                            class={'graduate-skill-content-item'}
-                          />
-                        </>
-                      }
-                      class="graduate-skill-content-box"
-                    />
-                    <span className={'text-color'}>{`${skill.school}`}</span>
-                  </a>
-                </li>
-              </div>
-            );
-          })}
+        <div className="skill-map-box">
+          {window1 &&
+            Custom_Data_Array_Obj.skills.map((skill: any, index: any) => {
+              return (
+                <div
+                  key={index}
+                  className="decoration-box">
+                  <li className={`${skill.class}`}>
+                    <a
+                      href={skill.link}
+                      target="blank">
+                      <Box
+                        tag={'div'}
+                        content={
+                          <>
+                            <Box
+                              tag={'p'}
+                              content={`${skill.year}: `}
+                            />
+                            <Box
+                              tag={'p'}
+                              content={`Formation ${skill.name}`}
+                              class={'graduate-skill-content-item'}
+                            />
+                          </>
+                        }
+                        class="graduate-skill-content-box"
+                      />
+                      <span className={'text-color'}>{`${skill.school}`}</span>
+                    </a>
+                  </li>
+                </div>
+              );
+            })}
+        </div>
         <Box
           tag={'h3'}
           content={`En cours ${Custom_Date_Obj.date.now.year}:`}
           id="career-learn"
           class="learns-skills-status career-title"
         />
-        {window2 &&
-          Custom_Data_Array_Obj.learns.map((learn: any, index: any) => {
-            return (
-              <Box
-                key={index}
-                tag={'div'}
-                content={
-                  <>
-                    <li className={learn.class}>
-                      <Box
-                        tag={'p'}
-                        content={learn.year + ':'}
-                        class="learns-skills-year"
-                      />
-                      <Box
-                        tag={'div'}
-                        content={
-                          <>
-                            <Box
-                              tag={'h3'}
-                              content={learn.name}
-                              class="learns-skills-title"
-                            />
-                            <img
-                              src={learn.image.src}
-                              alt={learn.image.alt}
-                              className={learn.image.class}
-                            />
-                          </>
-                        }
-                        class="learns-skills-title-container"
-                      />
-                      <a
-                        href={`${learn.link}`}
-                        target="blank"
-                        className="learns-skills-link">
+        <div className="learn-map-box">
+          {window2 &&
+            Custom_Data_Array_Obj.learns.map((learn: any, index: any) => {
+              return (
+                <Box
+                  key={index}
+                  tag={'div'}
+                  content={
+                    <>
+                      <li className={learn.class}>
                         <Box
                           tag={'p'}
-                          content={`${learn.skill} ${learn.description} `}
-                          class="learns-skills"
+                          content={learn.year + ':'}
+                          class="learns-skills-year"
                         />
                         <Box
-                          tag={'p'}
-                          content={`${learn.school}`}
-                          class="text-color"
+                          tag={'div'}
+                          content={
+                            <>
+                              <Box
+                                tag={'h3'}
+                                content={learn.name}
+                                class="learns-skills-title"
+                              />
+                              <img
+                                src={learn.image.src}
+                                alt={learn.image.alt}
+                                className={learn.image.class}
+                              />
+                            </>
+                          }
+                          class="learns-skills-title-container"
                         />
-                      </a>
-                    </li>
-                  </>
-                }
-                class="learns-skills-container decoration-box"
-              />
-            );
-          })}
+                        <a
+                          href={`${learn.link}`}
+                          target="blank"
+                          className="learns-skills-link">
+                          <Box
+                            tag={'p'}
+                            content={`${learn.skill} ${learn.description} `}
+                            class="learns-skills"
+                          />
+                          <Box
+                            tag={'p'}
+                            content={`${learn.school}`}
+                            class="text-color"
+                          />
+                        </a>
+                      </li>
+                    </>
+                  }
+                  class="learns-skills-container decoration-box"
+                />
+              );
+            })}
+        </div>
         <Box
           tag={'h3'}
           content={`À venir ${Custom_Date_Obj.date.now.year + 1}:`}
           id="career-incoming"
           class="incoming-skills-status career-title"
         />
-        {window3 &&
-          Custom_Data_Array_Obj.roadmap.map((map: any, index: any) => {
-            return (
-              <Box
-                key={index}
-                tag={'div'}
-                content={
-                  <Box
-                    key={index}
-                    tag={'li'}
-                    content={
-                      <>
-                        <Box
-                          tag={'div'}
-                          content={
-                            <Box
-                              tag={'p'}
-                              content={Custom_Date_Obj.date.now.year + 1 + ':'}
-                              class="courses-skills-year"
-                            />
-                          }
-                          class="courses-skills-year-container"
-                        />
-                        <Box
-                          tag={'div'}
-                          content={
-                            <a
-                              href={`${map.link}`}
-                              target="blank"
-                              className="courses-link">
-                              <Box
-                                tag={'div'}
-                                content={
-                                  <>
-                                    <Box
-                                      tag={'h4'}
-                                      content={`${map.description} `}
-                                      class="courses-skills-description"
-                                    />
-                                    <Box
-                                      tag={'p'}
-                                      content={`${map.skill}`}
-                                    />
-                                  </>
-                                }
-                                class="courses-skills-description-container"
-                              />
+        <div className="roadmap-map-box">
+          {window3 &&
+            Custom_Data_Array_Obj.roadmap.map((map: any, index: any) => {
+              return (
+                <Box
+                  key={index}
+                  tag={'div'}
+                  content={
+                    <Box
+                      key={index}
+                      tag={'li'}
+                      content={
+                        <>
+                          <Box
+                            tag={'div'}
+                            content={
                               <Box
                                 tag={'p'}
-                                content={`${map.school}`}
-                                class="text-color"
+                                content={Custom_Date_Obj.date.now.year + 1 + ':'}
+                                class="courses-skills-year"
                               />
-                            </a>
-                          }
-                          class="courses-skills-title-container"
-                        />
-                      </>
-                    }
-                    class="courses-skills-container"
-                  />
-                }
-                class="courses-skills-box decoration-box"
-              />
-            );
-          })}
+                            }
+                            class="courses-skills-year-container"
+                          />
+                          <Box
+                            tag={'div'}
+                            content={
+                              <a
+                                href={`${map.link}`}
+                                target="blank"
+                                className="courses-link">
+                                <Box
+                                  tag={'div'}
+                                  content={
+                                    <img
+                                      src={map.image.src}
+                                      alt={map.image.alt}
+                                      className={`learns-skills-logo ${map.image.class}`}
+                                    />
+                                  }
+                                  class={map.class}
+                                />
+                                <Box
+                                  tag={'div'}
+                                  content={
+                                    <>
+                                      <Box
+                                        tag={'h4'}
+                                        content={`${map.description} `}
+                                        class="courses-skills-description"
+                                      />
+                                      <Box
+                                        tag={'p'}
+                                        content={`${map.skill}`}
+                                      />
+                                    </>
+                                  }
+                                  class="courses-skills-description-container"
+                                />
+                                <Box
+                                  tag={'p'}
+                                  content={`${map.school}`}
+                                  class="text-color"
+                                />
+                              </a>
+                            }
+                            class="courses-skills-title-container"
+                          />
+                        </>
+                      }
+                      class="courses-skills-container"
+                    />
+                  }
+                  class="courses-skills-box decoration-box"
+                />
+              );
+            })}
+        </div>
       </ul>
     </div>
   );

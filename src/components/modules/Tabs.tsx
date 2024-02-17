@@ -76,7 +76,6 @@ const Tabs = (propertyObj: {
             className={`${propertyObj.tab.href.class1}`}
             href={propertyObj.tab.href.link1}>
             <span className="">{propertyObj.tab.name.name3}</span>
-            <span className="">{propertyObj.tab.content.value.content3}</span>
           </a>
         </nav>
       </div>

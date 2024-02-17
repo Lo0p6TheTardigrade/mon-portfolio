@@ -6,8 +6,20 @@
   height: 90px;
   width: 100%;
   .main-tab-box {
-    @include flex(row, nowrap, space-between, center, initial);
+    @include flex(row, nowrap, initial, center, 0.6rem);
     width: 100%;
+    .tab-box {
+      padding: 0 9px;
+      border-radius: 90px;
+      @include flex(row, nowrap, space-between, initial, 2rem);
+    }
+    .main-tab-content {
+      border-radius: 0;
+      width: 100%;
+    }
+    .main-tab-item {
+      width: auto;
+    }
   }
 }
 .tab {
@@ -38,13 +50,6 @@
   &:hover {
     opacity: 1;
   }
-}
-.tab-box {
-  @include flex(row, nowrap, space-between, initial, 2rem);
-  border-radius: 90px;
-}
-.main-tab-content {
-  border-radius: 0;
 }
 
 .tab-skills,

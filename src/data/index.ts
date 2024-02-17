@@ -255,13 +255,23 @@ const learns = [
   },
 ];
 
+const swagger = require('../assets/images/swagger.webp');
+const nodejs = require('../assets/images/nodeJS.webp');
+const expressCircle = require('../assets/images/expressCircle.webp');
+const expressSquare = require('../assets/images/expressSquare.webp');
+const mongodb = require('../assets/images/mongoDB.webp');
+const python = require('../assets/images/python.webp');
+const django = require('../assets/images/django.webp');
+const mongodb_nodejs_express = require('../assets/images/mongodb_nodejs_express.webp');
+
 const roadmap = [
   {
     name: 'Développeur Backend',
     type: 'graduation',
     description: 'Formation Développeur Backend',
     link: 'https://www.udemy.com/courses/search/?q=%20developpeur%20backend',
-    skill: 'Compétences NodeJS, MongoDB, Mongoose ect...',
+    image: { src: nodejs, class: 'roadmap-course', alt: 'logo des langages de la formation API REST, NodeJS, Express, MongoDB, Mongoose ect...' },
+    skill: 'Compétences API REST, NodeJS, Express, MongoDB, Mongoose ect...',
     id: 2,
     class: 'graduate-list-item',
     school: 'Udemy',
@@ -272,8 +282,21 @@ const roadmap = [
     type: 'graduation',
     description: 'Formation Python',
     link: 'https://www.udemy.com/courses/search/?q=python',
+    image: { src: python, class: 'roadmap-course', alt: 'logo de python' },
     skill: 'Python',
     id: 2,
+    class: 'graduate-list-item',
+    school: 'Udemy',
+    year: `${Custom_Date_Obj.date.now.year}`,
+  },
+  {
+    name: 'Django',
+    type: 'graduation',
+    description: 'Formation Django',
+    link: 'https://www.udemy.com/courses/search/?q=django',
+    image: { src: django, class: 'roadmap-course', alt: 'logo de django' },
+    skill: 'Django',
+    id: 3,
     class: 'graduate-list-item',
     school: 'Udemy',
     year: `${Custom_Date_Obj.date.now.year}`,

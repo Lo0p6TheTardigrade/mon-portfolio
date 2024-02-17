@@ -12,11 +12,13 @@
     list-style: none;
     .learns-skills-container {
       @include flex(row, nowrap, initial, center, 0.6rem);
+      .learns-skills-year,
+      p,
+      h3 {
+        margin: 0;
+      }
       li {
         margin: 9px 27px;
-      }
-      .learns-skills-year {
-        margin: 0;
       }
       .learns-skills-title-container {
         @include flex(row-reverse, nowrap, center, center, 0.6rem);
@@ -28,10 +30,17 @@
         @extend.flex;
       }
       .learns-skills-link {
-        @include flex(row, nowrap, center, center, 0.3rem);
+        @include flex(column, nowrap, initial, center, 0.6rem);
+        @media screen and (min-width: 675px) {
+          flex-direction: row;
+        }
         width: 100%;
         .learns-skills {
           @extend.flex;
+          text-align: center;
+          @media screen and (min-width: 675px) {
+            text-align: right;
+          }
         }
         .text-color {
           @extend.learns-skills-year;
@@ -44,7 +53,8 @@
 
 .displaying-roadmap-block {
   padding: 27px;
-  @include flex(column, nowrap, center, flex-start, 0.6rem);
+  @include flex(column, wrap, center, flex-start, 0.6rem);
+  align-content: center;
   border-radius: 9px;
   color: map-get($color-map, white__normal);
   box-shadow: map-get($box-shadow, shadow__card);
@@ -55,20 +65,36 @@
 }
 
 .courses-skills-box {
-  padding: 9px 33px;
+  p {
+    margin: 0;
+  }
   .courses-skills-container {
-    @include flex(row, nowrap, space-between, center, 0.6rem);
-    width: 100%;
+    margin: 9px 27px;
+    @include flex(column, nowrap, initial, center, 0.6rem);
+    width: auto;
+    @media screen and (min-width: 675px) {
+      flex-direction: row;
+    }
     .courses-skills-title-container {
-      @extend.courses-skills-container;
+      @include flex(column, nowrap, initial, center, initial);
+      @media screen and (min-width: 675px) {
+        width: 100%;
+        flex-direction: row;
+      }
     }
     .courses-link {
-      @extend.courses-skills-container;
+      @include flex(column, nowrap, initial, center, 0.6rem);
+      width: 100%;
+      @media screen and (min-width: 675px) {
+        flex-direction: row;
+      }
     }
   }
 }
 .courses-skills-description-container {
-  padding: 9px;
+  //   padding: 9px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 100%;
   h4 {
@@ -80,33 +106,46 @@
 }
 
 .flex {
-  @include flex(row, nowrap, center, center, 0.6rem);
+  //   @include flex(row, nowrap, center, center, 0.6rem);
   width: 100%;
+  @include flex(column, nowrap, initial, center, 0.6rem);
+  @media screen and (min-width: 675px) {
+    flex-direction: row;
+  }
 }
 
 .graduate-list-item {
   margin: 9px 27px;
+  p {
+    margin: 0 0 0.3rem 0;
+  }
   .graduate-skill-content-box {
-    @include flex(row, nowrap, initial, center, 0.6rem);
+    // @include flex(row, nowrap, initial, center, 0.6rem);
     width: 100%;
+    @include flex(column, nowrap, initial, center, 0.6rem);
+    @media screen and (min-width: 675px) {
+      flex-direction: row;
+    }
     .graduate-skill-content-item {
-      justify-content: center;
+      text-align: center;
       @extend.graduate-skill-content-box;
     }
   }
   a {
-    @include flex(row, nowrap, space-between, center, 0.6rem);
+    @include flex(column, nowrap, initial, center, 0.6rem);
+    @media screen and (min-width: 675px) {
+      flex-direction: row;
+    }
   }
 }
 
 .decoration-box {
   margin: auto;
-  outline: solid 3px map-get($color-map, grey__dark);
-  border: solid 3px map-get($color-map, white__normal);
+  padding: 18px 0;
   border-radius: 6px;
   background-color: map-get($color-map, grey__dark);
   box-shadow: map-get($box-shadow, shadow__card);
-  width: 81%;
+  width: 98%;
 }
 
 .career-title,
@@ -115,4 +154,20 @@
 #career-incoming {
   color: map-get($color-map, grey__dark);
   border-bottom: solid 3px map-get($color-map, grey__dark);
+}
+
+.skill-map-box,
+.learn-map-box,
+.roadmap-map-box {
+  padding: 18px 9px;
+  outline: solid 3px map-get($color-map, grey__dark);
+  border: solid 3px map-get($color-map, white__normal);
+  border-radius: 6px;
+  @include flex(column, nowrap, initial, center, 1.8rem);
+  //   background-color: map-get($color-map, grey__dark);
+  box-shadow: map-get($box-shadow, shadow__card);
+  width: 90%;
+  //   width: 100%;
+  @media screen and (min-width: 676px) {
+  }
 }

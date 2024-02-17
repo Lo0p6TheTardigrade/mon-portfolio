@@ -11,6 +11,10 @@
       @include flex(row, nowrap, center, center, 1rem);
       margin-top: 9px;
       border-radius: 27px;
+      border: solid 3px;
+      padding: 3px 18px;
+      background: map-get($color-map, white__normal);
+      box-shadow: map-get($box-shadow, shadow__menu__card) inset;
       .link-to {
         @include flex(column, nowrap, center, center, initial);
         color: map-get($color-map, grey__dark);

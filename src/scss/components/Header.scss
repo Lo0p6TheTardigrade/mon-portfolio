@@ -22,8 +22,8 @@
     font-size: x-large;
     text-align: center;
     width: 100%;
-    @media screen and (max-width: 720px) {
-      width: 200px;
+    @media screen and (min-width: 720px) {
+      // width: 200px;
     }
   }
 }

@@ -11,13 +11,13 @@
   outline: solid 3px map-get($color-map, grey__light);
   border: solid 3px map-get($color-map, grey__dark);
   border-radius: 27px;
-  height: 54px;
+  height: auto;
 }
 
 .title-container {
   .learn {
     @include flex(row, nowrap, space-between, center, 0.6rem);
-    height: auto;
+    // height: auto;
     .learn-title {
       margin: 0;
       min-width: 72%;
