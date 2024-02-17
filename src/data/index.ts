@@ -255,14 +255,9 @@ const learns = [
   },
 ];
 
-const swagger = require('../assets/images/swagger.webp');
 const nodejs = require('../assets/images/nodeJS.webp');
-const expressCircle = require('../assets/images/expressCircle.webp');
-const expressSquare = require('../assets/images/expressSquare.webp');
-const mongodb = require('../assets/images/mongoDB.webp');
 const python = require('../assets/images/python.webp');
 const django = require('../assets/images/django.webp');
-const mongodb_nodejs_express = require('../assets/images/mongodb_nodejs_express.webp');
 
 const roadmap = [
   {
