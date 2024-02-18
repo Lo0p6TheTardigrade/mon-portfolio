@@ -1,0 +1,45 @@
+.error-container {
+  @include flex(column, nowrap, center, center, 2rem);
+  .error-title-container {
+    @extend.error-padding-container;
+    @include flex(column, nowrap, center, center, initial);
+    .error-title {
+      font-size: 33px;
+      @extend.error-common;
+    }
+    .error-info-status-number {
+      font-size: 42px;
+      @extend.error-common;
+    }
+  }
+  .error-info-container {
+    @extend.error-padding-container;
+    outline: solid 3px map-get($color-map, white__normal);
+    border: solid 3px map-get($color-map, grey__dark);
+    border-radius: 33px;
+    @include flex(column, nowrap, center, center, 2rem);
+    box-shadow: map-get($box-shadow, shadow__card) inset;
+    height: 231px;
+    width: 42%;
+    .error-info-box {
+      .error-info {
+        margin: 0;
+      }
+    }
+  }
+  .error-link-home-container {
+    @extend.error-padding-container;
+    .error-link-home {
+      color: map-get($color-map, grey__dark);
+    }
+  }
+}
+
+.error-common {
+  color: map-get($color-map, red__pink__identity);
+  margin: 18px 0 0 0;
+}
+
+.error-padding-container {
+  padding: 6px 18px;
+}

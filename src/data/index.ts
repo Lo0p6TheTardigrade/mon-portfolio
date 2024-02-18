@@ -172,7 +172,7 @@ const projects = [
     type: 'REACT:',
     description: 'Utilisation de SASS et des animations',
     skill: 'Compétences REACT',
-    link: 'pc-web-kasa.netlify.app"',
+    link: 'https://pc-web-kasa.netlify.app',
     image: Kasa,
     id: 5,
     alt: 'kasa preview',
