@@ -34,11 +34,36 @@
     transform: rotate(720deg);
   }
 }
+@keyframes rotate_Y {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
 @keyframes rotate_180 {
   0% {
     transform: rotateZ(0deg);
   }
   100% {
     transform: rotateZ(180deg);
+  }
+}
+@keyframes rotate_90_reverse {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+  100% {
+    transform: rotateZ(90deg);
+  }
+}
+@keyframes translate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

@@ -4,6 +4,17 @@
   border-radius: 9px;
   background: map-get($color-map, white__normal);
   .image-profile-container {
+    transition: 1s ease-in-out both;
+    &:hover {
+      animation: rotate_Y 1s ease-in-out both;
+      a {
+        color: map-get($color-map, grey__dark);
+        animation: opacityAnimation 1s ease-in-out both;
+      }
+      p {
+        transform: rotateY(-180deg);
+      }
+    }
     .image-profile {
       margin: 9px;
       @include flex(row, nowrap, center, center, initial);
@@ -22,8 +33,5 @@
     font-size: x-large;
     text-align: center;
     width: 100%;
-    @media screen and (min-width: 720px) {
-      // width: 200px;
-    }
   }
 }

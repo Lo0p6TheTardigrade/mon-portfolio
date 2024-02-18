@@ -1,0 +1,17 @@
+.certificate-page-container {
+  @include flex(column, nowrap, center, center, 2rem);
+  .btn-back-to-home-container {
+    @include flex(row, nowrap, center, initial, initial);
+    .btn-back-to-home {
+      padding: 9px;
+      outline: solid 3px map-get($color-map, white__normal);
+      border: solid 3px map-get($color-map, grey__dark);
+      border-radius: 9px;
+      color: map-get($color-map, grey__dark);
+      box-shadow: map-get($box-shadow, shadow__card);
+      &:hover {
+        outline: solid 3px map-get($color-map, red__pink__identity);
+      }
+    }
+  }
+}

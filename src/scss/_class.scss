@@ -1,6 +1,9 @@
 .rotate-animate {
   animation: rotate_180 0.3s ease-in-out both;
 }
+.rotate-animate-reverse {
+  animation: rotate_90_reverse 0.3s ease-in-out both;
+}
 
 .iframe-display {
   @include flex(column, nowrap, initial, initial, initial);
@@ -40,4 +43,19 @@
 }
 .animate-action2 {
   animation: rotate 2s ease-in-out both;
+}
+
+.animate-translate {
+  animation: translate 2s ease-in-out both;
+}
+
+.animate-opacity {
+  animation: opacityAnimation 1s ease-in-out both;
+}
+
+.box {
+  outline: solid 3px map-get($color-map, white__normal);
+  border: solid 3px map-get($color-map, grey__dark);
+  border-radius: 33px;
+  box-shadow: map-get($box-shadow, shadow__card);
 }

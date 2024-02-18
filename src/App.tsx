@@ -1,6 +1,7 @@
 // @flow
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Certificate from './pages/Certificate';
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
           <Route
             path="/"
             element={<Home />}
+          />
+          <Route
+            path="/certificate"
+            element={<Certificate />}
           />
         </Routes>
       </BrowserRouter>

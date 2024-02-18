@@ -1,0 +1,47 @@
+.proof-container {
+  @include flex(column, nowrap, center, center, initial);
+  width: 100%;
+  .btn-file-switcher-container {
+    @include flex(row, nowrap, center, center, initial);
+    height: 33px;
+    width: 33px;
+    .btn-file-switcher {
+      border-radius: 33px;
+      transform: rotateZ(180deg);
+      height: 27px;
+      width: 27px;
+    }
+  }
+  .proof-file-container {
+    @include flex(row, nowrap, center, center, 1rem);
+    height: 100%;
+    width: 100%;
+    .file-box {
+      width: 100%;
+      .title-file-container {
+        padding: 9px;
+        @include flex(row, nowrap, space-between, center, 1rem);
+        .title-file-container-right-box {
+          padding: 0 9px;
+          @include flex(row, nowrap, space-between, center, 1rem);
+          cursor: pointer;
+          height: 45px;
+          &:hover {
+            color: orange;
+            .btn-file-switcher-container {
+              outline: solid 3px orange;
+              .btn-file-switcher {
+                background-color: orange;
+              }
+            }
+          }
+        }
+      }
+      .proof-file {
+        @include flex(row, nowrap, center, center, 1rem);
+        height: 633px;
+        width: 100%;
+      }
+    }
+  }
+}
