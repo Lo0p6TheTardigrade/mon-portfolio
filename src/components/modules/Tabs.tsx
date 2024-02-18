@@ -59,18 +59,32 @@ const Tabs = (propertyObj: {
         <div className="main-tab-content tab-box">{handleHeader2Section()}</div>
         <nav className="main-tab-item tab-box">
           {propertyObj.state.basic && (
-            <span
-              className={`tab-item tab ${propertyObj.tab.name.class1}`}
-              onClick={propertyObj.tab.function.onclicked1}>
-              {propertyObj.tab.image.file.image1}
-            </span>
+            <>
+              <div
+                className="click-text-button"
+                onClick={propertyObj.tab.function.onclicked1}>
+                {propertyObj.tab.content.value.content3}
+              </div>
+              <span
+                className={`tab-item tab ${propertyObj.tab.name.class1}`}
+                onClick={propertyObj.tab.function.onclicked1}>
+                {propertyObj.tab.image.file.image1}
+              </span>
+            </>
           )}
           {!propertyObj.state.basic && (
-            <span
-              className={`tab-item tab ${propertyObj.tab.name.class2}`}
-              onClick={propertyObj.tab.function.onclicked2}>
-              {propertyObj.tab.image.file.image1}
-            </span>
+            <>
+              <div
+                className="click-text-button"
+                onClick={propertyObj.tab.function.onclicked2}>
+                {propertyObj.tab.content.value.content3}
+              </div>
+              <span
+                className={`tab-item tab ${propertyObj.tab.name.class2}`}
+                onClick={propertyObj.tab.function.onclicked2}>
+                {propertyObj.tab.image.file.image1}
+              </span>
+            </>
           )}
           <a
             className={`${propertyObj.tab.href.class1}`}

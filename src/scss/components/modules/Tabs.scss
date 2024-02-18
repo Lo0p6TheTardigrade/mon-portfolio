@@ -8,10 +8,18 @@
   .main-tab-box {
     @include flex(row, nowrap, initial, center, 0.6rem);
     width: 100%;
+    .click-text-button {
+      display: none;
+      cursor: pointer;
+      @media screen and (min-width: 675px) {
+        @include flex(row, nowrap, center, center, initial);
+        width: 120px;
+      }
+    }
     .tab-box {
       padding: 0 9px;
       border-radius: 90px;
-      @include flex(row, nowrap, space-between, initial, 2rem);
+      @include flex(row, nowrap, space-between, initial, initial);
     }
     .main-tab-content {
       border-radius: 0;
@@ -63,9 +71,16 @@
   transform: rotateZ(-180deg);
   animation: shadowAnimation 3s ease-in-out 3s both infinite;
   opacity: 1;
+  outline: solid 3px transparent;
   &:hover {
     animation: none;
-    outline: solid 3px map-get($color-map, green__light);
+    outline: solid 3px map-get($color-map, grey__dark);
+    border: solid 2px transparent;
+    svg {
+      color: black;
+      background-color: orange;
+      border-radius: 33px;
+    }
   }
   svg {
     height: 100%;

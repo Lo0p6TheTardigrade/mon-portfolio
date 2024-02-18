@@ -88,7 +88,7 @@ const Main = () => {
             value: {
               content1: 'Mes projets',
               content2: 'Mes compétences',
-              content3: null,
+              content3: 'Cliquez-moi !',
             },
           },
           function: {
