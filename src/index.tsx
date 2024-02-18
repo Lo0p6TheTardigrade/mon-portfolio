@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 const store = configureStore({
   reducer: rootReducer,
-  devTools: false,
+  devTools: true,
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

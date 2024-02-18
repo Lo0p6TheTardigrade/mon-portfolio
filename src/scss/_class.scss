@@ -34,3 +34,10 @@
     color: map-get($color-map, red__pink__identity);
   }
 }
+
+.animate-action {
+  animation: rotate 2s ease-in-out both;
+}
+.animate-action2 {
+  animation: rotate 2s ease-in-out both;
+}
