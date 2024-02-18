@@ -1,46 +1,44 @@
-exports.outlineAnimation {
-  @keyframes outlineAnimation {
-    0% {
-      outline: solid 3px;
-    }
+@keyframes outlineAnimation {
+  0% {
+    outline: solid 3px;
   }
-  @keyframes shadowAnimation {
-    0% {
-      box-shadow: map-get($box-shadow, shadow__card_grey_ANIM);
-    }
-    50% {
-      box-shadow: map-get($box-shadow, shadow__card_green_ANIM);
-    }
-    100% {
-      box-shadow: map-get($box-shadow, shadow__card_grey_ANIM);
-    }
+}
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: map-get($box-shadow, shadow__card_grey_ANIM);
   }
-  @keyframes opacityAnimation {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
+  50% {
+    box-shadow: map-get($box-shadow, shadow__card_green_ANIM);
   }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
+  100% {
+    box-shadow: map-get($box-shadow, shadow__card_grey_ANIM);
+  }
+}
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-      transform: rotate(720deg);
-    }
+  100% {
+    transform: rotate(720deg);
   }
-  @keyframes rotate_180 {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    100% {
-      transform: rotateZ(180deg);
-    }
+}
+@keyframes rotate_180 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
   }
 }
