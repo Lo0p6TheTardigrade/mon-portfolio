@@ -2,7 +2,6 @@
 * {
   @include font-family_SF-Pro;
   box-sizing: border-box;
-  // transition: 0.6s ease-in-out 0.6s;
 }
 .title-container {
   margin: 9px 27px 27px 27px;
@@ -17,7 +16,6 @@
 .title-container {
   .learn {
     @include flex(row, nowrap, space-between, center, 0.6rem);
-    // height: auto;
     .learn-title {
       margin: 0;
       min-width: 72%;
