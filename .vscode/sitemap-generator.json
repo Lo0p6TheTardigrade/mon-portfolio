@@ -3,9 +3,15 @@
     "Protocol": "https",
     "DomainName": "tardigrade-web.netifly.app",
     "Root": "./",
-    "IncludeExt": [".html", ".php"],
+    "IncludeExt": [
+      ".html",
+      ".php"
+    ],
     "Exclude": [],
-    "TagsToInclude": ["priority", "lastmod"],
+    "TagsToInclude": [
+      "priority",
+      "lastmod"
+    ],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
     "bIncludeWWW": true,
@@ -18,9 +24,15 @@
     "Protocol": "https",
     "DomainName": "tardigrade-web.netifly.app",
     "Root": "./public/",
-    "IncludeExt": [".html", ".php"],
+    "IncludeExt": [
+      ".html",
+      ".php"
+    ],
     "Exclude": [],
-    "TagsToInclude": ["priority", "lastmod"],
+    "TagsToInclude": [
+      "priority",
+      "lastmod"
+    ],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
     "bIncludeWWW": true,
