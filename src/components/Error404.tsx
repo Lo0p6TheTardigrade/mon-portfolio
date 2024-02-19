@@ -1,9 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-type Props = {};
-
-const Error404 = (props: Props) => {
+const Error404 = () => {
   return (
     <div className="error-container">
       <div className="error-title-container">

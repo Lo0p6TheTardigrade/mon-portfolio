@@ -1,5 +1,4 @@
 // @flow
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Custom_Data_Array_Obj } from '../data';
 

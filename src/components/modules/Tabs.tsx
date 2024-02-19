@@ -1,5 +1,4 @@
 // @flow
-import React from 'react';
 import { Any_Null, String_Null, String_Undefined } from '../../types';
 
 const Tabs = (propertyObj: {

@@ -1,5 +1,4 @@
 // @flow
-import React from 'react';
 import WidgetAnimate from './WidgetAnimate';
 import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';

@@ -1,10 +1,8 @@
-import React from 'react';
+// @flow
 import Error404 from '../components/Error404';
 import Layout from '../components/Layout';
 
-type Props = {};
-
-const Error = (props: Props) => {
+const Error = () => {
   return (
     <Layout>
       <Error404 />

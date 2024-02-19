@@ -1,5 +1,4 @@
-import React from 'react';
-
+// @flow
 const Components = (prop: any) => {
   const Children = prop.children;
   const State = prop.state;

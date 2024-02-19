@@ -1,4 +1,4 @@
-import React from 'react';
+// @flow
 import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';

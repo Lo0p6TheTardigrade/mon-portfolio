@@ -1,5 +1,5 @@
 // @flow
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Skills from './Skills';
 import Project from './Project';
 import { useDispatch, useSelector } from 'react-redux';

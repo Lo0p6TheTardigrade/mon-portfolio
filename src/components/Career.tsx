@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Custom_Data_Array_Obj } from '../data/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
