@@ -3,18 +3,12 @@
     "Protocol": "https",
     "DomainName": "tardigrade-web.netifly.app",
     "Root": "./",
-    "IncludeExt": [
-      ".html",
-      ".php"
-    ],
+    "IncludeExt": [".html", ".php"],
     "Exclude": [],
-    "TagsToInclude": [
-      "priority",
-      "lastmod"
-    ],
+    "TagsToInclude": ["priority", "lastmod"],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
-    "bIncludeWWW": true,
+    "bIncludeWWW": false,
     "bRemoveFileExtentions": false,
     "bUseTrailingSlash": false,
     "bAutomaticallyUpdateSitemap": true,
@@ -23,19 +17,13 @@
   "public/sitemap.xml": {
     "Protocol": "http",
     "DomainName": "tardigrade-web.netifly.app",
-    "Root": "./",
-    "IncludeExt": [
-      ".html",
-      ".php"
-    ],
+    "Root": "./public",
+    "IncludeExt": [".html", ".php"],
     "Exclude": [],
-    "TagsToInclude": [
-      "priority",
-      "lastmod"
-    ],
+    "TagsToInclude": ["priority", "lastmod"],
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
-    "bIncludeWWW": true,
+    "bIncludeWWW": false,
     "bRemoveFileExtentions": false,
     "bUseTrailingSlash": false,
     "bAutomaticallyUpdateSitemap": true,
