@@ -15,7 +15,7 @@
     "bMinimized": false
   },
   "public/sitemap.xml": {
-    "Protocol": "http",
+    "Protocol": "https",
     "DomainName": "tardigrade-web.netifly.app",
     "Root": "./public",
     "IncludeExt": [".html", ".php"],
