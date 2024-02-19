@@ -5,9 +5,6 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://tardigrade-web.netlify.app/index.html</loc>
-        <lastmod>2024-02-19</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
+        <loc></loc>
     </url>
 </urlset>
