@@ -37,4 +37,50 @@ export type String_Undefined = string | undefined;
 export type String_Null = string | null;
 export type Any_Null = any | null;
 
+export interface Roadmap_Custom_Interface {
+  name: string;
+  type: string;
+  description: string;
+  link: string;
+  image: {
+    src: any;
+    alt: string;
+    class: string;
+  };
+  skill: string;
+  id: number;
+  class: string;
+  school: string;
+  year: string;
+}
+
+export interface Learn_Custom_Interface {
+  name: string;
+  type: string;
+  description: string;
+  link: string;
+  image: {
+    src: any;
+    alt: string;
+    class: string;
+  };
+  skill: string;
+  id: number;
+  class: string;
+  school: string;
+  year: number;
+}
+
+export interface Skills_Custom_Interface {
+  name: string;
+  type: string;
+  description: string;
+  link: string;
+  skill: string;
+  id: number;
+  class: string;
+  school: string;
+  year: number;
+}
+
 export {};

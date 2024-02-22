@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Custom_Data_Array_Obj } from '../data/index';
 import { useDispatch, useSelector } from 'react-redux';
-import { Behavior_Custom_Interface } from '../types';
+import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface, Skills_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import Box from './modules/Components';
 import { Custom_Date_Obj } from '../helpers/date.helper';
@@ -58,7 +58,7 @@ const Career = () => {
         />
         <div className="skill-map-box">
           {window1 &&
-            Custom_Data_Array_Obj.skills.map((skill: any, index: any) => {
+            Custom_Data_Array_Obj.skills.map((skill: Skills_Custom_Interface, index: number) => {
               return (
                 <div
                   key={index}
@@ -99,7 +99,7 @@ const Career = () => {
         />
         <div className="learn-map-box">
           {window2 &&
-            Custom_Data_Array_Obj.learns.map((learn: any, index: any) => {
+            Custom_Data_Array_Obj.learns.map((learn: Learn_Custom_Interface, index: number) => {
               return (
                 <Box
                   key={index}
@@ -161,7 +161,7 @@ const Career = () => {
         />
         <div className="roadmap-map-box">
           {window3 &&
-            Custom_Data_Array_Obj.roadmap.map((map: any, index: any) => {
+            Custom_Data_Array_Obj.roadmap.map((roadmap: Roadmap_Custom_Interface, index: number) => {
               return (
                 <Box
                   key={index}
@@ -187,19 +187,19 @@ const Career = () => {
                             tag={'div'}
                             content={
                               <a
-                                href={`${map.link}`}
+                                href={`${roadmap.link}`}
                                 target="blank"
                                 className="courses-link">
                                 <Box
                                   tag={'div'}
                                   content={
                                     <img
-                                      src={map.image.src}
-                                      alt={map.image.alt}
-                                      className={`learns-skills-logo ${map.image.class}`}
+                                      src={roadmap.image.src}
+                                      alt={roadmap.image.alt}
+                                      className={`learns-skills-logo ${roadmap.image.class}`}
                                     />
                                   }
-                                  class={map.class}
+                                  class={roadmap.class}
                                 />
                                 <Box
                                   tag={'div'}
@@ -207,12 +207,12 @@ const Career = () => {
                                     <>
                                       <Box
                                         tag={'h4'}
-                                        content={`${map.description} `}
+                                        content={`${roadmap.description} `}
                                         class="courses-skills-description"
                                       />
                                       <Box
                                         tag={'p'}
-                                        content={`${map.skill}`}
+                                        content={`${roadmap.skill}`}
                                       />
                                     </>
                                   }
@@ -220,7 +220,7 @@ const Career = () => {
                                 />
                                 <Box
                                   tag={'p'}
-                                  content={`${map.school}`}
+                                  content={`${roadmap.school}`}
                                   class="text-color"
                                 />
                               </a>
