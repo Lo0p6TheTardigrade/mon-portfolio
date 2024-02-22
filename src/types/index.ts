@@ -83,4 +83,16 @@ export interface Skills_Custom_Interface {
   year: number;
 }
 
+export interface Langage_Custom_Interface {
+  name: string;
+  description: string;
+  image: any;
+  id: number;
+  alt: string;
+  class: string;
+  url: {};
+  wiki: string;
+  info: string;
+}
+
 export {};

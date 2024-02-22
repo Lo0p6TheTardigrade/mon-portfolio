@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Custom_Data_Array_Obj } from '../data/index';
 import { useDispatch, useSelector } from 'react-redux';
-import { Behavior_Custom_Interface } from '../types';
+import { Behavior_Custom_Interface, Langage_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import { Link } from 'react-router-dom';
 import Career from './Career';
@@ -70,7 +70,7 @@ const Skills = () => {
       {!main ? (
         <section className="section">
           <div className="description-box">
-            {Custom_Data_Array_Obj.language.map((language: any, index: any) => (
+            {Custom_Data_Array_Obj.language.map((language: Langage_Custom_Interface, index: number) => (
               <div
                 key={index}
                 className="description-container"
