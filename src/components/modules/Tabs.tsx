@@ -85,11 +85,13 @@ const Tabs = (propertyObj: {
               </span>
             </>
           )}
-          <a
+          {/* Come back later */}
+          {/* <a
             className={`${propertyObj.tab.href.class1}`}
             href={propertyObj.tab.href.link1}>
             <span className="">{propertyObj.tab.name.name3}</span>
-          </a>
+          </a> */}
+          {/* Come back later */}
         </nav>
       </div>
     </div>
