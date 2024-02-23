@@ -6,13 +6,9 @@
   .image-profile-container {
     transition: 1s ease-in-out both;
     &:hover {
-      animation: rotate_Y 1s ease-in-out both;
       a {
         color: map-get($color-map, grey__dark);
         animation: opacityAnimation 1s ease-in-out both;
-      }
-      p {
-        transform: rotateY(-180deg);
       }
     }
     .image-profile {
@@ -27,6 +23,9 @@
       box-shadow: map-get($box-shadow, shadow__card);
       transform: rotateZ(15deg);
     }
+    .easter-egg-proof {
+      transform: rotateY(-180deg);
+    }
   }
   .home-title {
     @include font-family_SF-Pro;
@@ -34,4 +33,7 @@
     text-align: center;
     width: 100%;
   }
+}
+.easter-egg-display {
+  animation: rotate_Y 1s ease-in-out both;
 }

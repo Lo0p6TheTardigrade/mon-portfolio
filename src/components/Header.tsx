@@ -24,9 +24,8 @@ const Header = () => {
       id="top-page">
       <header className="header">
         <div
-          className="image-profile-container"
-          onMouseEnter={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(true))}
-          onMouseLeave={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(false))}>
+          className={`image-profile-container ${window4 && 'easter-egg-display'}`}
+          onClick={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(!window4))}>
           {window4 ? (
             easter_egg
           ) : (
