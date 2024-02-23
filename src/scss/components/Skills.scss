@@ -42,6 +42,9 @@
         cursor: default;
         &:hover {
           outline: solid 2px map-get($color-map, red__pink__identity);
+          .logo {
+            animation: spin 1s ease-in-out both;
+          }
         }
         @media screen and (min-width: 675px) {
           width: 250px;
@@ -83,7 +86,15 @@
           margin-bottom: 3px;
           .logo {
             @include width-height(51px, 51px);
-            border-radius: 9px;
+            outline: 3px solid map-get($color-map, grey__light);
+            border: 3px solid map-get($color-map, grey__dark);
+            border-radius: 90px;
+          }
+          .logo-html5 {
+            background-color: rgb(221, 34, 24);
+          }
+          .logo-css3 {
+            background-color: rgb(41, 132, 228);
           }
         }
         .description-separator-container {
