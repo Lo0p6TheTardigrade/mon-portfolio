@@ -25,7 +25,8 @@ const Header = () => {
       <header className="header">
         <div
           className={`image-profile-container ${window4 && 'easter-egg-display'}`}
-          onClick={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(!window4))}>
+          onClick={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(!window4))}
+          onMouseLeave={() => dispatch(Behavior_Action_Object.behavior.set.action.window.window4(false))}>
           {window4 ? (
             easter_egg
           ) : (
