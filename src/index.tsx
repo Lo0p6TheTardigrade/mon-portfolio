@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './scss/main.scss';
 import reportWebVitals from './reportWebVitals';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const store = configureStore({
   reducer: rootReducer,
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <SpeedInsights />
       <App />
     </Provider>
   </React.StrictMode>
