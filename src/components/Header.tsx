@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import { Link } from 'react-router-dom';
-const imageProfile = require('../assets/images/IMG_4876.webp');
+const imageProfile = require('../assets/images/me.webp');
 
 const Header = () => {
   const dispatch = useDispatch();
