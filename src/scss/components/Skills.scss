@@ -10,13 +10,6 @@
     padding: 27px;
     background: map-get($color-map, grey__light);
     height: auto;
-    background-image: url('../../assets/images/tree.webp');
-    background-size: 90% 90%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    @media screen and (max-width: 1024px) {
-      background-image: none;
-    }
     .section-title-container {
       @include flex(column, nowrap, center, center, initial);
       @media screen and (min-width: 720px) {
