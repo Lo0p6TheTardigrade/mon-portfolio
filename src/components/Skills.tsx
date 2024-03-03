@@ -79,7 +79,7 @@ const Skills = () => {
                   id={'card' + language.id}
                   className="description-item-container">
                   <h2 className="description-item item-title">
-                    {language.name}
+                    <span>{language.name}</span>
                     <Link
                       id={`wiki-viewer${language.id}`}
                       title={`${language.name} wiki`}

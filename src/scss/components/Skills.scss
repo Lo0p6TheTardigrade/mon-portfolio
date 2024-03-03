@@ -5,6 +5,7 @@
   width: 100%;
   @media screen and (min-width: 675px) {
     padding: 27px;
+    border-radius: 3px;
   }
   .section {
     padding: 27px;
@@ -26,7 +27,7 @@
       @include flex(row, wrap, center, center, 1.8rem);
       .description-container {
         padding: 6px;
-        @include flex(column, nowrap, center, center, initial);
+        @include flex(column, nowrap, space-between, center, initial);
         border-radius: 9px;
         box-shadow: map-get($box-shadow, shadow__card);
         background-color: map-get($color-map, white__normal);
@@ -39,13 +40,11 @@
             animation: spin 1s ease-in-out both;
           }
         }
-        @media screen and (min-width: 675px) {
-          width: 250px;
-        }
         @media screen and (min-width: 720px) {
-          width: 218px;
+          @include width-height(310px, 310px);
         }
         .description-item-container {
+          @include flex(column, nowrap, center, center, initial);
           height: 175px;
           @media screen and (min-width: 720px) {
             height: 153px;
@@ -73,15 +72,19 @@
             padding: 6px;
             @include border__solid(1px, map-get($color-map, grey__light));
             border-radius: 9px;
+            @include flex(row, nowrap, space-between, center, initial);
+            @include width-height(100%, auto);
           }
         }
         .logo-container {
           margin-bottom: 3px;
+          @include flex(column, nowrap, center, center, initial);
+          @include width-height(100%, 180px);
           .logo {
-            @include width-height(51px, 51px);
             outline: 3px solid map-get($color-map, grey__light);
             border: 3px solid map-get($color-map, grey__dark);
             border-radius: 90px;
+            @include width-height(90px, 90px);
           }
           .logo-html5 {
             background-color: rgb(221, 34, 24);
@@ -92,7 +95,7 @@
         }
         .description-separator-container {
           @include flex(row, nowrap, center, center, initial);
-          @include width-height(100%, inherit);
+          @include width-height(100%, auto);
           .description-separator {
             @include border__solid(1px, map-get($color-map, grey__light));
             @include width-height(100%, inherit);

@@ -2,22 +2,58 @@
 
 import { Custom_Date_Obj } from '../helpers/date.helper';
 
-// SKILLS
-const html5 = require('../assets/images/html5.webp');
-const css3 = require('../assets/images/css3.webp');
-const sass = require('../assets/images/sass.webp');
-const javascript = require('../assets/images/javascript.webp');
-const react = require('../assets/images/react.webp');
-const redux = require('../assets/images/redux.webp');
-const seo = require('../assets/images/seo.webp');
-const github = require('../assets/images/github.webp');
-const typescript = require('../assets/images/typescript.webp');
+const html5 = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304720/assets/images/html5_s20v7u.webp';
+const css3 = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304700/assets/images/css3_qeweu2.webp';
+const sass = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304722/assets/images/sass_phpugm.webp';
+const javascript = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304716/assets/images/javascript_osfxwf.webp';
+const react = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304718/assets/images/react_tors8i.webp';
+const redux = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304729/assets/images/redux_hir2em.webp';
+const seo = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304727/assets/images/seo_l6vrlx.webp';
+const github = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304705/assets/images/github_fs8xgw.webp';
+const typescript = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304725/assets/images/typescript_atzxdi.webp';
+const nodejs = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304714/assets/images/nodeJS_tzhqzd.webp';
+const python = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304707/assets/images/python_ixz8pf.webp';
+const django = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304698/assets/images/django_sjiesy.webp';
+const email = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304696/assets/images/email_piosif.webp';
+
+const OhMyFood = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbf90bb6aa01b2aeffc61/screenshot_2023-11-09-11-16-42-0000.png';
+const PrintIt = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbd912e06c6190cc3eded/screenshot_2023-11-09-11-08-25-0000.png';
+const NinaCarducci = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc033b5dcf7156a942acf/screenshot_2023-11-09-11-19-24-0000.png';
+const DebugEvent = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc08057495a2146d6dc3f/screenshot_2023-11-09-11-21-07-0000.png';
+const Kasa = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc66a413130287af09dce/screenshot_2023-11-09-11-46-21-0000.png';
+
+const Custom_Image_Object = {
+  file: {
+    webp: {
+      html5: html5,
+      css3: css3,
+      sass: sass,
+      javascript: javascript,
+      react: react,
+      redux: redux,
+      seo: seo,
+      github: github,
+      typescript: typescript,
+      nodejs: nodejs,
+      python: python,
+      django: django,
+      email: email,
+    },
+    screenshot: {
+      OhMyFood: OhMyFood,
+      PrintIt: PrintIt,
+      NinaCarducci: NinaCarducci,
+      DebugEvent: DebugEvent,
+      Kasa: Kasa,
+    },
+  },
+};
 
 const language = [
   {
     name: 'HTML5',
     description: "HTML5 c'est les fondations de votre site comme pour votre maison, et on ne veut pas que le toit nous tombe sur la tête.",
-    image: html5,
+    image: Custom_Image_Object.file.webp.html5,
     id: 1,
     alt: 'logo de html5',
     class: 'logo-html5 logo',
@@ -28,7 +64,7 @@ const language = [
   {
     name: 'CSS3',
     description: "CSS3 est le langage utilisé pour le style de votre site, c'est la décoration.",
-    image: css3,
+    image: Custom_Image_Object.file.webp.css3,
     id: 2,
     alt: 'logo de css3',
     class: 'logo-css3 logo',
@@ -39,7 +75,7 @@ const language = [
   {
     name: 'Sass',
     description: 'Sass est un préprocesseur CSS, il rend le code du style de vos page plus lisibles, plus performants et plus facilement maintenable.',
-    image: sass,
+    image: Custom_Image_Object.file.webp.sass,
     id: 3,
     alt: 'logo de sass',
     class: 'logo-sass logo',
@@ -50,7 +86,7 @@ const language = [
   {
     name: 'JavaScript',
     description: 'Vous souhaitez passer de votre page statique vers une page dynamique ? JavaScript fait le travail demandé sans rechigné.',
-    image: javascript,
+    image: Custom_Image_Object.file.webp.javascript,
     id: 4,
     alt: 'logo de javascript',
     class: 'logo-javascript logo',
@@ -61,7 +97,7 @@ const language = [
   {
     name: 'TypeScript',
     description: 'Et si on gagnait du temps en évitant des comportement inattendu, rendait le code plus robuste et plus clair.',
-    image: typescript,
+    image: Custom_Image_Object.file.webp.typescript,
     id: 5,
     alt: 'logo de typescript',
     class: 'logo-typescript logo',
@@ -72,7 +108,7 @@ const language = [
   {
     name: 'React',
     description: "Le framework JavaScript par excellence, l'un des framework les plus utilisé pour la création d'interface utilisateur.",
-    image: react,
+    image: Custom_Image_Object.file.webp.react,
     id: 6,
     alt: 'logo de react',
     class: 'logo-react logo',
@@ -83,7 +119,7 @@ const language = [
   {
     name: 'Redux',
     description: "Le gestionnaire d'état le plus utilisé en combinaison avec React. Grace à lui on dit bye-bye au prop drilling.",
-    image: redux,
+    image: Custom_Image_Object.file.webp.redux,
     id: 7,
     alt: 'logo de redux',
     class: 'logo-redux logo',
@@ -94,7 +130,7 @@ const language = [
   {
     name: 'SEO',
     description: "L'optimisation pour les moteurs de recherche. Et si on essayait de faire remonter votre position dans les résultats d'un moteur de recherche.",
-    image: seo,
+    image: Custom_Image_Object.file.webp.seo,
     id: 8,
     alt: 'logo de seo',
     class: 'logo-seo logo',
@@ -105,7 +141,7 @@ const language = [
   {
     name: 'GitHub',
     description: 'Il est temps de prendre soin de votre projet en créant des versions, qui, dans le temps vous sauveront la vie, et bien plus encore.',
-    image: github,
+    image: Custom_Image_Object.file.webp.github,
     id: 9,
     alt: 'logo de github',
     class: 'logo-github logo',
@@ -116,12 +152,6 @@ const language = [
 ];
 
 // PROJECTS
-const OhMyFood = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbf90bb6aa01b2aeffc61/screenshot_2023-11-09-11-16-42-0000.png';
-const PrintIt = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbd912e06c6190cc3eded/screenshot_2023-11-09-11-08-25-0000.png';
-const NinaCarducci = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc033b5dcf7156a942acf/screenshot_2023-11-09-11-19-24-0000.png';
-const DebugEvent = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc08057495a2146d6dc3f/screenshot_2023-11-09-11-21-07-0000.png';
-const Kasa = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc66a413130287af09dce/screenshot_2023-11-09-11-46-21-0000.png';
-
 const projects = [
   {
     name: 'OhMyFood',
@@ -129,7 +159,7 @@ const projects = [
     description: 'Utilisation de SASS et des animations.',
     skill: 'Compétences SCSS',
     link: 'https://pc-web-ohmyfood.netlify.app',
-    image: OhMyFood,
+    image: Custom_Image_Object.file.screenshot.OhMyFood,
     id: 1,
     alt: 'scss oh my food preview',
     class: 'project-ohmyfood',
@@ -151,7 +181,7 @@ const projects = [
     description: "Optimisation du référencement du site d'une photographe.",
     skill: 'Compétences SEO',
     link: 'https://pc-web-nina-carducci.netlify.app',
-    image: NinaCarducci,
+    image: Custom_Image_Object.file.screenshot.NinaCarducci,
     id: 3,
     alt: 'seo nina carducci preview',
     class: 'project-nina-carducci',
@@ -162,7 +192,7 @@ const projects = [
     description: "Debug d'un site d'évènementiel à l'aide des outils de debug et des tests unitaire.",
     skill: 'Compétences Debug',
     link: 'https://pc-web-724event.netlify.app',
-    image: DebugEvent,
+    image: Custom_Image_Object.file.screenshot.DebugEvent,
     id: 4,
     alt: 'debug 724Event preview',
     class: 'project-724event',
@@ -173,13 +203,14 @@ const projects = [
     description: 'Utilisation de SASS et des animations',
     skill: 'Compétences REACT',
     link: 'https://pc-web-kasa.netlify.app',
-    image: Kasa,
+    image: Custom_Image_Object.file.screenshot.Kasa,
     id: 5,
     alt: 'kasa preview',
     class: 'project-kasa',
   },
 ];
 
+// SKILLS
 const skills = [
   {
     name: 'HTML5 & CSS3',
@@ -187,6 +218,13 @@ const skills = [
     description: 'Formation HTML5 & CSS3',
     link: 'https://www.cegefos.com',
     skill: 'Compétences HTML5 & CSS3',
+    image: {
+      url: {
+        html5: Custom_Image_Object.file.webp.html5,
+        css3: Custom_Image_Object.file.webp.css3,
+      },
+      alt: 'logo language HTML5 & CSS3',
+    },
     id: 1,
     class: 'graduate-list-item',
     school: 'Cegefos',
@@ -198,6 +236,17 @@ const skills = [
     description: 'Formation Développeur Frontend',
     link: 'https://openclassrooms.com/fr/search?query=%20developpement%20web',
     skill: 'Compétences HTML5, CSS3, Sass, JavaScript, React, Redux, and others ',
+    image: {
+      url: {
+        html5: Custom_Image_Object.file.webp.html5,
+        css3: Custom_Image_Object.file.webp.css3,
+        sass: Custom_Image_Object.file.webp.sass,
+        javascript: Custom_Image_Object.file.webp.javascript,
+        react: Custom_Image_Object.file.webp.react,
+        redux: Custom_Image_Object.file.webp.redux,
+      },
+      alt: 'logo language HTML5, CSS3, Sass, JavaScript, React, Redux, and others',
+    },
     id: 2,
     class: 'graduate-list-item',
     school: 'OpenClassroom',
@@ -209,6 +258,12 @@ const skills = [
     description: 'Formation TypeScript',
     link: 'https://www.udemy.com/courses/search/?q=typescript',
     skill: 'Compétences TypeScript',
+    image: {
+      url: {
+        typescript: Custom_Image_Object.file.webp.typescript,
+      },
+      alt: 'logo language TypeScript',
+    },
     id: 3,
     class: 'graduate-list-item',
     school: 'Udemy',
@@ -255,10 +310,6 @@ const learns = [
   },
 ];
 
-const nodejs = require('../assets/images/nodeJS.webp');
-const python = require('../assets/images/python.webp');
-const django = require('../assets/images/django.webp');
-
 const roadmap = [
   {
     name: 'Développeur Backend',
@@ -297,8 +348,6 @@ const roadmap = [
     year: `${Custom_Date_Obj.date.now.year}`,
   },
 ];
-
-const email = require('../assets/images/email.webp');
 
 const contacts = [
   {
