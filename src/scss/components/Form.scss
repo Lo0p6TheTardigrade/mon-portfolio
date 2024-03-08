@@ -1,0 +1,30 @@
+.form-container {
+  @include flex(column, nowrap, center, center, 0.6rem);
+  #form {
+    padding: 18px;
+    @include flex(row, nowrap, initial, initial, 0.6rem);
+    @include width-height(100%, 100%);
+    .informations-fields,
+    .message-fields {
+      @include flex(column, nowrap, center, center, 1rem);
+      @include width-height(100%, initial);
+    }
+  }
+}
+input,
+textarea {
+  padding: 18px;
+  outline: solid 3px map-get($color-map, grey__dark);
+  border: solid 3px map-get($color-map, white__normal);
+  border-radius: 3px;
+}
+label {
+  @include flex(column, nowrap, center, center, initial);
+  @include width-height(100%, 100%);
+  input {
+    @include width-height(81%, initial);
+  }
+  textarea {
+    @include width-height(100%, 100%);
+  }
+}

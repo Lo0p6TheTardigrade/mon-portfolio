@@ -331,7 +331,7 @@ const contacts = [
     type: 'Email:',
     description: 'Send an email for a project, auditory or any',
     image: { src: email, alt: 'logo de contact email', class: 'logo-email logo', size: { width: 27, height: 27 } },
-    link: 'mailto:tardigrade.web@gmail.com',
+    link: '/contact',
     id: 2,
     class: 'contact-list-item',
   },

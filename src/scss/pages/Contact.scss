@@ -1,0 +1,24 @@
+.contact-page-container {
+  margin: 27px 0;
+  height: 639px;
+  .contact-head-container {
+    padding: 0 33px;
+    @include flex(row, nowrap, space-between, center, initial);
+    .contact-title-container {
+      margin-bottom: 33px;
+      .contact-title {
+        border-bottom: solid 6px map-get($color-map, grey__dark);
+      }
+    }
+    .home-btn-container {
+      padding: 9px;
+      @include flex(row, nowrap, center, center, initial);
+      border: solid 3px map-get($color-map, grey__dark);
+      border-radius: 3px;
+      cursor: pointer;
+      .home-btn {
+        @include width-height(18px, 18px);
+      }
+    }
+  }
+}
