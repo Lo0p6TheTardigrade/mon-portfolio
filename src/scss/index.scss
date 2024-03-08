@@ -9,7 +9,7 @@
   @include flex(row, nowrap, initial, center, initial);
   outline: solid 3px map-get($color-map, grey__light);
   border: solid 3px map-get($color-map, grey__dark);
-  border-radius: 27px;
+  border-radius: 18px;
   height: auto;
 }
 

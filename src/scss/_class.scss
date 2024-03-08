@@ -27,8 +27,8 @@
 .decoration-box {
   padding: 18px 0;
   display: flex;
-  outline: solid 3px map-get($color-map, white__normal);
-  border: solid 1px transparent;
+  outline: solid 3px map-get($color-map, grey__dark);
+  border: solid 3px map-get($color-map, white__normal);
   border-radius: 6px;
   background-color: map-get($color-map, grey__dark);
   box-shadow: map-get($box-shadow, shadow__card);
@@ -66,7 +66,7 @@
   padding: 3px 18px;
   outline: solid 1px map-get($color-map, white__normal);
   border: solid 3px map-get($color-map, grey__dark);
-  border-radius: 27px;
+  border-radius: 18px;
   @include flex(row, nowrap, center, center, initial);
   background-color: map-get($color-map, grey__light);
   color: map-get($color-map, grey__dark);

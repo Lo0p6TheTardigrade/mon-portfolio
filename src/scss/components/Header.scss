@@ -29,7 +29,8 @@
     }
   }
   .home-title {
-    @include font-family_SF-Pro;
+    @include font-family_Pacifico;
+    font-weight: 200;
     font-size: x-large;
     text-align: center;
     width: 100%;

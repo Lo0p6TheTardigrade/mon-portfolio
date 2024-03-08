@@ -113,7 +113,7 @@ const Career = () => {
           content={
             <Box
               tag={'h3'}
-              content={`Acquises de ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
+              content={`Passées ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
               id="career-graduated"
               class="career-graduated career-title"
             />
@@ -225,7 +225,7 @@ const Career = () => {
         </div>
         <Box
           tag={'h3'}
-          content={`À venir ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
+          content={`Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
           id="career-incoming"
           class="incoming-skills-status career-title"
         />
