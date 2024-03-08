@@ -22,38 +22,11 @@ const NinaCarducci = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_33
 const DebugEvent = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc08057495a2146d6dc3f/screenshot_2023-11-09-11-21-07-0000.png';
 const Kasa = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cc66a413130287af09dce/screenshot_2023-11-09-11-46-21-0000.png';
 
-const Custom_Image_Object = {
-  file: {
-    webp: {
-      html5: html5,
-      css3: css3,
-      sass: sass,
-      javascript: javascript,
-      react: react,
-      redux: redux,
-      seo: seo,
-      github: github,
-      typescript: typescript,
-      nodejs: nodejs,
-      python: python,
-      django: django,
-      email: email,
-    },
-    screenshot: {
-      OhMyFood: OhMyFood,
-      PrintIt: PrintIt,
-      NinaCarducci: NinaCarducci,
-      DebugEvent: DebugEvent,
-      Kasa: Kasa,
-    },
-  },
-};
-
 const language = [
   {
     name: 'HTML5',
     description: "HTML5 c'est les fondations de votre site comme pour votre maison, et on ne veut pas que le toit nous tombe sur la tête.",
-    image: Custom_Image_Object.file.webp.html5,
+    image: html5,
     id: 1,
     alt: 'logo de html5',
     class: 'logo-html5 logo',
@@ -64,7 +37,7 @@ const language = [
   {
     name: 'CSS3',
     description: "CSS3 est le langage utilisé pour le style de votre site, c'est la décoration.",
-    image: Custom_Image_Object.file.webp.css3,
+    image: css3,
     id: 2,
     alt: 'logo de css3',
     class: 'logo-css3 logo',
@@ -75,7 +48,7 @@ const language = [
   {
     name: 'Sass',
     description: 'Sass est un préprocesseur CSS, il rend le code du style de vos page plus lisibles, plus performants et plus facilement maintenable.',
-    image: Custom_Image_Object.file.webp.sass,
+    image: sass,
     id: 3,
     alt: 'logo de sass',
     class: 'logo-sass logo',
@@ -86,7 +59,7 @@ const language = [
   {
     name: 'JavaScript',
     description: 'Vous souhaitez passer de votre page statique vers une page dynamique ? JavaScript fait le travail demandé sans rechigné.',
-    image: Custom_Image_Object.file.webp.javascript,
+    image: javascript,
     id: 4,
     alt: 'logo de javascript',
     class: 'logo-javascript logo',
@@ -97,7 +70,7 @@ const language = [
   {
     name: 'TypeScript',
     description: 'Et si on gagnait du temps en évitant des comportement inattendu, rendait le code plus robuste et plus clair.',
-    image: Custom_Image_Object.file.webp.typescript,
+    image: typescript,
     id: 5,
     alt: 'logo de typescript',
     class: 'logo-typescript logo',
@@ -108,7 +81,7 @@ const language = [
   {
     name: 'React',
     description: "Le framework JavaScript par excellence, l'un des framework les plus utilisé pour la création d'interface utilisateur.",
-    image: Custom_Image_Object.file.webp.react,
+    image: react,
     id: 6,
     alt: 'logo de react',
     class: 'logo-react logo',
@@ -119,7 +92,7 @@ const language = [
   {
     name: 'Redux',
     description: "Le gestionnaire d'état le plus utilisé en combinaison avec React. Grace à lui on dit bye-bye au prop drilling.",
-    image: Custom_Image_Object.file.webp.redux,
+    image: redux,
     id: 7,
     alt: 'logo de redux',
     class: 'logo-redux logo',
@@ -130,7 +103,7 @@ const language = [
   {
     name: 'SEO',
     description: "L'optimisation pour les moteurs de recherche. Et si on essayait de faire remonter votre position dans les résultats d'un moteur de recherche.",
-    image: Custom_Image_Object.file.webp.seo,
+    image: seo,
     id: 8,
     alt: 'logo de seo',
     class: 'logo-seo logo',
@@ -141,7 +114,7 @@ const language = [
   {
     name: 'GitHub',
     description: 'Il est temps de prendre soin de votre projet en créant des versions, qui, dans le temps vous sauveront la vie, et bien plus encore.',
-    image: Custom_Image_Object.file.webp.github,
+    image: github,
     id: 9,
     alt: 'logo de github',
     class: 'logo-github logo',
@@ -151,7 +124,7 @@ const language = [
   },
 ];
 
-// PROJECTS
+// PROJECTS ARRAY
 const projects = [
   {
     name: 'OhMyFood',
@@ -159,7 +132,7 @@ const projects = [
     description: 'Utilisation de SASS et des animations.',
     skill: 'Compétences SCSS',
     link: 'https://pc-web-ohmyfood.netlify.app',
-    image: Custom_Image_Object.file.screenshot.OhMyFood,
+    image: OhMyFood,
     id: 1,
     alt: 'scss oh my food preview',
     class: 'project-ohmyfood',
@@ -181,7 +154,7 @@ const projects = [
     description: "Optimisation du référencement du site d'une photographe.",
     skill: 'Compétences SEO',
     link: 'https://pc-web-nina-carducci.netlify.app',
-    image: Custom_Image_Object.file.screenshot.NinaCarducci,
+    image: NinaCarducci,
     id: 3,
     alt: 'seo nina carducci preview',
     class: 'project-nina-carducci',
@@ -192,7 +165,7 @@ const projects = [
     description: "Debug d'un site d'évènementiel à l'aide des outils de debug et des tests unitaire.",
     skill: 'Compétences Debug',
     link: 'https://pc-web-724event.netlify.app',
-    image: Custom_Image_Object.file.screenshot.DebugEvent,
+    image: DebugEvent,
     id: 4,
     alt: 'debug 724Event preview',
     class: 'project-724event',
@@ -203,14 +176,14 @@ const projects = [
     description: 'Utilisation de SASS et des animations',
     skill: 'Compétences REACT',
     link: 'https://pc-web-kasa.netlify.app',
-    image: Custom_Image_Object.file.screenshot.Kasa,
+    image: Kasa,
     id: 5,
     alt: 'kasa preview',
     class: 'project-kasa',
   },
 ];
 
-// SKILLS
+// SKILLS ARRAY
 const skills = [
   {
     name: 'HTML5 & CSS3',
@@ -219,11 +192,9 @@ const skills = [
     link: 'https://www.cegefos.com',
     skill: 'Compétences HTML5 & CSS3',
     image: {
-      url: {
-        html5: Custom_Image_Object.file.webp.html5,
-        css3: Custom_Image_Object.file.webp.css3,
-      },
-      alt: 'logo language HTML5 & CSS3',
+      src: html5,
+      class: 'logo',
+      alt: 'language HTML5 & CSS3',
     },
     id: 1,
     class: 'graduate-list-item',
@@ -237,15 +208,9 @@ const skills = [
     link: 'https://openclassrooms.com/fr/search?query=%20developpement%20web',
     skill: 'Compétences HTML5, CSS3, Sass, JavaScript, React, Redux, and others ',
     image: {
-      url: {
-        html5: Custom_Image_Object.file.webp.html5,
-        css3: Custom_Image_Object.file.webp.css3,
-        sass: Custom_Image_Object.file.webp.sass,
-        javascript: Custom_Image_Object.file.webp.javascript,
-        react: Custom_Image_Object.file.webp.react,
-        redux: Custom_Image_Object.file.webp.redux,
-      },
-      alt: 'logo language HTML5, CSS3, Sass, JavaScript, React, Redux, and others',
+      src: javascript,
+      class: 'logo',
+      alt: 'language HTML5, CSS3, Sass, JavaScript, React, Redux, and others',
     },
     id: 2,
     class: 'graduate-list-item',
@@ -259,10 +224,9 @@ const skills = [
     link: 'https://www.udemy.com/courses/search/?q=typescript',
     skill: 'Compétences TypeScript',
     image: {
-      url: {
-        typescript: Custom_Image_Object.file.webp.typescript,
-      },
-      alt: 'logo language TypeScript',
+      src: typescript,
+      class: 'logo',
+      alt: 'language TypeScript',
     },
     id: 3,
     class: 'graduate-list-item',
@@ -271,12 +235,13 @@ const skills = [
   },
 ];
 
+// LEARN ARRAY
 const learns = [
   {
     name: 'React ',
     type: 'graduation:',
     description: 'Intermediate',
-    image: { alt: 'logo de react', src: react, class: 'learns-skills-logo' },
+    image: { alt: 'logo de react', src: react, class: 'learns-skills-logo logo' },
     link: 'https://www.udemy.com/courses/search/?q=react',
     skill: 'Compétences React',
     id: 1,
@@ -288,7 +253,7 @@ const learns = [
     name: 'Redux ',
     type: 'graduation:',
     description: 'Intermediate',
-    image: { alt: 'logo de redux', src: redux, class: 'learns-skills-logo' },
+    image: { alt: 'logo de redux', src: redux, class: 'learns-skills-logo logo' },
     link: 'https://www.udemy.com/courses/search/?q=redux',
     skill: 'Compétences Redux',
     id: 2,
@@ -300,7 +265,7 @@ const learns = [
     name: 'TypeScript ',
     type: 'graduation:',
     description: 'Intermediate',
-    image: { alt: 'logo de typescript', src: typescript, class: 'learns-skills-logo' },
+    image: { alt: 'logo de typescript', src: typescript, class: 'learns-skills-logo logo' },
     link: 'https://www.udemy.com/courses/search/?q=typescript',
     skill: 'Compétences TypeScript',
     id: 3,
@@ -310,16 +275,17 @@ const learns = [
   },
 ];
 
+// ROADMAP ARRAY
 const roadmap = [
   {
     name: 'Développeur Backend',
     type: 'graduation',
     description: 'Formation Développeur Backend',
     link: 'https://www.udemy.com/courses/search/?q=%20developpeur%20backend',
-    image: { src: nodejs, class: 'roadmap-course', alt: 'logo des langages de la formation API REST, NodeJS, Express, MongoDB, Mongoose ect...' },
+    image: { src: nodejs, class: 'logo roadmap-course', alt: 'logo des langages de la formation API REST, NodeJS, Express, MongoDB, Mongoose ect...' },
     skill: 'Compétences API REST, NodeJS, Express, MongoDB, Mongoose ect...',
     id: 2,
-    class: 'graduate-list-item',
+    class: 'roadmap-list-item',
     school: 'Udemy',
     year: `${Custom_Date_Obj.date.now.year}`,
   },
@@ -328,27 +294,28 @@ const roadmap = [
     type: 'graduation',
     description: 'Formation Python',
     link: 'https://www.udemy.com/courses/search/?q=python',
-    image: { src: python, class: 'roadmap-course', alt: 'logo de python' },
+    image: { src: python, class: 'logo roadmap-course', alt: 'logo de python' },
     skill: 'Python',
     id: 2,
-    class: 'graduate-list-item',
+    class: 'roadmap-list-item',
     school: 'Udemy',
-    year: `${Custom_Date_Obj.date.now.year}`,
+    year: `${Custom_Date_Obj.date.now.year + 1}`,
   },
   {
     name: 'Django',
     type: 'graduation',
     description: 'Formation Django',
     link: 'https://www.udemy.com/courses/search/?q=django',
-    image: { src: django, class: 'roadmap-course', alt: 'logo de django' },
+    image: { src: django, class: 'logo roadmap-course', alt: 'logo de django' },
     skill: 'Django',
     id: 3,
-    class: 'graduate-list-item',
+    class: 'roadmap-list-item',
     school: 'Udemy',
-    year: `${Custom_Date_Obj.date.now.year}`,
+    year: `${Custom_Date_Obj.date.now.year + 2}`,
   },
 ];
 
+// CONTACT INFORMATION ARRAY
 const contacts = [
   {
     name: 'GitHub ',
@@ -370,6 +337,7 @@ const contacts = [
   },
 ];
 
+// COPYRIGHT NOTICE ARRAY
 const copyright = [
   {
     watermark: { copy: '©Copyright', year: Custom_Date_Obj.copyright, who: 'Tardigrade-Web', class: 'copyright' },

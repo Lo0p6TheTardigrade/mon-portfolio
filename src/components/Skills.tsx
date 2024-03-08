@@ -1,5 +1,5 @@
 // @flow
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Custom_Data_Array_Obj } from '../data/index';
@@ -16,11 +16,15 @@ const Skills = () => {
   const iconRef = useRef<SVGSVGElement>(null);
   const main = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.main);
 
+  // Roadmap visibility
+
+  // Click in handler
   const handleClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.info(!info));
     dispatch(Behavior_Action_Object.behavior.set.action.window.main(!main));
   };
 
+  // Click outside handler
   const handleClickOutside = (event: MouseEvent) => {
     if (iconRef.current && !iconRef.current.contains(event.target as Node)) {
       dispatch(Behavior_Action_Object.behavior.set.action.info(false));
@@ -31,6 +35,7 @@ const Skills = () => {
   // END INNER </CODE>
 
   // START SUB <CODE>
+  // Local objects for personal interaction
   const Custom_Function_Obj = {
     click: {
       in: handleClick,
@@ -38,20 +43,14 @@ const Skills = () => {
     },
   };
 
-  useEffect(() => {
-    document.addEventListener('click', Custom_Function_Obj.click.out);
-
-    return () => {
-      document.removeEventListener('click', Custom_Function_Obj.click.out);
-    };
-  }, [info, Custom_Function_Obj.click.out]);
-
   // END SUB </CODE>
 
   return (
     <div className="section-container">
       <div className="title-container">
-        <div className="learn">
+        <div
+          className="learn"
+          onClick={Custom_Function_Obj.click.in}>
           <p className="learn-title">Roadmap</p>
           <div className="icon-container">
             <FontAwesomeIcon

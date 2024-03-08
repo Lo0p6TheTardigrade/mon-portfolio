@@ -1,42 +1,107 @@
-import { useEffect, useRef } from 'react';
 import { Custom_Data_Array_Obj } from '../data/index';
-import { useDispatch, useSelector } from 'react-redux';
-import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface, Skills_Custom_Interface } from '../types';
-import { Behavior_Action_Object } from '../actions/behavior.action';
+import { useSelector } from 'react-redux';
+import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface } from '../types';
 import Box from './modules/Components';
 import { Custom_Date_Obj } from '../helpers/date.helper';
 
 const Career = () => {
   // START INNER <CODE>
-  const dispatch = useDispatch();
   let info = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.info);
-  const iconRef = useRef<SVGSVGElement>(null);
   let window1 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window1);
   let window2 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window2);
   let window3 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window3);
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (iconRef.current && !iconRef.current.contains(event.target as Node)) {
-      dispatch(Behavior_Action_Object.behavior.set.action.info(false));
-    }
+  // Part of the component for the finding function
+  const partComponent = (params1: Roadmap_Custom_Interface, params2: number) => {
+    return (
+      <Box
+        key={params2}
+        tag={'div'}
+        content={
+          <Box
+            key={params2}
+            tag={'li'}
+            content={
+              <>
+                <Box
+                  tag={'div'}
+                  content={
+                    <Box
+                      tag={'h3'}
+                      content={params1.year}
+                      class="courses-skills-year"
+                    />
+                  }
+                  class="courses-skills-year-container"
+                />
+                <Box
+                  tag={'div'}
+                  content={
+                    <a
+                      href={`${params1.link}`}
+                      target="blank"
+                      className="courses-link">
+                      <Box
+                        tag={'div'}
+                        content={
+                          <img
+                            src={params1.image.src}
+                            alt={params1.image.alt}
+                            className={`learns-skills-logo ${params1.image.class}`}
+                          />
+                        }
+                        class={params1.class}
+                      />
+                      <Box
+                        tag={'div'}
+                        content={
+                          <>
+                            <Box
+                              tag={'h4'}
+                              content={`${params1.description} `}
+                              class="courses-skills-description"
+                            />
+                            <Box
+                              tag={'p'}
+                              content={`${params1.skill}`}
+                            />
+                          </>
+                        }
+                        class="courses-skills-description-container"
+                      />
+                      <Box
+                        tag={'p'}
+                        content={`${params1.school}`}
+                        class="text-color"
+                      />
+                    </a>
+                  }
+                  class="courses-skills-title-container"
+                />
+              </>
+            }
+            class="courses-skills-container"
+          />
+        }
+        class="courses-skills-box decoration-box"
+      />
+    );
+  };
+
+  // Finding a precise date for map data
+  const atDay = (params: string) => {
+    const date = new Date(params);
+    return Custom_Data_Array_Obj.roadmap.map((roadmap: Roadmap_Custom_Interface, index: number) => {
+      if (parseInt(roadmap.year) <= date.getUTCFullYear()) {
+        return partComponent(roadmap, index);
+      }
+      return null;
+    });
   };
 
   // END INNER </CODE>
 
   // START SUB <CODE>
-  const Custom_Function_Obj = {
-    click: {
-      out: handleClickOutside,
-    },
-  };
-
-  useEffect(() => {
-    document.addEventListener('click', Custom_Function_Obj.click.out);
-
-    return () => {
-      document.removeEventListener('click', Custom_Function_Obj.click.out);
-    };
-  }, [info, Custom_Function_Obj.click.out]);
 
   // END SUB </CODE>
 
@@ -58,7 +123,7 @@ const Career = () => {
         />
         <div className="skill-map-box">
           {window1 &&
-            Custom_Data_Array_Obj.skills.map((skill: Skills_Custom_Interface, index: number) => {
+            Custom_Data_Array_Obj.skills.map((skill: any, index: number) => {
               return (
                 <div
                   key={index}
@@ -72,11 +137,16 @@ const Career = () => {
                         content={
                           <>
                             <Box
-                              tag={'p'}
-                              content={`${skill.year}: `}
+                              tag={'h3'}
+                              content={`${skill.year}`}
+                            />
+                            <img
+                              src={skill.image.src}
+                              alt={skill.image.alt}
+                              className={skill.image.class}
                             />
                             <Box
-                              tag={'p'}
+                              tag={'h4'}
                               content={`Formation ${skill.name}`}
                               class={'graduate-skill-content-item'}
                             />
@@ -108,8 +178,8 @@ const Career = () => {
                     <>
                       <li className={learn.class}>
                         <Box
-                          tag={'p'}
-                          content={learn.year + ':'}
+                          tag={'h3'}
+                          content={learn.year}
                           class="learns-skills-year"
                         />
                         <Box
@@ -117,7 +187,7 @@ const Career = () => {
                           content={
                             <>
                               <Box
-                                tag={'h3'}
+                                tag={'h4'}
                                 content={learn.name}
                                 class="learns-skills-title"
                               />
@@ -155,88 +225,11 @@ const Career = () => {
         </div>
         <Box
           tag={'h3'}
-          content={`À venir ${Custom_Date_Obj.date.now.year + 1}:`}
+          content={`À venir ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
           id="career-incoming"
           class="incoming-skills-status career-title"
         />
-        <div className="roadmap-map-box">
-          {window3 &&
-            Custom_Data_Array_Obj.roadmap.map((roadmap: Roadmap_Custom_Interface, index: number) => {
-              return (
-                <Box
-                  key={index}
-                  tag={'div'}
-                  content={
-                    <Box
-                      key={index}
-                      tag={'li'}
-                      content={
-                        <>
-                          <Box
-                            tag={'div'}
-                            content={
-                              <Box
-                                tag={'p'}
-                                content={Custom_Date_Obj.date.now.year + 1 + ':'}
-                                class="courses-skills-year"
-                              />
-                            }
-                            class="courses-skills-year-container"
-                          />
-                          <Box
-                            tag={'div'}
-                            content={
-                              <a
-                                href={`${roadmap.link}`}
-                                target="blank"
-                                className="courses-link">
-                                <Box
-                                  tag={'div'}
-                                  content={
-                                    <img
-                                      src={roadmap.image.src}
-                                      alt={roadmap.image.alt}
-                                      className={`learns-skills-logo ${roadmap.image.class}`}
-                                    />
-                                  }
-                                  class={roadmap.class}
-                                />
-                                <Box
-                                  tag={'div'}
-                                  content={
-                                    <>
-                                      <Box
-                                        tag={'h4'}
-                                        content={`${roadmap.description} `}
-                                        class="courses-skills-description"
-                                      />
-                                      <Box
-                                        tag={'p'}
-                                        content={`${roadmap.skill}`}
-                                      />
-                                    </>
-                                  }
-                                  class="courses-skills-description-container"
-                                />
-                                <Box
-                                  tag={'p'}
-                                  content={`${roadmap.school}`}
-                                  class="text-color"
-                                />
-                              </a>
-                            }
-                            class="courses-skills-title-container"
-                          />
-                        </>
-                      }
-                      class="courses-skills-container"
-                    />
-                  }
-                  class="courses-skills-box decoration-box"
-                />
-              );
-            })}
-        </div>
+        <div className="roadmap-map-box">{window3 && atDay('07/09/2024')}</div>
       </ul>
     </div>
   );

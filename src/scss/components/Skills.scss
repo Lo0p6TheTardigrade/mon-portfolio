@@ -26,7 +26,7 @@
     .description-box {
       @include flex(row, wrap, center, center, 1.8rem);
       .description-container {
-        padding: 6px;
+        padding: 18px;
         @include flex(column, nowrap, space-between, center, initial);
         border-radius: 9px;
         box-shadow: map-get($box-shadow, shadow__card);
@@ -84,7 +84,7 @@
             outline: 3px solid map-get($color-map, grey__light);
             border: 3px solid map-get($color-map, grey__dark);
             border-radius: 90px;
-            @include width-height(90px, 90px);
+            @include width-height(72px, 72px);
           }
           .logo-html5 {
             background-color: rgb(221, 34, 24);

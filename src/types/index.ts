@@ -37,6 +37,7 @@ export type String_Undefined = string | undefined;
 export type String_Null = string | null;
 export type Any_Null = any | null;
 
+// ROADMAP DATA
 export interface Roadmap_Custom_Interface {
   name: string;
   type: string;
@@ -54,6 +55,7 @@ export interface Roadmap_Custom_Interface {
   year: string;
 }
 
+// LEARN DATA
 export interface Learn_Custom_Interface {
   name: string;
   type: string;
@@ -71,18 +73,24 @@ export interface Learn_Custom_Interface {
   year: number;
 }
 
+// SKILLS DATA
 export interface Skills_Custom_Interface {
   name: string;
   type: string;
   description: string;
   link: string;
   skill: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   id: number;
   class: string;
   school: string;
   year: number;
 }
 
+// LANGAGE DATA
 export interface Langage_Custom_Interface {
   name: string;
   description: string;
