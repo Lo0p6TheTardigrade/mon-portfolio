@@ -51,7 +51,7 @@ const Main = () => {
   const switchIcon = () => {
     return (
       <FontAwesomeIcon
-        className={`${!basic ? 'rotate-element' : 'rotate-animate'}`}
+        className={`${basic ? 'rotate-element' : 'rotate-animate'}`}
         icon={faRotate}
         height={27}
         width={27}

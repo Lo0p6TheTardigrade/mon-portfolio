@@ -156,6 +156,7 @@
   .head-learn,
   .head-incoming {
     @include flex(row-reverse, nowrap, space-between, center, 1.8rem);
+    cursor: pointer;
     @include width-height(100%, initial);
     .caret-down {
       @include width-height(18px, 18px);

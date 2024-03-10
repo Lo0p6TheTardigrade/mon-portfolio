@@ -104,19 +104,31 @@ const Career = () => {
   };
 
   const handleGraduatedClick = () => {
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(!window1));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+    if (window1 === false) {
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window1(!window1));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+    } else {
+      return null;
+    }
   };
   const handleLearnClick = () => {
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(!window2));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+    if (window2 === false) {
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window2(!window2));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+    } else {
+      return null;
+    }
   };
   const handleIncomingClick = () => {
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
-    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(!window3));
+    if (window3 === false) {
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
+      dispatch(Behavior_Action_Object.behavior.set.action.window.window3(!window3));
+    } else {
+      return null;
+    }
   };
 
   // END INNER </CODE>
@@ -135,11 +147,11 @@ const Career = () => {
           content={
             <Box
               tag={'div'}
-              classX="head-graduated">
+              classX="head-graduated"
+              onClick={handleGraduatedClick}>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 className={`caret-down ${window1 && 'rotate-animate'}`}
-                onClick={handleGraduatedClick}
               />
               <Box
                 tag={'div'}
@@ -204,11 +216,11 @@ const Career = () => {
           content={
             <Box
               tag={'div'}
-              classX="head-learn">
+              classX="head-learn"
+              onClick={handleLearnClick}>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 className={`caret-down ${window2 && 'rotate-animate'}`}
-                onClick={handleLearnClick}
               />
               <Box
                 tag={'div'}
@@ -289,11 +301,11 @@ const Career = () => {
           content={
             <Box
               tag={'div'}
-              classX="head-incoming">
+              classX="head-incoming"
+              onClick={handleIncomingClick}>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 className={`caret-down ${window3 && 'rotate-animate'}`}
-                onClick={handleIncomingClick}
               />
               <Box
                 tag={'div'}
