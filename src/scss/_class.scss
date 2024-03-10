@@ -68,6 +68,9 @@
 .rotate-element {
   transform: rotateZ(180deg);
 }
+.rotate-element-reverse {
+  transform: rotateZ(-180deg);
+}
 
 .unselected-element {
   font-weight: 300 !important;

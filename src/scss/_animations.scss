@@ -1,8 +1,3 @@
-@keyframes outlineAnimation {
-  0% {
-    outline: solid 3px;
-  }
-}
 @keyframes shadowAnimation {
   0% {
     box-shadow: map-get($box-shadow, shadow__card_grey_ANIM);

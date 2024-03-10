@@ -48,14 +48,16 @@ const Main = () => {
     }
   };
 
-  const switchIcon = (
-    <FontAwesomeIcon
-      className={basic ? 'rotate-animate' : 'rotate-animate'}
-      icon={faRotate}
-      height={27}
-      width={27}
-    />
-  );
+  const switchIcon = () => {
+    return (
+      <FontAwesomeIcon
+        className={`${!basic ? 'rotate-element' : 'rotate-animate'}`}
+        icon={faRotate}
+        height={27}
+        width={27}
+      />
+    );
+  };
   const switch_skills_or_projets = basic ? 'tab-projects' : 'tab-skills';
 
   setTimeout(() => {
@@ -105,13 +107,12 @@ const Main = () => {
             <Span
               tag={'span'}
               classX={`tab-item tab ${switch_skills_or_projets}`}>
-              {switchIcon}
+              {switchIcon()}
             </Span>
           </Nav>
         </Div>
       </Div>
-      {!basic && <Skills />}
-      {basic && <Project />}
+      {!basic ? <Skills /> : <Project />}
     </div>
   );
 };
