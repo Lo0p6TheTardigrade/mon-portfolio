@@ -11,11 +11,15 @@ p {
 .title-container {
   margin: 9px 27px 27px 27px;
   padding: 6px 27px;
-  @include flex(row, nowrap, initial, center, initial);
   outline: solid 3px map-get($color-map, grey__light);
   border: solid 3px map-get($color-map, grey__dark);
   border-radius: 18px;
+  @include flex(row, nowrap, initial, center, initial);
+  text-align: center;
   height: auto;
+  @media screen and (min-width: 1024px) {
+    text-align: initial;
+  }
 }
 
 .title-container {

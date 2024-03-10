@@ -1,22 +1,12 @@
 @import '../partial';
 .projects-section {
-  padding: 0;
+  padding: 27px;
   @extend .common-class-wrapper;
-  @media screen and (min-width: 675px) {
-    padding: 27px;
-  }
   .projects {
     padding: 27px 0;
     @include flex(row, wrap, center, initial, 1rem);
     background-color: map-get($color-map, grey__light);
-    background-image: url('../../assets/images/tree.webp');
-    background-size: 80% 80%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
     width: 100%;
-    @media screen and (max-width: 1024px) {
-      background-image: none;
-    }
     .article-container {
       @include flex(column, nowrap, initial, initial, initial);
       padding: 9px;
