@@ -31,7 +31,7 @@
   border-radius: 6px;
   background-color: map-get($color-map, white__normal);
   box-shadow: map-get($box-shadow, shadow__card);
-  @include width-height(390px, 280px);
+  @include width-height(390px, auto);
   cursor: pointer;
   @media screen and (min-width: 675px) {
     @include width-height(291px, 291px);

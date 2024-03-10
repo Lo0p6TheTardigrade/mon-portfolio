@@ -8,6 +8,11 @@
   .main-tab-box {
     @include flex(row, nowrap, initial, center, 0.6rem);
     width: 100%;
+    .click-btn-container {
+      padding: 3px;
+      @include flex(row, nowrap, center, center, 0.6rem);
+      @include width-height(100%, 100%);
+    }
     .click-text-button {
       display: none;
       cursor: pointer;
@@ -22,6 +27,7 @@
       @include flex(row, nowrap, space-between, initial, initial);
       h2 {
         @include font-family_SF-Pro;
+        font-size: 21px;
         font-weight: 600;
         font-style: normal;
       }
@@ -62,14 +68,19 @@
     // animation: none;
     outline: solid 3px map-get($color-map, grey__dark);
     border: solid 2px transparent;
+    background-color: orange;
     svg {
+      outline: solid 2px map-get($color-map, white__normal);
+      border-top: solid 1px map-get($color-map, grey__dark);
+      border-radius: 33px;
       color: black;
       background-color: orange;
-      border-radius: 33px;
+      animation: rotate 1.5s ease-in-out both infinite;
     }
   }
   svg {
-    height: 100%;
+    outline: solid 2px transparent;
+    border: solid 1px transparent;
     width: 100%;
   }
 }

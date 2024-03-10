@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRotate } from '@fortawesome/free-solid-svg-icons';
 import Div from './modules/Components';
 import Nav from './modules/Components';
 import Span from './modules/Components';
+import { faCircle } from '@fortawesome/free-regular-svg-icons';
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -50,12 +50,16 @@ const Main = () => {
 
   const switchIcon = () => {
     return (
-      <FontAwesomeIcon
-        className={`${basic ? 'rotate-element' : 'rotate-animate'}`}
-        icon={faRotate}
-        height={27}
-        width={27}
-      />
+      <Div
+        tag={'div'}
+        classX="click-btn-container">
+        <FontAwesomeIcon
+          className={`${basic ? 'rotate-element' : 'rotate-animate'}`}
+          icon={faCircle}
+          height={27}
+          width={27}
+        />
+      </Div>
     );
   };
   const switch_skills_or_projets = basic ? 'tab-projects' : 'tab-skills';

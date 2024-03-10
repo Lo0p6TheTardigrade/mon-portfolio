@@ -1,14 +1,10 @@
 .roadmap-list-container {
   border-radius: 3px;
   @include flex(column, nowrap, center, initial, initial);
-  // background-image: url('../../assets/images/tree.webp');
-  background-size: 90% 90%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
   background-color: map-get($color-map, grey__light);
   @include width-height(fit-content, 100%);
   @media screen and (max-width: 1024px) {
-    background-image: none;
+    @include width-height(100%, 100%);
   }
   .roadmap-list {
     list-style: none;
@@ -171,12 +167,6 @@
     }
   }
 }
-
-// .roadmap-map-box {
-//   .decoration-box {
-//     height: auto;
-//   }
-// }
 
 .skill-map-box,
 .learn-map-box,
