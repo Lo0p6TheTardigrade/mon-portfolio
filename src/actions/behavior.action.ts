@@ -100,21 +100,21 @@ const setFrameAction = (frame: boolean) => {
   };
 };
 
-export const SET_WINDOW_1_ACTION = 'SET_WINDOW_1_ACTION';
-// eslint-disable-next-line
-const setWindow1Action = (window1: boolean) => {
-  return {
-    type: 'SET_WINDOW_1_ACTION',
-    payload: window1,
-  };
-};
-
 export const SET_MAIN_WINDOW_ACTION = 'SET_MAIN_WINDOW_ACTION';
 // eslint-disable-next-line
 const setMainWindowAction = (main: boolean) => {
   return {
     type: 'SET_MAIN_WINDOW_ACTION',
     payload: main,
+  };
+};
+
+export const SET_WINDOW_1_ACTION = 'SET_WINDOW_1_ACTION';
+// eslint-disable-next-line
+const setWindow1Action = (window1: boolean) => {
+  return {
+    type: 'SET_WINDOW_1_ACTION',
+    payload: window1,
   };
 };
 

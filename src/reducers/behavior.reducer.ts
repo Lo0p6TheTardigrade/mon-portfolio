@@ -11,9 +11,9 @@ const behaviorState: Behavior_Custom_Interface = {
   frame: false,
   window: {
     main: false,
-    window1: true,
+    window1: false,
     window2: true,
-    window3: true,
+    window3: false,
     window4: false,
     window5: false,
     window6: false,

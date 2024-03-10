@@ -61,6 +61,14 @@
   }
 }
 
+.dot-colored {
+  background-color: map-get($color-map_2, Georgia_Peach);
+}
+
+.rotate-element {
+  transform: rotateZ(180deg);
+}
+
 .animate-action {
   animation: rotate 2s ease-in-out both;
 }

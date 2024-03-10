@@ -1,13 +1,15 @@
 import { Custom_Data_Array_Obj } from '../data/index';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface } from '../types';
 import Box from './modules/Components';
 import { Custom_Date_Obj } from '../helpers/date.helper';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Behavior_Action_Object } from '../actions/behavior.action';
 
 const Career = () => {
   // START INNER <CODE>
+  const dispatch = useDispatch();
   let info = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.info);
   let window1 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window1);
   let window2 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window2);
@@ -101,6 +103,22 @@ const Career = () => {
     });
   };
 
+  const handleGraduatedClick = () => {
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(!window1));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+  };
+  const handleLearnClick = () => {
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(!window2));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(false));
+  };
+  const handleIncomingClick = () => {
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window1(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window2(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.window3(!window3));
+  };
+
   // END INNER </CODE>
 
   // START SUB <CODE>
@@ -120,14 +138,15 @@ const Career = () => {
               classX="head-graduated">
               <FontAwesomeIcon
                 icon={faCaretDown}
-                className="caret-down"
+                className={`caret-down ${window1 && 'rotate-animate'}`}
+                onClick={handleGraduatedClick}
               />
               <Box
                 tag={'div'}
                 classX="head-title-container">
                 <Box
                   tag={'div'}
-                  classX={'career-dot-container'}
+                  classX={`career-dot-container ${window1 && 'dot-colored'}`}
                 />
                 <Box
                   tag={'h3'}
@@ -188,14 +207,15 @@ const Career = () => {
               classX="head-learn">
               <FontAwesomeIcon
                 icon={faCaretDown}
-                className="caret-down"
+                className={`caret-down ${window2 && 'rotate-animate'}`}
+                onClick={handleLearnClick}
               />
               <Box
                 tag={'div'}
                 classX="head-title-container">
                 <Box
                   tag={'div'}
-                  classX={'career-dot-container'}
+                  classX={`career-dot-container ${window2 && 'dot-colored'}`}
                 />
                 <Box
                   tag={'h3'}
@@ -272,14 +292,15 @@ const Career = () => {
               classX="head-incoming">
               <FontAwesomeIcon
                 icon={faCaretDown}
-                className="caret-down"
+                className={`caret-down ${window3 && 'rotate-animate'}`}
+                onClick={handleIncomingClick}
               />
               <Box
                 tag={'div'}
                 classX="head-title-container">
                 <Box
                   tag={'div'}
-                  classX={'career-dot-container'}
+                  classX={`career-dot-container ${window3 && 'dot-colored'}`}
                 />
                 <Box
                   tag={'h3'}
