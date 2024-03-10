@@ -21,8 +21,8 @@
       border-radius: 90px;
       @include flex(row, nowrap, space-between, initial, initial);
       h2 {
-        @include font-family_Roboto;
-        font-weight: 400;
+        @include font-family_SF-Pro;
+        font-weight: 600;
         font-style: normal;
       }
     }
