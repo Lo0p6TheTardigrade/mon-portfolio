@@ -1,11 +1,14 @@
 .contact-page-container {
-  margin: 27px 0;
-  height: 639px;
+  margin-top: 90px;
+  @include flex(column, nowrap, initial, center, 3rem);
+  border-radius: 6px;
+  background-color: map-get($color-map, grey__light);
+  @include width-height(100%, 576px);
   .contact-head-container {
     padding: 0 33px;
     @include flex(row, nowrap, space-between, center, initial);
+    @include width-height(100%, initial);
     .contact-title-container {
-      margin-bottom: 33px;
       .contact-title {
         border-bottom: solid 6px map-get($color-map, grey__dark);
       }
@@ -15,6 +18,11 @@
       @include flex(row, nowrap, center, center, initial);
       border: solid 3px map-get($color-map, grey__dark);
       border-radius: 3px;
+      box-shadow: map-get($box-shadow, shadow__card) inset;
+      transition: 0.6s ease-in-out;
+      &:hover {
+        background-color: map-get($color-map_2, Georgia_Peach);
+      }
       cursor: pointer;
       .home-btn {
         @include width-height(18px, 18px);

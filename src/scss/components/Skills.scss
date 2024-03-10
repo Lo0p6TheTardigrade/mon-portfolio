@@ -1,10 +1,9 @@
 .section-container {
-  padding: 0;
+  padding: 27px;
   @include font-family_SF-Pro;
   @extend .common-class-wrapper;
   width: 100%;
   @media screen and (min-width: 675px) {
-    padding: 27px;
     border-radius: 3px;
   }
   .section {
@@ -26,83 +25,86 @@
     .description-box {
       @include flex(row, wrap, center, center, 1.8rem);
       .description-container {
-        padding: 18px;
-        @include flex(column, nowrap, space-between, center, initial);
-        border-radius: 9px;
-        box-shadow: map-get($box-shadow, shadow__card);
-        background-color: map-get($color-map, white__normal);
-        outline: solid 2px transparent;
-        width: 90%;
-        cursor: default;
-        &:hover {
-          outline: solid 2px map-get($color-map, red__pink__identity);
-          .logo {
-            animation: spin 1s ease-in-out both;
+        @include flex(row, wrap, center, center, 1.8rem);
+        a {
+          padding: 18px;
+          @include flex(column, nowrap, space-around, center, initial);
+          border-radius: 9px;
+          box-shadow: map-get($box-shadow, shadow__card);
+          background-color: map-get($color-map, white__normal);
+          outline: solid 2px transparent;
+          width: 90%;
+          cursor: default;
+          &:hover {
+            outline: solid 2px map-get($color-map, red__pink__identity);
+            .logo {
+              animation: spin 1s ease-in-out both;
+            }
           }
-        }
-        @media screen and (min-width: 720px) {
-          @include width-height(310px, 310px);
-        }
-        .description-item-container {
-          @include flex(column, nowrap, center, center, initial);
-          height: 175px;
           @media screen and (min-width: 720px) {
-            height: 153px;
+            @include width-height(310px, 310px);
           }
-          .item-title {
-            @include flex(row, nowrap, space-between, center, initial);
-            font-size: 19px;
-            text-align: center;
-            font-weight: bold;
+          .description-item-container {
+            @include flex(column, nowrap, center, center, initial);
+            height: 175px;
             @media screen and (min-width: 720px) {
-              font-size: 16px;
+              height: 153px;
+            }
+            .item-title {
+              @include flex(row, nowrap, space-between, center, initial);
+              font-size: 19px;
+              text-align: center;
+              font-weight: bold;
+              @media screen and (min-width: 720px) {
+                font-size: 16px;
+              }
+            }
+            .item-text {
+              font-size: 15px;
+              @media screen and (min-width: 720px) {
+                font-size: 13px;
+              }
+            }
+            .iframe-content {
+              position: relative;
+            }
+            .description-item {
+              margin-top: 3px;
+              padding: 6px;
+              @include border__solid(1px, map-get($color-map, grey__light));
+              border-radius: 9px;
+              @include flex(row, nowrap, space-between, center, initial);
+              @include width-height(100%, auto);
             }
           }
-          .item-text {
-            font-size: 15px;
-            @media screen and (min-width: 720px) {
-              font-size: 13px;
+          .logo-container {
+            margin-bottom: 3px;
+            @include flex(column, nowrap, center, center, initial);
+            @include width-height(100%, 120px);
+            .logo {
+              outline: 3px solid map-get($color-map, grey__light);
+              border: 3px solid map-get($color-map, grey__dark);
+              border-radius: 90px;
+              @include width-height(72px, 72px);
+            }
+            .logo-html5 {
+              background-color: rgb(221, 34, 24);
+            }
+            .logo-css3 {
+              background-color: rgb(41, 132, 228);
             }
           }
-          .iframe-content {
-            position: relative;
-          }
-          .description-item {
-            margin-top: 3px;
-            padding: 6px;
-            @include border__solid(1px, map-get($color-map, grey__light));
-            border-radius: 9px;
-            @include flex(row, nowrap, space-between, center, initial);
+          .description-separator-container {
+            @include flex(row, nowrap, center, center, initial);
             @include width-height(100%, auto);
+            .description-separator {
+              @include border__solid(1px, map-get($color-map, grey__light));
+              @include width-height(100%, inherit);
+            }
           }
-        }
-        .logo-container {
-          margin-bottom: 3px;
-          @include flex(column, nowrap, center, center, initial);
-          @include width-height(100%, 180px);
-          .logo {
-            outline: 3px solid map-get($color-map, grey__light);
-            border: 3px solid map-get($color-map, grey__dark);
-            border-radius: 90px;
-            @include width-height(72px, 72px);
+          .wiki-link {
+            color: map-get($color-map, grey__dark);
           }
-          .logo-html5 {
-            background-color: rgb(221, 34, 24);
-          }
-          .logo-css3 {
-            background-color: rgb(41, 132, 228);
-          }
-        }
-        .description-separator-container {
-          @include flex(row, nowrap, center, center, initial);
-          @include width-height(100%, auto);
-          .description-separator {
-            @include border__solid(1px, map-get($color-map, grey__light));
-            @include width-height(100%, inherit);
-          }
-        }
-        .wiki-link {
-          color: map-get($color-map, grey__dark);
         }
       }
     }

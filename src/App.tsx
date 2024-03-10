@@ -5,8 +5,9 @@ import Certificate from './pages/Certificate';
 import { useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from './types';
 import Error from './pages/Error';
-import Contact from './pages/Contatct';
+import Contact from './pages/Contact';
 import Layout from './components/Layout';
+import Service from './pages/Service';
 
 function App() {
   const window6 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window6);
@@ -28,6 +29,10 @@ function App() {
             <Route
               path="contact"
               element={<Contact />}
+            />
+            <Route
+              path="service"
+              element={<Service />}
             />
             <Route
               path="*"

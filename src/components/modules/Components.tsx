@@ -1,30 +1,34 @@
 // @flow
-const Components = (prop: any) => {
-  const Children = prop.children;
-  const State = prop.state;
-  const Tag = prop.tag;
-  const Id = prop.id;
-  const Class = prop.class;
-  const Src = prop.src;
-  const Href = prop.href;
-  const To = prop.to;
-  const Alt = prop.alt;
-  const Icon = prop.icon;
-  const Height = prop.height;
-  const Width = prop.width;
-  const Title = prop.title;
-  const Name = prop.name;
-  const Content = prop.content;
-  const OnClick = prop.onClick;
-  const OnChange = prop.onChange;
-  const OnToggle = prop.onToggle;
-  const OnFocus = prop.onFocus;
-  const OnBlur = prop.onBlur;
-  const OnMouseEnter = prop.onMouseEnter;
-  const OnMouseLeave = prop.onMouseLeave;
-  const Value = prop.value;
-  const Target = prop.target;
-  const Disabled = prop.disabled;
+import { Props } from '../../types';
+
+const Components = ({ children, state, tag, id, classX, src, href, to, alt, icon, height, width, title, name, content, onClick, onChange, onToggle, onFocus, onBlur, onMouseEnter, onMouseLeave, value, target, disabled }: Props) => {
+  const Children = children;
+  const State = state;
+  const Tag = tag;
+  const Id = id;
+  const Class = classX;
+  const Src = src;
+  const Href = href;
+  const To = to;
+  const Alt = alt;
+  const Icon = icon;
+  const Height = height;
+  const Width = width;
+  const Title = title;
+  const Name = name;
+  const Content = content;
+  const OnClick = onClick;
+  const OnChange = onChange;
+  const OnToggle = onToggle;
+  const OnFocus = onFocus;
+  const OnBlur = onBlur;
+  const OnMouseEnter = onMouseEnter;
+  const OnMouseLeave = onMouseLeave;
+  const Value = value;
+  const Target = target;
+  const Disabled = disabled;
+
+  // Returns the current component
   return (
     <Tag
       //   Start attributes

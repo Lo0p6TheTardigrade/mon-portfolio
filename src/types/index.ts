@@ -1,4 +1,6 @@
 // @flow
+import { ReactElement, ReactNode } from 'react';
+
 export interface Behavior_Custom_Interface {
   basic: boolean;
   info: boolean;
@@ -102,5 +104,76 @@ export interface Langage_Custom_Interface {
   wiki: string;
   info: string;
 }
+
+export type Props = {
+  children?: ReactNode;
+  state?: boolean;
+  tag?: any;
+  id?: string | number;
+  classX?: string;
+  src?: ReactElement<any, any>;
+  href?: string;
+  to?: string;
+  alt?: string;
+  icon?: any;
+  height?: string | number;
+  width?: string | number;
+  title?: string;
+  name?: string;
+  content?: any;
+  onClick?: () => void;
+  onChange?: () => void;
+  onToggle?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  value?: string | number;
+  target?: string;
+  disabled?: boolean;
+};
+
+export type Property_Tab_Object = {
+  tab: {
+    name: {
+      name1?: String_Null;
+      class1?: String_Null;
+      name2?: String_Null;
+      class2?: String_Null;
+      name3?: String_Null;
+      class3?: String_Null;
+    };
+    function: {
+      onclicked1?: Any_Null;
+      onclicked2?: Any_Null;
+    };
+    href: {
+      link1?: String_Undefined;
+      class1?: String_Null;
+    };
+    image: {
+      file: {
+        image1?: any;
+      };
+      class: {
+        class1?: string;
+      };
+    };
+    content: {
+      value: {
+        content1?: string;
+        content2?: string;
+        content3?: String_Null;
+      };
+      class: {
+        class1?: string;
+        class2?: string;
+      };
+    };
+  };
+  state: {
+    basic: boolean;
+  };
+};
 
 export {};

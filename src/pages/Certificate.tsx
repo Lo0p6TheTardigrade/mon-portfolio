@@ -11,7 +11,7 @@ const Certificate = () => {
   return (
     <Box
       tag="div"
-      class="certificate-page-container">
+      classX={'certificate-page-container'}>
       <Proof
         cegefos={{ file: cegefos, name: 'Cegefos' }}
         openclassroom={{ file: openclassroom, name: 'OpenClassroom' }}
@@ -19,7 +19,7 @@ const Certificate = () => {
       />
       <Box
         tag="div"
-        class="btn-back-to-home-container">
+        classX={'btn-back-to-home-container'}>
         <Link
           to="/"
           className="btn-back-to-home">

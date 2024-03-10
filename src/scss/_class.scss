@@ -27,36 +27,21 @@
 .decoration-box {
   padding: 18px 0;
   display: flex;
-  outline: solid 3px map-get($color-map, grey__dark);
-  border: solid 3px map-get($color-map, white__normal);
+  border: solid 2px transparent;
   border-radius: 6px;
-  background-color: map-get($color-map, grey__dark);
+  background-color: map-get($color-map, white__normal);
   box-shadow: map-get($box-shadow, shadow__card);
-  @include width-height(330px, 330px);
+  @include width-height(390px, 280px);
   cursor: pointer;
   @media screen and (min-width: 675px) {
-    @include width-height(291px, 251px);
+    @include width-height(291px, 291px);
+  }
+  h4 {
+    font-weight: 500;
   }
   &:hover {
-    outline: solid 1px map-get($color-map, white__normal);
-    border: solid 3px map-get($color-map, grey__dark_2);
-    background-color: map-get($color-map, white__normal);
-    transition: 0.6s ease-in-out;
-    h3,
-    h4,
-    p,
-    span {
-      color: map-get($color-map, grey__dark);
-      transition: 0.6s ease-in-out;
-    }
-    img {
-      border: solid 3px map-get($color-map, grey__dark);
-      box-shadow: map-get($box-shadow, shadow__card) inset;
-    }
+    border: solid 2px map-get($color-map, red__pink__identity);
     .text-color {
-      outline: solid 3px map-get($color-map, grey__dark);
-      border: solid 1px map-get($color-map, white__normal);
-      color: map-get($color-map, grey__dark);
       transition: 0.6s ease-in-out;
     }
   }
@@ -65,15 +50,14 @@
 .text-color {
   padding: 3px 18px;
   outline: solid 1px map-get($color-map, white__normal);
-  border: solid 3px map-get($color-map, grey__dark);
+  border: solid 2px map-get($color-map, grey__dark);
   border-radius: 18px;
   @include flex(row, nowrap, center, center, initial);
   background-color: map-get($color-map, grey__light);
-  color: map-get($color-map, grey__dark);
   box-shadow: map-get($box-shadow, shadow__card) inset;
-  @include width-height(100%, 93px);
+  @include width-height(100%, 69px);
   @media screen and (min-width: 675px) {
-    @include width-height(72%, 63px);
+    @include width-height(72%, 54px);
   }
 }
 

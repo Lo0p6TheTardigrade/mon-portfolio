@@ -1,11 +1,12 @@
 .roadmap-list-container {
+  border-radius: 3px;
   @include flex(column, nowrap, center, initial, initial);
-  @include width-height(100%, 100%);
-  background-image: url('../../assets/images/tree.webp');
+  // background-image: url('../../assets/images/tree.webp');
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-color: map-get($color-map, grey__light);
+  @include width-height(fit-content, 100%);
   @media screen and (max-width: 1024px) {
     background-image: none;
   }
@@ -14,13 +15,6 @@
     .learns-skills-container {
       @include flex(row, nowrap, initial, center, 0.6rem);
       .learns-skills-year,
-      p,
-      h3 {
-        margin: 0;
-      }
-      li {
-        margin: 9px 27px;
-      }
       .learns-skills-title-container {
         @include flex(column-reverse, nowrap, center, center, 0.6rem);
         .learns-skills-title {
@@ -32,10 +26,10 @@
       }
       .learns-skills-link {
         @include flex(column, nowrap, initial, center, 0.6rem);
-        @media screen and (min-width: 675px) {
-          flex-direction: row;
-        }
         width: 100%;
+        @media screen and (min-width: 675px) {
+          // flex-direction: row;
+        }
         .learns-skills {
           @extend.flex;
           text-align: center;
@@ -53,10 +47,9 @@
 }
 
 .displaying-roadmap-block {
-  padding: 27px;
+  padding: 18px 27px;
   @include flex(column, wrap, center, flex-start, 0.6rem);
   align-content: center;
-  color: map-get($color-map, white__normal);
 }
 
 .learns-skills-logo {
@@ -64,7 +57,7 @@
 }
 
 .courses-skills-box {
-  width: 60%;
+  // width: 60%;
   p {
     margin: 0;
   }
@@ -106,6 +99,7 @@
 }
 
 .flex {
+  margin: 9px 27px;
   @include flex(column, nowrap, initial, center, 0.6rem);
   text-align: center;
   width: 100%;
@@ -123,13 +117,9 @@
     margin: 0 0 0.3rem 0;
   }
   .graduate-skill-content-box {
-    width: 100%;
-    @include flex(column, nowrap, initial, center, 0.6rem);
+    @include flex(column, nowrap, center, center, 0.6rem);
+    @include width-height(100%, initial);
     @media screen and (min-width: 675px) {
-      h3,
-      h4 {
-        margin: 0;
-      }
     }
     .graduate-skill-content-item {
       text-align: center;
@@ -146,10 +136,9 @@
 #career-learn,
 #career-incoming {
   padding: 9px;
-  @include font-family_Pacifico;
-  font-weight: 100;
-  color: map-get($color-map, grey__dark);
-  border-bottom: solid 3px map-get($color-map, grey__dark);
+  @include font-family_SF-Pro;
+  font-weight: 600;
+  border-bottom: solid 2px map-get($color-map, grey__dark);
   border-radius: 9px 9px 0 0;
 }
 
@@ -158,18 +147,43 @@
 .roadmap-map-box > li {
   @include flex(column, wrap, center, center, 0.6rem);
 }
-
-.roadmap-map-box {
-  .decoration-box {
-    height: auto;
+.career-roadmap-skill-title-container,
+.career-learn-skill-title-container,
+.career-graduated-skill-title-container {
+  @include flex(row, nowrap, center, center, 0.6rem);
+  @include width-height(100%, initial);
+  .head-graduated,
+  .head-learn,
+  .head-incoming {
+    @include flex(row-reverse, nowrap, space-between, center, 1.8rem);
+    @include width-height(100%, initial);
+    .caret-down {
+      @include width-height(18px, 18px);
+    }
+    .head-title-container {
+      @include flex(row, nowrap, space-between, center, 1.8rem);
+      .career-dot-container {
+        border: solid 3px map-get($color-map, grey__dark);
+        border-radius: 18px;
+        @include width-height(18px, 18px);
+      }
+    }
   }
 }
+
+// .roadmap-map-box {
+//   .decoration-box {
+//     height: auto;
+//   }
+// }
 
 .skill-map-box,
 .learn-map-box,
 .roadmap-map-box {
+  margin: 0 6px;
   padding: 18px 9px;
-  border-radius: 6px;
+  border-left: solid 3px map-get($color-map, grey__dark);
+  // border-radius: 6px;
   @include flex(row, wrap, center, center, 1.8rem);
   width: 100%;
   @media screen and (min-width: 676px) {
@@ -182,8 +196,8 @@
 
 .learns-skills-logo,
 .logo {
-  border: solid 3px transparent;
+  // border: solid 3px transparent;
   border-radius: 39px;
   @include flex(column, nowrap, center, center, initial);
-  box-shadow: map-get($box-shadow, shadow__card);
+  // box-shadow: map-get($box-shadow, shadow__card);
 }

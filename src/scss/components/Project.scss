@@ -39,9 +39,10 @@
           @include flex(row, nowrap, space-between, center, 1rem);
           height: 93px;
           width: 100%;
-          cursor: default;
+          cursor: pointer;
           .description {
             @include flex(row, nowrap, flex-start, initial, initial);
+            color: map-get($color-map, white__normal);
             font-size: small;
           }
           .skills {
@@ -75,6 +76,7 @@
             width: 100%;
             .project-type {
               @include flex(row, wrap, flex-start, initial, initial);
+              color: map-get($color-map, white__normal);
               @include font-family_Roboto;
             }
             .project-name {
@@ -104,5 +106,6 @@
 }
 a {
   text-decoration: none;
-  color: map-get($color-map, white__normal);
+  color: map-get($color-map, grey__dark);
+  // color: map-get($color-map, white__normal);
 }

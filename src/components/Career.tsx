@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface } from '../types';
 import Box from './modules/Components';
 import { Custom_Date_Obj } from '../helpers/date.helper';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Career = () => {
   // START INNER <CODE>
@@ -29,10 +31,10 @@ const Career = () => {
                     <Box
                       tag={'h3'}
                       content={params1.year}
-                      class="courses-skills-year"
+                      classX="courses-skills-year"
                     />
                   }
-                  class="courses-skills-year-container"
+                  classX="courses-skills-year-container"
                 />
                 <Box
                   tag={'div'}
@@ -50,7 +52,7 @@ const Career = () => {
                             className={`learns-skills-logo ${params1.image.class}`}
                           />
                         }
-                        class={params1.class}
+                        classX={params1.class}
                       />
                       <Box
                         tag={'div'}
@@ -59,7 +61,7 @@ const Career = () => {
                             <Box
                               tag={'h4'}
                               content={`${params1.description} `}
-                              class="courses-skills-description"
+                              classX="courses-skills-description"
                             />
                             <Box
                               tag={'p'}
@@ -67,23 +69,23 @@ const Career = () => {
                             />
                           </>
                         }
-                        class="courses-skills-description-container"
+                        classX="courses-skills-description-container"
                       />
                       <Box
                         tag={'p'}
                         content={`${params1.school}`}
-                        class="text-color"
+                        classX="text-color"
                       />
                     </a>
                   }
-                  class="courses-skills-title-container"
+                  classX="courses-skills-title-container"
                 />
               </>
             }
-            class="courses-skills-container"
+            classX="courses-skills-container"
           />
         }
-        class="courses-skills-box decoration-box"
+        classX="courses-skills-box decoration-box"
       />
     );
   };
@@ -110,16 +112,32 @@ const Career = () => {
       <ul className={`roadmap-list ${info && 'displaying-roadmap-block'}`}>
         <Box
           tag={'div'}
+          id="career-graduated-container"
+          classX={'career-graduated-skill-title-container career-title-container'}
           content={
             <Box
-              tag={'h3'}
-              content={`Passées ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
-              id="career-graduated"
-              class="career-graduated career-title"
-            />
+              tag={'div'}
+              classX="head-graduated">
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className="caret-down"
+              />
+              <Box
+                tag={'div'}
+                classX="head-title-container">
+                <Box
+                  tag={'div'}
+                  classX={'career-dot-container'}
+                />
+                <Box
+                  tag={'h3'}
+                  content={`Acquises ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
+                  id="career-graduated"
+                  classX={'career-graduated career-title'}
+                />
+              </Box>
+            </Box>
           }
-          id="career-graduated-container"
-          class="career-graduated-skill-title-container career-title-container"
         />
         <div className="skill-map-box">
           {window1 &&
@@ -148,11 +166,11 @@ const Career = () => {
                             <Box
                               tag={'h4'}
                               content={`Formation ${skill.name}`}
-                              class={'graduate-skill-content-item'}
+                              classX={'graduate-skill-content-item'}
                             />
                           </>
                         }
-                        class="graduate-skill-content-box"
+                        classX={'graduate-skill-content-box'}
                       />
                       <span className={'text-color'}>{`${skill.school}`}</span>
                     </a>
@@ -162,10 +180,32 @@ const Career = () => {
             })}
         </div>
         <Box
-          tag={'h3'}
-          content={`En cours ${Custom_Date_Obj.date.now.year}:`}
-          id="career-learn"
-          class="learns-skills-status career-title"
+          tag={'div'}
+          classX="career-learn-skill-title-container career-title-container"
+          content={
+            <Box
+              tag={'div'}
+              classX="head-learn">
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className="caret-down"
+              />
+              <Box
+                tag={'div'}
+                classX="head-title-container">
+                <Box
+                  tag={'div'}
+                  classX={'career-dot-container'}
+                />
+                <Box
+                  tag={'h3'}
+                  content={`Maintenant ${Custom_Date_Obj.date.now.year}:`}
+                  id="career-learn"
+                  classX={'learns-skills-status career-title'}
+                />
+              </Box>
+            </Box>
+          }
         />
         <div className="learn-map-box">
           {window2 &&
@@ -177,57 +217,79 @@ const Career = () => {
                   content={
                     <>
                       <li className={learn.class}>
-                        <Box
-                          tag={'h3'}
-                          content={learn.year}
-                          class="learns-skills-year"
-                        />
-                        <Box
-                          tag={'div'}
-                          content={
-                            <>
-                              <Box
-                                tag={'h4'}
-                                content={learn.name}
-                                class="learns-skills-title"
-                              />
-                              <img
-                                src={learn.image.src}
-                                alt={learn.image.alt}
-                                className={learn.image.class}
-                              />
-                            </>
-                          }
-                          class="learns-skills-title-container"
-                        />
                         <a
                           href={`${learn.link}`}
                           target="blank"
                           className="learns-skills-link">
                           <Box
-                            tag={'p'}
-                            content={`${learn.skill} ${learn.description} `}
-                            class="learns-skills"
+                            tag={'div'}
+                            content={
+                              <>
+                                <Box
+                                  tag={'p'}
+                                  content={`${learn.skill} ${learn.description} `}
+                                  classX="learns-skills"
+                                />
+                                <Box
+                                  tag={'h4'}
+                                  content={learn.name}
+                                  classX={'learns-skills-title'}
+                                />
+                                <img
+                                  src={learn.image.src}
+                                  alt={learn.image.alt}
+                                  className={learn.image.class}
+                                />
+                                <Box
+                                  tag={'h3'}
+                                  content={learn.year}
+                                  classX={'learns-skills-year'}
+                                />
+                              </>
+                            }
+                            classX={'learns-skills-title-container'}
                           />
                           <Box
                             tag={'p'}
                             content={`${learn.school}`}
-                            class="text-color"
+                            classX="text-color"
                           />
                         </a>
                       </li>
                     </>
                   }
-                  class="learns-skills-container decoration-box"
+                  classX="learns-skills-container decoration-box"
                 />
               );
             })}
         </div>
         <Box
-          tag={'h3'}
-          content={`Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
-          id="career-incoming"
-          class="incoming-skills-status career-title"
+          tag={'div'}
+          classX="career-roadmap-skill-title-container career-title-container"
+          content={
+            <Box
+              tag={'div'}
+              classX="head-incoming">
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className="caret-down"
+              />
+              <Box
+                tag={'div'}
+                classX="head-title-container">
+                <Box
+                  tag={'div'}
+                  classX={'career-dot-container'}
+                />
+                <Box
+                  tag={'h3'}
+                  content={`Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
+                  id="career-incoming"
+                  classX="incoming-skills-status career-title"
+                />
+              </Box>
+            </Box>
+          }
         />
         <div className="roadmap-map-box">{window3 && atDay('07/09/2024')}</div>
       </ul>

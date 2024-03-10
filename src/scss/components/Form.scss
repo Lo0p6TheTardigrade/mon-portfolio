@@ -1,5 +1,6 @@
 .form-container {
   @include flex(column, nowrap, center, center, 0.6rem);
+  @include width-height(100%, initial);
   #form {
     padding: 18px;
     @include flex(row, nowrap, initial, initial, 0.6rem);
@@ -10,6 +11,20 @@
       @include width-height(100%, initial);
     }
   }
+  .btn-submit-container {
+    .btn-submit {
+      padding: 9px;
+      outline: solid 3px map-get($color-map, grey__dark);
+      border: solid 3px map-get($color-map, white__normal);
+      border-radius: 3px;
+      background-color: map-get($color-map, white__normal);
+      box-shadow: map-get($box-shadow, shadow__card);
+      transition: 0.6s ease-in-out;
+      &:hover {
+        border: solid 3px map-get($color-map_2, Georgia_Peach);
+      }
+    }
+  }
 }
 input,
 textarea {
@@ -17,6 +32,15 @@ textarea {
   outline: solid 3px map-get($color-map, grey__dark);
   border: solid 3px map-get($color-map, white__normal);
   border-radius: 3px;
+  box-shadow: map-get($box-shadow, shadow__card);
+  transition: 0.6s ease-in-out;
+  &:hover {
+    border: solid 3px map-get($color-map_2, Georgia_Peach);
+  }
+  &:focus {
+    border: solid 3px map-get($color-map, grey__dark);
+    outline: solid 3px map-get($color-map_2, Georgia_Peach);
+  }
 }
 label {
   @include flex(column, nowrap, center, center, initial);

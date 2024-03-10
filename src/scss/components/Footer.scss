@@ -6,6 +6,7 @@
   background: map-get($color-map, grey__light);
   box-shadow: map-get($box-shadow, shadow__card);
   .footer {
+    margin: 6px 0;
     @include flex(column, nowrap, center, center, initial);
     .footer-list {
       @include flex(row, nowrap, center, center, 1rem);
@@ -41,6 +42,7 @@
       }
     }
     .copyright-container {
+      margin: 18px 0;
       .copyright {
         font-size: smaller;
       }

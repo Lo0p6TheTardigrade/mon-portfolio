@@ -4,10 +4,12 @@ import Skills from './Skills';
 import Project from './Project';
 import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
-import Tabs from './modules/Tabs';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
+import Div from './modules/Components';
+import Nav from './modules/Components';
+import Span from './modules/Components';
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -21,6 +23,31 @@ const Main = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.basic(true));
   };
 
+  const handleSwitchClick = () => {
+    switch (basic) {
+      case true:
+        handleSectionClick();
+
+        break;
+      case false:
+        handleProjectClick();
+
+        break;
+
+      default:
+        break;
+    }
+  };
+  const handleHeader2Section = () => {
+    switch (basic) {
+      case true:
+        return <h2 className={`title-tab-content projects-header-page-content`}>Mes Projets</h2>;
+
+      case false:
+        return <h2 className={`title-tab-content skill-header-page-content`}>Mes compétences</h2>;
+    }
+  };
+
   const switchIcon = (
     <FontAwesomeIcon
       className={basic ? 'rotate-animate' : 'rotate-animate'}
@@ -29,6 +56,7 @@ const Main = () => {
       width={27}
     />
   );
+  const switch_skills_or_projets = basic ? 'tab-projects' : 'tab-skills';
 
   setTimeout(() => {
     dispatch(Behavior_Action_Object.behavior.set.action.welcome(false));
@@ -58,46 +86,30 @@ const Main = () => {
           </div>
         </div>
       )}
-      <Tabs
-        tab={{
-          name: {
-            name1: null,
-            class1: 'tab-skills',
-            name2: null,
-            class2: 'tab-projects',
-            name3: 'TOP',
-            class3: 'tab-top-page',
-          },
-          image: {
-            file: {
-              image1: switchIcon,
-            },
-            class: {
-              class1: 'switch-icon',
-            },
-          },
-          href: {
-            link1: '#top-page',
-            class1: 'tab-link-top',
-          },
-          content: {
-            class: {
-              class1: 'projects-header-page-content',
-              class2: 'skills-header-page-content',
-            },
-            value: {
-              content1: 'Mes projets',
-              content2: 'Mes compétences',
-              content3: 'Cliquez-moi !',
-            },
-          },
-          function: {
-            onclicked1: handleSectionClick,
-            onclicked2: handleProjectClick,
-          },
-        }}
-        state={{ basic }}
-      />
+      <Div
+        tag={'div'}
+        classX="main-tab-container">
+        <Div
+          tag={'div'}
+          classX="main-tab-box"
+          onClick={handleSwitchClick}>
+          <div className="main-tab-content tab-box">{handleHeader2Section()}</div>
+          <Nav
+            tag={'nav'}
+            classX="main-tab-item tab-box">
+            <Div
+              tag={'div'}
+              classX="click-text-button">
+              Cliquez moi !
+            </Div>
+            <Span
+              tag={'span'}
+              classX={`tab-item tab ${switch_skills_or_projets}`}>
+              {switchIcon}
+            </Span>
+          </Nav>
+        </Div>
+      </Div>
       {!basic && <Skills />}
       {basic && <Project />}
     </div>

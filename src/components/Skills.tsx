@@ -74,38 +74,38 @@ const Skills = () => {
                 key={index}
                 className="description-container"
                 title={language.name}>
-                <article
-                  id={'card' + language.id}
-                  className="description-item-container">
-                  <h2 className="description-item item-title">
-                    <span>{language.name}</span>
-                    <Link
-                      id={`wiki-viewer${language.id}`}
-                      title={`${language.name} wiki`}
-                      target="blank"
-                      to={`${language.wiki}`}>
+                <Link
+                  id={`wiki-viewer${language.id}`}
+                  title={`${language.name} wiki`}
+                  target="blank"
+                  to={`${language.wiki}`}>
+                  <article
+                    id={'card' + language.id}
+                    className="description-item-container">
+                    <h2 className="description-item item-title">
+                      <span>{language.name}</span>
                       <FontAwesomeIcon
                         icon={faInfoCircle}
                         height={27}
                         width={27}
                         color="black"
                       />
-                    </Link>
-                  </h2>
-                  <p className="description-item item-text">{language.description}</p>
-                </article>
-                <div className="logo-container">
-                  <img
-                    src={language.image}
-                    alt={language.alt}
-                    className={language.class}
-                    width="51"
-                    height="51"
-                  />
-                </div>
-                <div className="description-separator-container">
-                  <div className="description-separator"></div>
-                </div>
+                    </h2>
+                    <p className="description-item item-text">{language.description}</p>
+                  </article>
+                  <div className="logo-container">
+                    <img
+                      src={language.image}
+                      alt={language.alt}
+                      className={language.class}
+                      width="51"
+                      height="51"
+                    />
+                  </div>
+                  <div className="description-separator-container">
+                    <div className="description-separator"></div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
