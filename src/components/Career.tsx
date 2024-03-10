@@ -152,7 +152,7 @@ const Career = () => {
                   tag={'h3'}
                   content={`Acquises ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
                   id="career-graduated"
-                  classX={'career-graduated career-title'}
+                  classX={`career-graduated career-title ${!window1 && 'unselected-element'}`}
                 />
               </Box>
             </Box>
@@ -221,7 +221,7 @@ const Career = () => {
                   tag={'h3'}
                   content={`Maintenant ${Custom_Date_Obj.date.now.year}:`}
                   id="career-learn"
-                  classX={'learns-skills-status career-title'}
+                  classX={`learns-skills-status career-title ${!window2 && 'unselected-element'}`}
                 />
               </Box>
             </Box>
@@ -306,7 +306,7 @@ const Career = () => {
                   tag={'h3'}
                   content={`Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
                   id="career-incoming"
-                  classX="incoming-skills-status career-title"
+                  classX={`incoming-skills-status career-title ${!window3 && 'unselected-element'}`}
                 />
               </Box>
             </Box>

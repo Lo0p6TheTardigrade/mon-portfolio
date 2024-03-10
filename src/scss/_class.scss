@@ -69,6 +69,10 @@
   transform: rotateZ(180deg);
 }
 
+.unselected-element {
+  font-weight: 300 !important;
+}
+
 .animate-action {
   animation: rotate 2s ease-in-out both;
 }
