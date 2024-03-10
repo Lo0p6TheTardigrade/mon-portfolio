@@ -100,6 +100,15 @@ const setFrameAction = (frame: boolean) => {
   };
 };
 
+export const SET_VIEW_ACTION = 'SET_VIEW_ACTION';
+// eslint-disable-next-line
+const setViewAction = (view: boolean) => {
+  return {
+    type: 'SET_VIEW_ACTION',
+    payload: view,
+  };
+};
+
 export const SET_MAIN_WINDOW_ACTION = 'SET_MAIN_WINDOW_ACTION';
 // eslint-disable-next-line
 const setMainWindowAction = (main: boolean) => {
@@ -199,6 +208,7 @@ const Behavior_Action_Object = {
         welcome: SET_WELCOME_ACTION,
         iFrame: SET_IFRAME_ACTION,
         frame: SET_FRAME_ACTION,
+        view: SET_VIEW_ACTION,
       },
       window: {
         main: SET_MAIN_WINDOW_ACTION,
@@ -221,6 +231,7 @@ const Behavior_Action_Object = {
         welcome: setWelcomeAction,
         iFrame: setIFrameAction,
         frame: setFrameAction,
+        view: setViewAction,
         window: {
           main: setMainWindowAction,
           window1: setWindow1Action,

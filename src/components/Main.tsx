@@ -15,12 +15,15 @@ const Main = () => {
   const dispatch = useDispatch();
   const basic = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.basic);
   const welcome = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.welcome);
+  const view = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.view);
 
   const handleSectionClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.basic(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.view(false));
   };
   const handleProjectClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.basic(true));
+    dispatch(Behavior_Action_Object.behavior.set.action.view(false));
   };
 
   const handleSwitchClick = () => {
@@ -99,7 +102,7 @@ const Main = () => {
           tag={'div'}
           classX="main-tab-box"
           onClick={handleSwitchClick}>
-          <div className="main-tab-content tab-box">{handleHeader2Section()}</div>
+          <div className="main-tab-content tab-box">{view ? <h2 className={`title-tab-content projects-header-page-content`}>Roadmap</h2> : handleHeader2Section()}</div>
           <Nav
             tag={'nav'}
             classX="main-tab-item tab-box">

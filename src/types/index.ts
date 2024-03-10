@@ -7,6 +7,7 @@ export interface Behavior_Custom_Interface {
   welcome: boolean;
   iFrame: boolean;
   frame: boolean;
+  view: boolean;
   window: {
     main: boolean;
     window1: boolean;

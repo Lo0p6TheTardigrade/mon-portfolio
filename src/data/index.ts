@@ -173,7 +173,7 @@ const projects = [
   {
     name: 'Kasa',
     type: 'REACT:',
-    description: 'Utilisation de SASS et des animations',
+    description: "Création d'une application d'agence de voyage avec le framework React",
     skill: 'Compétences REACT',
     link: 'https://pc-web-kasa.netlify.app',
     image: Kasa,

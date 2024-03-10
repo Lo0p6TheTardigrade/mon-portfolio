@@ -12,8 +12,8 @@ p {
   margin: 9px 27px 27px 27px;
   padding: 6px 27px;
   outline: solid 3px map-get($color-map, grey__light);
-  border: solid 3px map-get($color-map, grey__dark);
-  border-radius: 18px;
+  border: solid 2px map-get($color-map, grey__dark);
+  border-radius: 9px;
   @include flex(row, nowrap, initial, center, initial);
   text-align: center;
   height: auto;

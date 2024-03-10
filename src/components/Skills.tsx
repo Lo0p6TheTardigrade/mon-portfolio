@@ -15,6 +15,7 @@ const Skills = () => {
   const info = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.info);
   const iconRef = useRef<SVGSVGElement>(null);
   const main = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.main);
+  const view = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.view);
 
   // Roadmap visibility
 
@@ -22,6 +23,7 @@ const Skills = () => {
   const handleClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.info(!info));
     dispatch(Behavior_Action_Object.behavior.set.action.window.main(!main));
+    dispatch(Behavior_Action_Object.behavior.set.action.view(!view));
   };
 
   // Click outside handler
@@ -60,7 +62,6 @@ const Skills = () => {
               width={27}
               fontSize={27}
               color={`${info && 'orange'}`}
-              onClick={Custom_Function_Obj.click.in}
               ref={iconRef}
             />
           </div>

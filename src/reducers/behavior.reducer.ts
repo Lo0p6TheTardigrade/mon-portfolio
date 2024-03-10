@@ -1,5 +1,5 @@
 // @flow
-import { SET_BASIC_ACTION, SET_FNAME_ACTION, SET_FRAME_ACTION, SET_IFRAME_ACTION, SET_INFO_ACTION, SET_WINDOW_1_ACTION, SET_WINDOW_2_ACTION, SET_WINDOW_3_ACTION, SET_WINDOW_4_ACTION, SET_WINDOW_5_ACTION, SET_WINDOW_6_ACTION, SET_WINDOW_7_ACTION, SET_WINDOW_8_ACTION, SET_WINDOW_9_ACTION, SET_WELCOME_ACTION, SET_MAIN_WINDOW_ACTION } from '../actions/behavior.action';
+import { SET_BASIC_ACTION, SET_FNAME_ACTION, SET_FRAME_ACTION, SET_IFRAME_ACTION, SET_INFO_ACTION, SET_WINDOW_1_ACTION, SET_WINDOW_2_ACTION, SET_WINDOW_3_ACTION, SET_WINDOW_4_ACTION, SET_WINDOW_5_ACTION, SET_WINDOW_6_ACTION, SET_WINDOW_7_ACTION, SET_WINDOW_8_ACTION, SET_WINDOW_9_ACTION, SET_WELCOME_ACTION, SET_MAIN_WINDOW_ACTION, SET_VIEW_ACTION } from '../actions/behavior.action';
 import { Behavior_Custom_Interface, User_Custom_Interface } from '../types';
 
 const behaviorState: Behavior_Custom_Interface = {
@@ -9,6 +9,7 @@ const behaviorState: Behavior_Custom_Interface = {
   welcome: true,
   iFrame: false,
   frame: false,
+  view: false,
   window: {
     main: false,
     window1: false,
@@ -50,6 +51,9 @@ const behaviorReducer = (state = behaviorState, action: any) => {
 
     case SET_FRAME_ACTION:
       return { ...state, frame: action.payload };
+
+    case SET_VIEW_ACTION:
+      return { ...state, view: action.payload };
 
     case SET_MAIN_WINDOW_ACTION:
       return { ...state, window: { ...state.window, main: action.payload } };
