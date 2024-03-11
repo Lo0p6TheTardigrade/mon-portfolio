@@ -16,14 +16,17 @@ const Main = () => {
   const basic = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.basic);
   const welcome = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.welcome);
   const view = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.view);
+  // const main = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.main);
 
   const handleSectionClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.basic(false));
     dispatch(Behavior_Action_Object.behavior.set.action.view(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.main(false));
   };
   const handleProjectClick = () => {
     dispatch(Behavior_Action_Object.behavior.set.action.basic(true));
     dispatch(Behavior_Action_Object.behavior.set.action.view(false));
+    dispatch(Behavior_Action_Object.behavior.set.action.window.main(false));
   };
 
   const handleSwitchClick = () => {
@@ -42,12 +45,20 @@ const Main = () => {
     }
   };
   const handleHeader2Section = () => {
-    switch (basic) {
+    switch (view) {
       case true:
-        return <h2 className={`title-tab-content projects-header-page-content`}>Mes Projets</h2>;
-
+        return <h2 className={`title-tab-content roadmap-header-page-content`}>Roadmap</h2>;
       case false:
-        return <h2 className={`title-tab-content skill-header-page-content`}>Mes compétences</h2>;
+        switch (basic) {
+          case true:
+            return <h2 className={`title-tab-content projects-header-page-content`}>Mes Projets</h2>;
+
+          case false:
+            return <h2 className={`title-tab-content skill-header-page-content`}>Mes compétences</h2>;
+
+          default:
+            break;
+        }
     }
   };
 
@@ -102,14 +113,15 @@ const Main = () => {
           tag={'div'}
           classX="main-tab-box"
           onClick={handleSwitchClick}>
-          <div className="main-tab-content tab-box">{view ? <h2 className={`title-tab-content projects-header-page-content`}>Roadmap</h2> : handleHeader2Section()}</div>
+          <div className="main-tab-content tab-box">{handleHeader2Section()}</div>
           <Nav
             tag={'nav'}
             classX="main-tab-item tab-box">
             <Div
               tag={'div'}
               classX="click-text-button">
-              Cliquez moi !
+              {/* {basic ? 'Compétences' : 'Projets'} */}
+              {/* Cliquez moi ! */}
             </Div>
             <Span
               tag={'span'}

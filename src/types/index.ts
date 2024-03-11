@@ -86,6 +86,7 @@ export interface Skills_Custom_Interface {
   image: {
     src: string;
     alt: string;
+    class: string;
   };
   id: number;
   class: string;

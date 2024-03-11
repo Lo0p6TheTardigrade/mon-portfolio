@@ -1,6 +1,6 @@
 import { Custom_Data_Array_Obj } from '../data/index';
 import { useDispatch, useSelector } from 'react-redux';
-import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface } from '../types';
+import { Behavior_Custom_Interface, Learn_Custom_Interface, Roadmap_Custom_Interface, Skills_Custom_Interface } from '../types';
 import Box from './modules/Components';
 import { Custom_Date_Obj } from '../helpers/date.helper';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
@@ -162,7 +162,7 @@ const Career = () => {
                 />
                 <Box
                   tag={'h3'}
-                  content={`Acquises ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
+                  content={`🏆 Acquises ${Custom_Date_Obj.full.year} à ${Custom_Date_Obj.date.now.year}:`}
                   id="career-graduated"
                   classX={`career-graduated career-title ${!window1 && 'unselected-element'}`}
                 />
@@ -172,7 +172,7 @@ const Career = () => {
         />
         <div className="skill-map-box">
           {window1 &&
-            Custom_Data_Array_Obj.skills.map((skill: any, index: number) => {
+            Custom_Data_Array_Obj.skills.map((skill: Skills_Custom_Interface, index: number) => {
               return (
                 <div
                   key={index}
@@ -231,7 +231,7 @@ const Career = () => {
                 />
                 <Box
                   tag={'h3'}
-                  content={`Maintenant ${Custom_Date_Obj.date.now.year}:`}
+                  content={`👨🏽‍🎓 Maintenant ${Custom_Date_Obj.date.now.year}:`}
                   id="career-learn"
                   classX={`learns-skills-status career-title ${!window2 && 'unselected-element'}`}
                 />
@@ -316,7 +316,7 @@ const Career = () => {
                 />
                 <Box
                   tag={'h3'}
-                  content={`Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
+                  content={`🔜 Roadmap ${Custom_Date_Obj.date.now.year} / ${Custom_Date_Obj.date.now.year + 1}:`}
                   id="career-incoming"
                   classX={`incoming-skills-status career-title ${!window3 && 'unselected-element'}`}
                 />

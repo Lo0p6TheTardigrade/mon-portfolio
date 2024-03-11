@@ -7,7 +7,7 @@
     border-radius: 3px;
   }
   .section {
-    padding: 27px;
+    padding: 67px 27px;
     background: map-get($color-map, grey__light);
     height: auto;
     .section-title-container {
@@ -23,7 +23,7 @@
       }
     }
     .description-box {
-      @include flex(row, wrap, center, center, 1.8rem);
+      @include flex(row, wrap, center, center, 3rem);
       .description-container {
         @include flex(row, wrap, center, center, 1.8rem);
         a {
@@ -42,14 +42,14 @@
             }
           }
           @media screen and (min-width: 720px) {
-            @include width-height(310px, 310px);
+            @include width-height(270px, 270px);
           }
           .description-item-container {
-            @include flex(column, nowrap, center, center, initial);
-            height: 175px;
-            @media screen and (min-width: 720px) {
-              height: 153px;
-            }
+            @include flex(column, nowrap, initial, center, initial);
+            height: 100%;
+            // @media screen and (min-width: 720px) {
+            //   height: 153px;
+            // }
             .item-title {
               @include flex(row, nowrap, space-between, center, initial);
               font-size: 19px;
