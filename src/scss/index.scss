@@ -17,6 +17,15 @@ p {
   @include flex(row, nowrap, initial, center, initial);
   text-align: center;
   height: auto;
+  &:hover {
+    .icon-container {
+      outline: solid 3px orange;
+      background-color: orange;
+      .roadmap-icon-trigger {
+        color: map-get($color-map, grey__dark);
+      }
+    }
+  }
   @media screen and (min-width: 1024px) {
     text-align: initial;
   }
@@ -38,13 +47,6 @@ p {
       box-shadow: map-get($box-shadow, shadow__card) inset;
       @include width-height(30px, 30px);
       cursor: pointer;
-      &:hover {
-        outline: solid 3px orange;
-        background-color: orange;
-        .roadmap-icon-trigger {
-          color: map-get($color-map, grey__dark);
-        }
-      }
       .roadmap-icon-trigger {
         @include width-height(24px, 18px);
       }

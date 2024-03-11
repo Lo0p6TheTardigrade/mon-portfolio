@@ -40,11 +40,7 @@ const Header = () => {
           )}
         </div>
         <h1 className="home-title">Développeur Frontend</h1>
-        <WidgetAnimate
-          state1={false}
-          state2={true}
-          state3={false}
-        />
+        <WidgetAnimate state2={true} />
       </header>
     </div>
   );

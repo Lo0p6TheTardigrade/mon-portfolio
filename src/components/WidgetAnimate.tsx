@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
 
-const WidgetAnimate = (state: { state1: boolean; state2: boolean; state3: boolean }) => {
+const WidgetAnimate = (state: { custom?: boolean; state1?: boolean; state2?: boolean; state3?: boolean }) => {
   const basic = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.basic);
   const info = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.info);
   return (
