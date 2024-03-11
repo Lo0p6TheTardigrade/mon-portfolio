@@ -109,6 +109,69 @@ const setViewAction = (view: boolean) => {
   };
 };
 
+export const SET_REDESIGN_ACTION = 'SET_REDESIGN_ACTION';
+// eslint-disable-next-line
+const setRedesignAction = (redesign: boolean) => {
+  return {
+    type: 'SET_REDESIGN_ACTION',
+    payload: redesign,
+  };
+};
+
+export const SET_SEO_ACTION = 'SET_SEO_ACTION';
+// eslint-disable-next-line
+const setSeoAction = (seo: boolean) => {
+  return {
+    type: 'SET_SEO_ACTION',
+    payload: seo,
+  };
+};
+
+export const SET_DEBUG_ACTION = 'SET_DEBUG_ACTION';
+// eslint-disable-next-line
+const setDebugAction = (debug: boolean) => {
+  return {
+    type: 'SET_DEBUG_ACTION',
+    payload: debug,
+  };
+};
+
+export const SET_ADVICE_ACTION = 'SET_ADVICE_ACTION';
+// eslint-disable-next-line
+const setAdviceAction = (advice: boolean) => {
+  return {
+    type: 'SET_ADVICE_ACTION',
+    payload: advice,
+  };
+};
+
+export const SET_BUILD_ACTION = 'SET_BUILD_ACTION';
+// eslint-disable-next-line
+const setBuildAction = (build: boolean) => {
+  return {
+    type: 'SET_BUILD_ACTION',
+    payload: build,
+  };
+};
+
+export const SET_FUNCTIONALITY_ACTION = 'SET_FUNCTIONALITY_ACTION';
+// eslint-disable-next-line
+const setFunctionalityAction = (functionality: boolean) => {
+  return {
+    type: 'SET_FUNCTIONALITY_ACTION',
+    payload: functionality,
+  };
+};
+
+export const SET_COLLABORATION_ACTION = 'SET_COLLABORATION_ACTION';
+// eslint-disable-next-line
+const setCollaborationAction = (collaboration: boolean) => {
+  return {
+    type: 'SET_COLLABORATION_ACTION',
+    payload: collaboration,
+  };
+};
+
 export const SET_MAIN_WINDOW_ACTION = 'SET_MAIN_WINDOW_ACTION';
 // eslint-disable-next-line
 const setMainWindowAction = (main: boolean) => {
@@ -209,6 +272,13 @@ const Behavior_Action_Object = {
         iFrame: SET_IFRAME_ACTION,
         frame: SET_FRAME_ACTION,
         view: SET_VIEW_ACTION,
+        redesign: SET_REDESIGN_ACTION,
+        seo: SET_SEO_ACTION,
+        debug: SET_DEBUG_ACTION,
+        advice: SET_ADVICE_ACTION,
+        build: SET_BUILD_ACTION,
+        functionality: SET_FUNCTIONALITY_ACTION,
+        collaboration: SET_COLLABORATION_ACTION,
       },
       window: {
         main: SET_MAIN_WINDOW_ACTION,
@@ -232,6 +302,13 @@ const Behavior_Action_Object = {
         iFrame: setIFrameAction,
         frame: setFrameAction,
         view: setViewAction,
+        redesign: setRedesignAction,
+        seo: setSeoAction,
+        debug: setDebugAction,
+        advice: setAdviceAction,
+        build: setBuildAction,
+        functionality: setFunctionalityAction,
+        collaboration: setCollaborationAction,
         window: {
           main: setMainWindowAction,
           window1: setWindow1Action,

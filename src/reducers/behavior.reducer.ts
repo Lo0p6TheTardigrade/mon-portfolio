@@ -1,5 +1,5 @@
 // @flow
-import { SET_BASIC_ACTION, SET_FNAME_ACTION, SET_FRAME_ACTION, SET_IFRAME_ACTION, SET_INFO_ACTION, SET_WINDOW_1_ACTION, SET_WINDOW_2_ACTION, SET_WINDOW_3_ACTION, SET_WINDOW_4_ACTION, SET_WINDOW_5_ACTION, SET_WINDOW_6_ACTION, SET_WINDOW_7_ACTION, SET_WINDOW_8_ACTION, SET_WINDOW_9_ACTION, SET_WELCOME_ACTION, SET_MAIN_WINDOW_ACTION, SET_VIEW_ACTION } from '../actions/behavior.action';
+import { SET_BASIC_ACTION, SET_FNAME_ACTION, SET_FRAME_ACTION, SET_IFRAME_ACTION, SET_INFO_ACTION, SET_WINDOW_1_ACTION, SET_WINDOW_2_ACTION, SET_WINDOW_3_ACTION, SET_WINDOW_4_ACTION, SET_WINDOW_5_ACTION, SET_WINDOW_6_ACTION, SET_WINDOW_7_ACTION, SET_WINDOW_8_ACTION, SET_WINDOW_9_ACTION, SET_WELCOME_ACTION, SET_MAIN_WINDOW_ACTION, SET_VIEW_ACTION, SET_REDESIGN_ACTION, SET_SEO_ACTION, SET_DEBUG_ACTION, SET_ADVICE_ACTION, SET_BUILD_ACTION, SET_FUNCTIONALITY_ACTION, SET_COLLABORATION_ACTION } from '../actions/behavior.action';
 import { Behavior_Custom_Interface, User_Custom_Interface } from '../types';
 
 const behaviorState: Behavior_Custom_Interface = {
@@ -10,6 +10,13 @@ const behaviorState: Behavior_Custom_Interface = {
   iFrame: false,
   frame: false,
   view: false,
+  redesign: true,
+  seo: false,
+  debug: false,
+  advice: false,
+  build: false,
+  functionality: false,
+  collaboration: false,
   window: {
     main: false,
     window1: false,
@@ -54,6 +61,27 @@ const behaviorReducer = (state = behaviorState, action: any) => {
 
     case SET_VIEW_ACTION:
       return { ...state, view: action.payload };
+
+    case SET_REDESIGN_ACTION:
+      return { ...state, redesign: action.payload };
+
+    case SET_SEO_ACTION:
+      return { ...state, seo: action.payload };
+
+    case SET_DEBUG_ACTION:
+      return { ...state, debug: action.payload };
+
+    case SET_ADVICE_ACTION:
+      return { ...state, advice: action.payload };
+
+    case SET_BUILD_ACTION:
+      return { ...state, build: action.payload };
+
+    case SET_FUNCTIONALITY_ACTION:
+      return { ...state, functionality: action.payload };
+
+    case SET_COLLABORATION_ACTION:
+      return { ...state, collaboration: action.payload };
 
     case SET_MAIN_WINDOW_ACTION:
       return { ...state, window: { ...state.window, main: action.payload } };

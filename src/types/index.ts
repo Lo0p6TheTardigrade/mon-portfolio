@@ -8,6 +8,13 @@ export interface Behavior_Custom_Interface {
   iFrame: boolean;
   frame: boolean;
   view: boolean;
+  redesign: boolean;
+  seo: boolean;
+  debug: boolean;
+  advice: boolean;
+  build: boolean;
+  functionality: boolean;
+  collaboration: boolean;
   window: {
     main: boolean;
     window1: boolean;
@@ -111,7 +118,7 @@ export type Props = {
   children?: ReactNode;
   state?: boolean;
   tag?: any;
-  id?: string | number;
+  id?: string;
   classX?: string;
   src?: ReactElement<any, any>;
   href?: string;
@@ -120,9 +127,14 @@ export type Props = {
   icon?: any;
   height?: string | number;
   width?: string | number;
+  index?: number;
   title?: string;
   name?: string;
   content?: any;
+  value?: string | number;
+  description?: string;
+  disabled?: boolean;
+  target?: string;
   onClick?: () => void;
   onChange?: () => void;
   onToggle?: () => void;
@@ -130,52 +142,6 @@ export type Props = {
   onBlur?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
-  value?: string | number;
-  target?: string;
-  disabled?: boolean;
-};
-
-export type Property_Tab_Object = {
-  tab: {
-    name: {
-      name1?: String_Null;
-      class1?: String_Null;
-      name2?: String_Null;
-      class2?: String_Null;
-      name3?: String_Null;
-      class3?: String_Null;
-    };
-    function: {
-      onclicked1?: Any_Null;
-      onclicked2?: Any_Null;
-    };
-    href: {
-      link1?: String_Undefined;
-      class1?: String_Null;
-    };
-    image: {
-      file: {
-        image1?: any;
-      };
-      class: {
-        class1?: string;
-      };
-    };
-    content: {
-      value: {
-        content1?: string;
-        content2?: string;
-        content3?: String_Null;
-      };
-      class: {
-        class1?: string;
-        class2?: string;
-      };
-    };
-  };
-  state: {
-    basic: boolean;
-  };
 };
 
 export {};

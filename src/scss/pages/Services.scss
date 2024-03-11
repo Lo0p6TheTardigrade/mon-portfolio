@@ -1,0 +1,36 @@
+#services {
+  padding: 18px;
+  .services-box {
+    @include flex(row, nowrap, space-between, initial, 0.6rem);
+    .services-description-container {
+      margin: 16px 0;
+      padding: 27px;
+      border-radius: 3px;
+      @include flex(row, wrap, center, initial, 3rem);
+      width: 100%;
+      .services-title-container {
+        .services-title {
+          border-bottom: solid 3px map-get($color-map, grey__dark);
+          @include font-family_Roboto;
+          width: fit-content;
+        }
+      }
+      .services-container {
+        // margin: 33px;
+        padding: 15px;
+        border-radius: 3px;
+        @include flex(column, nowrap, center, initial, 0.6rem);
+        box-shadow: map-get($box-shadow, shadow__card);
+        @include width-height(100%, auto);
+        flex: auto;
+        @media screen and (min-width: 675px) {
+          @include width-height(270px, auto);
+        }
+        .services-content-box {
+          padding: 9px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

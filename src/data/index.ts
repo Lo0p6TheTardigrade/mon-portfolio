@@ -344,6 +344,54 @@ const copyright = [
     class: 'copyright-container',
   },
 ];
+
+// SERVICE
+const services = [
+  {
+    name: 'Redesign',
+    id: 'redesign-content',
+    class: 'redesign-content',
+    description: "Une refonte de site internet consiste à modifier en profondeur son site web. Il s'agit d'une intervention de fond sur l'aspect visuel, technique et structurel d'un site internet.",
+  },
+  {
+    name: 'SEO',
+    id: 'seo-content',
+    class: 'seo-content',
+    description: "Le SEO on-page, ce sont toutes les optimisations que vous pouvez implémenter sur vos pages web pour améliorer leur référencement sur les moteurs de recherche. Cet ensemble de critères permettra à vos contenus d'être compréhensibles pour les robots des moteurs de recherche.",
+  },
+  {
+    name: 'Debug',
+    id: 'debug-content',
+    class: 'debug-content',
+    description: "Le débogage est le processus qui consister à trouver et à corriger les erreurs ou les bogues dans le code source d'un logiciel. Lorsqu'un logiciel ne fonctionne pas comme prévu, les programmeurs informatiques étudient le code pour déterminer la raison des erreurs.",
+  },
+  {
+    name: 'Advice',
+    id: 'advice-content',
+    class: 'advice-content',
+    description: "Le conseil est un point déterminant quant à l'élaboration du produit. Un design attractif et professionnel. Un site qui se charge rapidement. Une ergonomie fluide et intuitive. Une organisation claire. Du contenu de qualité. Une sécurité à toute épreuve. Des éléments de réassurance.",
+  },
+  {
+    name: 'Build',
+    id: 'build-content',
+    class: 'build-content',
+    description: 'Les applications web, comme nous le disions, reposent sur des bases de données et sur un programme, qui va piocher dans ces bases de données pour afficher des informations aux utilisateurs. Le site web, lui, va être construit via des contenus statiques.',
+  },
+  {
+    name: 'Functionality',
+    id: 'functionality-content',
+    class: 'functionality-content',
+    description: "On appelle fonctionnalité toute caractéristique ou capacité spécifique qu'un site web offre à ses utilisateurs. Il peut s'agir d'une action à effectuer, d'une information à trouver ou d'une interaction que les visiteurs peuvent avoir avec le site.",
+  },
+  {
+    name: 'Collaboration',
+    id: 'collaboration-content',
+    class: 'collaboration-content',
+    description: "Collaboration: La collaboration en entreprise fait passer le travail d'équipe à la vitesse supérieure, notamment en permettant à vos collègues d'unir leurs compétences, atouts et idées pour atteindre un objectif commun. Une collaboration efficace au travail peut avoir un effet positif sur votre équipe et votre organisation.",
+  },
+];
+
+// ARRAY OBJECT
 const Custom_Data_Array_Obj = {
   language: language,
   projects: projects,
@@ -352,5 +400,6 @@ const Custom_Data_Array_Obj = {
   roadmap: roadmap,
   contacts: contacts,
   copyright: copyright,
+  services: services,
 };
-export { language, projects, skills, learns, roadmap, contacts, copyright, Custom_Data_Array_Obj };
+export { language, projects, skills, learns, roadmap, contacts, copyright, services, Custom_Data_Array_Obj };
