@@ -15,6 +15,7 @@ export interface Behavior_Custom_Interface {
   build: boolean;
   functionality: boolean;
   collaboration: boolean;
+  interaction: boolean;
   window: {
     main: boolean;
     window1: boolean;
