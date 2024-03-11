@@ -12,21 +12,18 @@
 // import { Behavior_Action_Object } from '../actions/behavior.action';
 import { Custom_Data_Array_Obj } from '../data';
 import ServiceX from '../components/Service/ServiceX';
+import { Link } from 'react-router-dom';
 
 function Services() {
-  // const dispatch = useDispatch();
-  // const redesign = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.redesign);
-  // const seo = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.seo);
-  // const debug = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.debug);
-  // const advice = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.advice);
-  // const build = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.build);
-  // const functionality = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.functionality);
-  // const collaboration = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.collaboration);
-
   return (
     <div id="services">
       <div className="services-title-container">
         <h2 className="services-title">Services</h2>
+        <Link
+          to="/"
+          className="link-to-home">
+          Accueil
+        </Link>
       </div>
       <div className="services-box">
         <div className="services-description-container">

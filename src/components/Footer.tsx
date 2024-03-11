@@ -13,7 +13,6 @@ const Footer = () => {
                 key={index}
                 to={contact.link}
                 title={contact.description}
-                target="blank"
                 id={`link${index}`}
                 className={`link-to ${contact.class}`}>
                 <div className="logo-container">
