@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import WidgetAnimate from './WidgetAnimate';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const Error404 = () => {
   return (
@@ -9,11 +10,11 @@ const Error404 = () => {
         <h3 className="error-title error-info-status-number">404</h3>
       </div>
       <div className="error-info-container">
-        <div className="error-info-box">
-          <p className="error-info">Oups !!!</p>
+        <div className="error-info-title-box">
+          <h3 className="error-info-title">😵‍💫 Oups !!!</h3>
         </div>
         <div className="error-info-box">
-          <p className="error-info">La page demandée n'existe plus</p>
+          <p className="error-info">La page demandée n'existe plus.</p>
         </div>
       </div>
       <Link
@@ -23,7 +24,13 @@ const Error404 = () => {
           <p className="error-link-to-home">Retourner à l’accueil</p>
         </div>
         <div className="animation-link">
-          <WidgetAnimate state4={true} />
+          <WidgetAnimate
+            element1={true}
+            font_awesome={faSpinner}
+            height={27}
+            width={27}
+            font_size={27}
+          />
         </div>
       </Link>
     </div>

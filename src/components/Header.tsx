@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Behavior_Custom_Interface } from '../types';
 import { Behavior_Action_Object } from '../actions/behavior.action';
 import { Link } from 'react-router-dom';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 const imageProfile = require('../assets/images/me.webp');
 
 const Header = () => {
@@ -40,7 +41,13 @@ const Header = () => {
           )}
         </div>
         <h1 className="home-title">Développeur Frontend</h1>
-        <WidgetAnimate state2={true} />
+        <WidgetAnimate
+          element0={true}
+          font_awesome={faSpinner}
+          height={27}
+          width={27}
+          font_size={27}
+        />
       </header>
     </div>
   );

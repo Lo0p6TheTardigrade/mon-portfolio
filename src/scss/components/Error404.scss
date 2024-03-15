@@ -1,10 +1,15 @@
 .error-container {
-  margin: 25svh 5svw;
-  @include flex(column, nowrap, center, center, 1.8rem);
+  margin: 25svh 25svw;
+  padding: 27px 9px;
+  outline: solid 2px map-get($color-map, grey__light);
+  border-radius: 3px;
+  box-shadow: map-get($box-shadow, shadow__card-out) inset;
+  @include flex(column, nowrap, center, center, 0.9rem);
   .error-title-container {
     @extend.error-padding-container;
     @include flex(row, nowrap, center, center, 0.6rem);
     .error-title {
+      margin-bottom: 12px;
       font-size: 33px;
       @extend.error-common;
     }
@@ -18,21 +23,29 @@
     border-radius: 33px;
     @include flex(column, nowrap, center, center, 0.6rem);
     font-size: 21px;
-    font-weight: 600;
     @include width-height(auto, auto);
     .error-info-box {
       .error-info {
         margin: 0;
+        font-size: 18px;
+        font-weight: 600;
       }
     }
   }
   .error-link-home-container {
+    margin: 18px 0;
     @extend.error-padding-container;
     outline: solid 3px map-get($color-map, grey__light);
     border: solid 2px transparent;
     @include flex(row, nowrap, space-between, center, 1.2rem);
     transition: 0.6s ease-in-out;
     box-shadow: none;
+    .dot-menu-display-container {
+      @include width-height(18px, 18px);
+      .dot-menu-display {
+        font-size: 18px;
+      }
+    }
     &:hover {
       cursor: pointer;
       .error-link-to-home-container {

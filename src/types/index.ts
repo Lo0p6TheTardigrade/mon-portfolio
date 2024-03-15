@@ -118,15 +118,19 @@ export interface Langage_Custom_Interface {
 
 export type Props = {
   children?: ReactNode;
+  element0?: boolean;
+  element1?: boolean;
   state?: boolean;
   tag?: any;
   id?: string;
-  classX?: string;
+  classX?: string | (() => string);
   src?: ReactElement<any, any>;
   href?: string;
   to?: string;
   alt?: string;
   icon?: any;
+  font_awesome?: any;
+  font_size?: number;
   height?: string | number;
   width?: string | number;
   index?: number;
