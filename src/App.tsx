@@ -11,6 +11,7 @@ import Services from './pages/Services';
 
 function App() {
   const window6 = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.window.window6);
+  const DEV_ELEMENT = useSelector((state: { behavior: Behavior_Custom_Interface }) => state.behavior.DEV);
   return (
     <div className="App">
       <BrowserRouter>
@@ -30,10 +31,12 @@ function App() {
               path="/contact"
               element={<Contact />}
             />
-            <Route
-              path="/services"
-              element={<Services />}
-            />
+            {DEV_ELEMENT && (
+              <Route
+                path="/services"
+                element={<Services />}
+              />
+            )}
             <Route
               path="*"
               element={<Error />}

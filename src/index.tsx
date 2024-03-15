@@ -12,7 +12,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 const store = configureStore({
   reducer: rootReducer,
-  devTools: true,
+  devTools: false,
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
