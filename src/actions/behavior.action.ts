@@ -181,6 +181,15 @@ const setInteractionAction = (interaction: boolean) => {
   };
 };
 
+export const SET_DEV_ACTION = 'SET_DEV_ACTION';
+// eslint-disable-next-line
+const setDevAction = (DEV: boolean) => {
+  return {
+    type: 'SET_DEV_ACTION',
+    payload: DEV,
+  };
+};
+
 export const SET_MAIN_WINDOW_ACTION = 'SET_MAIN_WINDOW_ACTION';
 // eslint-disable-next-line
 const setMainWindowAction = (main: boolean) => {
@@ -289,6 +298,7 @@ const Behavior_Action_Object = {
         functionality: SET_FUNCTIONALITY_ACTION,
         collaboration: SET_COLLABORATION_ACTION,
         interaction: SET_INTERACTION_ACTION,
+        DEV: SET_DEV_ACTION,
       },
       window: {
         main: SET_MAIN_WINDOW_ACTION,
@@ -320,6 +330,7 @@ const Behavior_Action_Object = {
         functionality: setFunctionalityAction,
         collaboration: setCollaborationAction,
         interaction: setInteractionAction,
+        dev: setDevAction,
         window: {
           main: setMainWindowAction,
           window1: setWindow1Action,

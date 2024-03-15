@@ -15,7 +15,7 @@ const nodejs = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304714/as
 const python = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304707/assets/images/python_ixz8pf.webp';
 const django = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304698/assets/images/django_sjiesy.webp';
 const email = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1709304696/assets/images/email_piosif.webp';
-const request = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1710139063/assets/images/request_glxgva.webp';
+// const request = 'https://res.cloudinary.com/dp5onh4yw/image/upload/v1710139063/assets/images/request_glxgva.webp';
 
 const OhMyFood = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbf90bb6aa01b2aeffc61/screenshot_2023-11-09-11-16-42-0000.png';
 const PrintIt = 'https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/654cbd912e06c6190cc3eded/screenshot_2023-11-09-11-08-25-0000.png';
@@ -336,15 +336,15 @@ const contacts = [
     id: 2,
     class: 'contact-list-item',
   },
-  {
-    name: 'Services ',
-    type: 'Service:',
-    description: 'Services for a project, auditory or any',
-    image: { src: request, alt: 'logo de service', class: 'logo-request logo', size: { width: 27, height: 27 } },
-    link: '/services',
-    id: 3,
-    class: 'contact-list-item',
-  },
+  // {
+  //   name: 'Services ',
+  //   type: 'Service:',
+  //   description: 'Services for a project, auditory or any',
+  //   image: { src: request, alt: 'logo de service', class: 'logo-request logo', size: { width: 27, height: 27 } },
+  //   link: '/services',
+  //   id: 3,
+  //   class: 'contact-list-item',
+  // },
 ];
 
 // COPYRIGHT NOTICE ARRAY

@@ -16,6 +16,7 @@ export interface Behavior_Custom_Interface {
   functionality: boolean;
   collaboration: boolean;
   interaction: boolean;
+  DEV: boolean;
   window: {
     main: boolean;
     window1: boolean;
@@ -143,6 +144,23 @@ export type Props = {
   onBlur?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  redesign?: boolean;
+  seo?: boolean;
+  debug?: boolean;
+  advice?: boolean;
+  build?: boolean;
+  functionality?: boolean;
+  collaboration?: boolean;
+};
+
+export type State = {
+  redesign?: boolean;
+  seo?: boolean;
+  debug?: boolean;
+  advice?: boolean;
+  build?: boolean;
+  functionality?: boolean;
+  collaboration?: boolean;
 };
 
 export {};
