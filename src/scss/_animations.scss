@@ -29,6 +29,15 @@
     transform: rotate(720deg);
   }
 }
+@keyframes rotate-infinite {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(1080deg);
+  }
+}
 @keyframes rotate_Y {
   0% {
     transform: rotateY(0deg);

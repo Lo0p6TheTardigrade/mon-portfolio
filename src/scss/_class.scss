@@ -76,6 +76,10 @@
   font-weight: 300 !important;
 }
 
+.rotate-infinite {
+  animation: rotate-infinite 2s ease-in-out both infinite;
+}
+
 .animate-action {
   animation: rotate 2s ease-in-out both;
 }

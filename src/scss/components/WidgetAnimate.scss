@@ -1,6 +1,5 @@
-.nav-container {
+.widget-container {
   @include flex(row, nowrap, center, center, initial);
-  padding-right: 1rem;
   width: fit-content;
   .dot-menu-display-container {
     @include flex(row, nowrap, center, center, initial);

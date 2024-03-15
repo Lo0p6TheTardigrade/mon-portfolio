@@ -1,4 +1,5 @@
 .header {
+  padding: 0 2rem 0 1rem;
   @include flex(row, nowrap, space-between, center, initial);
   box-shadow: map-get($box-shadow, shadow__card);
   border-radius: 9px;

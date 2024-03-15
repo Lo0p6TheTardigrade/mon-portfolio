@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import WidgetAnimate from './WidgetAnimate';
 
 const Error404 = () => {
   return (
@@ -15,13 +16,16 @@ const Error404 = () => {
           <p className="error-info">La page demandée n'existe plus</p>
         </div>
       </div>
-      <div className="error-link-home-container box">
-        <Link
-          to="/"
-          className="error-link-home">
-          Retourner à l’accueil
-        </Link>
-      </div>
+      <Link
+        to="/"
+        className="error-link-home-container box">
+        <div className="error-link-to-home-container">
+          <p className="error-link-to-home">Retourner à l’accueil</p>
+        </div>
+        <div className="animation-link">
+          <WidgetAnimate state4={true} />
+        </div>
+      </Link>
     </div>
   );
 };
