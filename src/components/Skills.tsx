@@ -49,10 +49,10 @@ const Skills = () => {
 
   return (
     <div className="section-container">
-      <div className="title-container">
-        <div
-          className="learn"
-          onClick={Custom_Function_Obj.click.in}>
+      <div
+        className="title-container"
+        onClick={Custom_Function_Obj.click.in}>
+        <div className="learn">
           <p className="learn-title">Roadmap</p>
           <div className="icon-container">
             <FontAwesomeIcon

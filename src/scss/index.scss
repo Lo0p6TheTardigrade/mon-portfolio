@@ -17,6 +17,7 @@ p {
   @include flex(row, nowrap, initial, center, initial);
   text-align: center;
   height: auto;
+  cursor: pointer;
   &:hover {
     .icon-container {
       outline: solid 3px orange;
@@ -46,7 +47,6 @@ p {
       border-radius: 18px;
       box-shadow: map-get($box-shadow, shadow__card) inset;
       @include width-height(30px, 30px);
-      cursor: pointer;
       .roadmap-icon-trigger {
         @include width-height(24px, 18px);
       }
