@@ -26,6 +26,7 @@
       @include flex(row, wrap, center, center, 3rem);
       .description-container {
         @include flex(row, wrap, center, center, 1.8rem);
+        cursor: pointer;
         a {
           padding: 18px;
           @include flex(column, nowrap, space-around, center, initial);
@@ -34,7 +35,6 @@
           background-color: map-get($color-map, white__normal);
           outline: solid 2px transparent;
           width: 90%;
-          cursor: default;
           &:hover {
             outline: solid 2px map-get($color-map, red__pink__identity);
             .logo {
