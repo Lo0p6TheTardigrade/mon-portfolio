@@ -7,6 +7,7 @@
     @include width-height(100%, 100%);
   }
   .roadmap-list {
+    padding-right: 9px;
     list-style: none;
     .learns-skills-container {
       @include flex(row, nowrap, initial, center, 0.6rem);
@@ -178,6 +179,25 @@
   @include flex(row, wrap, center, center, 1.8rem);
   width: 100%;
   @media screen and (min-width: 676px) {
+  }
+}
+.roadmap-map-box {
+  .decoration-box {
+    justify-content: center !important;
+    @media screen and (min-width: 676px) {
+      width: 100%;
+    }
+    .text-color {
+      width: 30%;
+    }
+    .courses-skills-description-container {
+      width: 90%;
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
   }
 }
 

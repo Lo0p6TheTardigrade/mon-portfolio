@@ -77,6 +77,7 @@ const Main = () => {
     );
   };
   const switch_skills_or_projets = basic ? 'tab-projects' : 'tab-skills';
+  const switch_title_attribute = basic ? 'Compétences / Projets' : 'Projets / Compétences';
 
   setTimeout(() => {
     dispatch(Behavior_Action_Object.behavior.set.action.welcome(false));
@@ -125,7 +126,8 @@ const Main = () => {
             </Div>
             <Span
               tag={'span'}
-              classX={`tab-item tab ${switch_skills_or_projets}`}>
+              classX={`tab-item tab ${switch_skills_or_projets}`}
+              title={switch_title_attribute}>
               {switchIcon()}
             </Span>
           </Nav>

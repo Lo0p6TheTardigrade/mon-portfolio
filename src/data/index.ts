@@ -284,7 +284,7 @@ const roadmap = [
     description: 'Formation Développeur Backend',
     link: 'https://www.udemy.com/courses/search/?q=%20developpeur%20backend',
     image: { src: nodejs, class: 'logo roadmap-course', alt: 'logo des langages de la formation API REST, NodeJS, Express, MongoDB, Mongoose ect...' },
-    skill: 'Compétences API REST, NodeJS, Express, MongoDB, Mongoose ect...',
+    skill: 'Compétences API REST, NodeJS, Express, MongoDB, Mongoose Stripe, Sendgrid, Atlas, Compass, Git, Heroku, etc...',
     id: 2,
     class: 'roadmap-list-item',
     school: 'Udemy',
