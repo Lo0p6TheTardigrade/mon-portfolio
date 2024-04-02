@@ -22,7 +22,7 @@
         width: 333px;
       }
       .article-item {
-        @include flex(row, nowrap, initial, initial, initial);
+        @include flex(row, nowrap, center, initial, initial);
         .description-container {
           padding: 0 3px 6px 3px;
           margin-top: 12px;
@@ -68,16 +68,19 @@
               @include flex(row, wrap, flex-start, initial, initial);
               color: map-get($color-map, white__normal);
               @include font-family_Roboto;
+              text-align: right;
+              width: 30%;
             }
             .project-name {
               @include flex(row, wrap, flex-end, initial, initial);
               color: rgb(250, 203, 223);
               @include font-family_Braah_One;
+              width: 60%;
             }
             .project-name,
             .project-type {
               margin: 0;
-              width: 50%;
+              // width: 50%;
             }
           }
           .project-preview-image {
