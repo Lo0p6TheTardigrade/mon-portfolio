@@ -126,6 +126,7 @@ export type Props = {
   classX?: string | (() => string);
   src?: ReactElement<any, any>;
   href?: string;
+  link?: string;
   to?: string;
   alt?: string;
   icon?: any;

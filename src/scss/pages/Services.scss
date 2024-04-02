@@ -36,6 +36,12 @@
           @include font-family_Roboto;
           width: fit-content;
         }
+        svg {
+          display: none;
+          border: 2px solid map-get($color-map, grey__dark);
+          border-radius: 30px;
+          @include width-height(9px, 9px);
+        }
       }
       .services-container {
         padding: 15px;
@@ -50,6 +56,10 @@
         &:hover {
           outline: solid 2px map-get($color-map_2, Georgia_Peach);
           .services-title-box {
+            svg {
+              display: block;
+              color: map-get($color-map_2, Georgia_Peach);
+            }
             .services-title {
               color: map-get($color-map, red__pink__identity);
               border-bottom: solid 3px map-get($color-map, red__pink__identity);
